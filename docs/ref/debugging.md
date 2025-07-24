@@ -10,7 +10,7 @@ nav_order: 2
 
 ### 🐍 Python Debugging Process
 
-{:.highlight} Follow the steps in the **debugging process** below _before_ asking a peer or your teacher! Solving your own errors, no matter how small, is one of the _best_ ways to become a more confident coder. 
+{:.highlight} Follow the steps in the **debugging process** below _before_ asking a peer or your teacher! Fixing your own errors, no matter how small, is one of the _best_ ways to become a more confident coder. 
 
 1. **Read the Error Message**
 
