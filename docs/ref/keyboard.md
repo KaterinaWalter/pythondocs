@@ -58,17 +58,8 @@ From top to bottom:
 | `/` | Slash ([Forward Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/)) | Forward slash, fraction slash |
 | `?` | Question Mark | |
 
-## 💻 Other Symbols
-
-| Symbol | Common Name in CS | Other Names |
-|---|-----|----------------------|
-| `...` | [Ellipsis](https://en.wikipedia.org/wiki/Ellipsis) | "dot dot dot" |
-| `>>>` | a Python prompt | (triple) angled brackets, chevron |
-| `≠` | "not equal" sign, inequality written as `!=` in Python ||
-| `≈` | "approximately" symbol ||
-
-
-Whenever are talking about **_indentation_**, we are referring to the offset that is created using either the `Tab` key (on the right side of the keyboard) or to the sequence of spaces created using the `spacebar`.
+{:.important}
+➡️ Whenever are talking about **_indentation_**, we are referring to the offset that is created using either the `Tab` key (on the right side of the keyboard) or to the sequence of spaces created using the `spacebar`.
 
 ---
 
