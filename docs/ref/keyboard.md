@@ -7,7 +7,7 @@ nav_order: 1
 
 # 🔣 Keyboard Symbols
 
-{:.important}
+{: .highlight }
 ➡️ Whenever are talking about **_indentation_** in code, we are referring to the **offset** that is created using either the `Tab` key (4 spaces) or to a consistent sequence of spaces created using the `spacebar` (usually 2 or 4 spaces).
 
 ## ⌨️ Top Row Keys
