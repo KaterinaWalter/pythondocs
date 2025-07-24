@@ -74,5 +74,5 @@ Whenever are talking about **_indentation_**, we are referring to the offset tha
 
 #### Acknowledgement
 
-Content on this page is adapted from [Yekaterina Kharitonova](ucsb-csw8.github.io) with reference to [1](https://excelnotes.com/names-of-the-keyboard-symbols) and [2](https://finallylearn.com/what-are-the-keyboard-symbol-names>).
+Content on this page is adapted from [Yekaterina Kharitonova](https://ucsb-csw8.github.io/) with reference to [1](https://excelnotes.com/names-of-the-keyboard-symbols) and [2](https://finallylearn.com/what-are-the-keyboard-symbol-names>).
 {: .fs-2 }
