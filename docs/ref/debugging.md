@@ -63,7 +63,7 @@ Code not working? Follow the steps in the **debugging process** below _before_ a
 
 10. **If All Else Fails…**
 
-    * Comment out parts of your code and slowly re-enable them.
-    * Use an online tool like PythonTutor.com to step through code.
+    * **Comment out** sections of your code and slowly re-enable them.
+    * Use a visualization tool like [PythonTutor.com](https://pythontutor.com/python-compiler.html#mode=edit) to "step through" code, which shows what's happening **line-by-line**.
 
 
