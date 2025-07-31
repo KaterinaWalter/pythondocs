@@ -6,8 +6,9 @@ parent: "1️⃣ Python Bootcamp"
 nav_order: 5
 ---
 
-### Overview & Setup
-In this project, students will demonstrate their understanding of Python programming basics, including variables, data types, functions, loops, conditionals, dictionaries, and lists, by creating an interactive quiz. The quiz should take input from the user, process that input, and provide appropriate feedback based on the user’s responses.
+### Project Overview
+
+In this project, students will demonstrate understanding of Python programming basics, including variables, data types, functions, loops, conditionals, dictionaries, and lists, by creating an interactive quiz. The quiz should take input from the user, process that input, and provide appropriate feedback based on the user’s responses.
 
 - **Project Goal:** Develop an interactive trivia quiz in Python that tests the user’s knowledge on a topic of your choice (e.g., general knowledge, mathematics, history, etc.).
 - You are encouraged to be creative with the quiz topics and question types.
