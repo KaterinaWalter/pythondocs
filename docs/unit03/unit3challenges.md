@@ -1,22 +1,20 @@
 ---
-layout: project
-title: "💻 PROJECT #3.1"
-projectname: "Fun Web App"
+layout: notes
+title: "🎯Unit 3 Challenges" 
 parent: "3️⃣ Flask Web Apps"
 nav_order: 5
 ---
 
-### Overview & Setup
+## Table of Contents
+{: .no_toc .text-delta }
 
-<div class="setup" markdown="block">
+{: .fs-2 }
+- TOC
+{:toc}
 
-1. Go to the `CS3 Project 3.1` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
-  > 📁 Clicking the link generates a **private repository** for your project with the appropriate starter code. Note that **projects** are stored within the [BWL-CS Organization](https://github.com/BWL-CS), so you _cannot_ access it from the "Your Repositories" page!
-2. Open the repository in a **Codespace** whenever you spend time working on the program, in class or at home. 
-  > ⚠️ Always remember to `commit changes` after every coding session!
-3. When your project is complete, **submit the link to your repository** in the `CS3 Project 3.1` assignment on Blackbaud.
+---
 
-</div>
+## Flask Web App
 
 For your project, you will create a **custom Flask web application** that demonstrates your mastery of Flask, Jinja templates, and the concepts covered in the tutorial. The project is intentionally open-ended to encourage creativity. Choose a theme that interests you and build an app that is interactive, visually appealing, and functional.
 
