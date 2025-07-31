@@ -1,14 +1,19 @@
 ---
 layout: project
-title: "💻 PROJECT #2.4"
+title: "💻Unit 2 Project"
 projectname: "Exploratory Data Analysis"
 parent: "2️⃣ Data Science"
 nav_order: 8
 ---
 
-### Overview & Setup
+### Project Overview
 
+This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a large, real-world dataset of your choice to perform EDA.
 
+<html>
+  <details>
+    <summary>📥 <strong>SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
+    
 <div class="setup" markdown="block">
 
 1. Go to the `CS3 Project 2.4` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
@@ -19,7 +24,10 @@ nav_order: 8
 
 </div>
 
-This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a large, real-world dataset of your choice to perform EDA. The long-term project consists of THREE main deliverables:
+</details>
+</html>
+
+The long-term project consists of THREE main deliverables:
 
 1. A descriptive **markdown** text file
 2. A **python** code script
