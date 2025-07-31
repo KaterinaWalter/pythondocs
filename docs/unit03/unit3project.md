@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "💻 PROJECT #3.2"
+title: "💻Unit 3 Project"
 projectname: "C.R.U.D. Web App"
 parent: "3️⃣ Flask Web Apps"
 nav_order: 5
@@ -16,11 +16,11 @@ This project will help you practice **full-stack development** using `Flask` and
 
 <div class="setup" markdown="block">
 
-1. Go to the `CS3 Project 3.2` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
+1. Go to the `CS3 Unit 3 Project` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
   > 📁 Clicking the link generates a **private repository** for your project with the appropriate starter code. Note that **projects** are stored within the [BWL-CS Organization](https://github.com/BWL-CS), so you _cannot_ access it from the "Your Repositories" page!
 2. Open the repository in a **Codespace** whenever you spend time working on the program, in class or at home. 
   > ⚠️ Always remember to `commit changes` after every coding session!
-3. When your project is complete, **submit the link to your repository** in the `CS3 Project 3.2` assignment on Blackbaud.
+3. When your project is complete, **submit the link to your repository** in the `CS3 Unit 3 Project` assignment on Blackbaud.
 
 </div>
 
