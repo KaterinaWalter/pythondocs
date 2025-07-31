@@ -14,6 +14,10 @@ In this project, students will demonstrate their understanding of Python program
 - Testing your program thoroughly before submission is crucial to ensure it handles different inputs and scenarios effectively.
 - Collaboration with classmates is allowed, but each student must submit their unique quiz project.
 
+<html>
+  <details>
+    <summary>📥 <strong>SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
+    
 <div class="setup" markdown="block">
 
 1. Go to the `CS3 Unit 1 Project` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
@@ -23,6 +27,9 @@ In this project, students will demonstrate their understanding of Python program
 3. When your project is complete, **submit the link to your repository** in the `CS3 Unit 1 Project` assignment on Blackbaud.
 
 </div>
+
+</details>
+</html>
 
 ### Instructions & Requirements
 
