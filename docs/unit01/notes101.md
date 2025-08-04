@@ -129,7 +129,7 @@ Because Python is a *dynamic* language, we **don't need to declare the type** of
 That means that this is valid Python code:
 
 ```python
->>> x = 42
+x = 42
 ```
 
 Unlike typed languages, the type of what's contained in Python variables can change at any time.
@@ -137,8 +137,8 @@ Unlike typed languages, the type of what's contained in Python variables can cha
 For example, the below is perfectly valid Python code:
 
 ```python
->>> x = 42
->>> x = "hello"
+x = 42
+x = "hello"
 ```
 
 Here, the value of the variable `x` changed from a number to a string.
@@ -172,7 +172,7 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
 Python has a very easy way of determining the type of something, with the `type()` function.
 
 ```python
->>> num = 42
+num = 42
 >>> type(num)
 ```
 
@@ -369,87 +369,20 @@ There are two possible solutions here, for two different scenarios.
 8
 ```
 
-### ⭐️ Practice
+### Formatting Strings
 
-#### Types
-{: .no_toc }
-
-<html>
-<div class="task" markdown="block">
-
-List the type of the following variables using the `type()` function.
-
-```python
->>> x = 42
->>> y = 3 / 4
->>> z = int('7')
->>> a = float(5)
->>> name = "Nina"
-```
-
-</div>
-</html>
-
-#### Numbers
-{: .no_toc }
-
-<div class="task" markdown="block">
-
-Calculate the amount of rent you pay daily, by taking your monthly rent and diving it by 30.
-
-```python
->>> rent = 480
->>> per_day = rent / 30
->>> print(per_day)
-16.0
-```
-
-</div>
-
-#### Strings
-{: .no_toc }
-
-<div class="task" markdown="block">
-
-Try printing some things:
-
-```python
->>> print("Hello world")
-Hello world
->>> name = "Nina"
->>> print("My name is", name)
-My name is Nina
-```
-</div>
-
-The current recommended way to format string is with **f-Strings**. f-Strings are much more readable and easier to maintain than the previous methods. 
+The current recommended way to format string data is with **f-Strings**. f-Strings are much more readable and easier to maintain than the previous methods. 
 
 {:.highlight}
 With f-Strings, your string is prepended with the letter `f` and your **variables** or **expressions to interpret** are placed in `{brackets}`.
 
 ```python
->>> name = "Nina"
->>> print(f"Hello, my name is {name} and I pay ${rent / 30} in rent per day")
+name = "Nina"
+print(f"Hello, my name is {name} and I pay ${rent / 30} in rent per day")
+```
+```
 Hello, my name is Nina and I pay $16.0 in rent per day
 ```
-
-#### Helper Functions
-{: .no_toc }
-
-Python has a few built-in functions to help you if you get stuck. `type()` tells you what an object's type is, for example a string (`str`) or integer (`int`). `dir()` returns a list of valid attributes for an object, so you can quickly see what variables an object has or what functions you can call on it. `help()` brings up helpful documentation on any object. You can also type `help()` on its own to bring an interactive help console.
-
-<div class="task" markdown="block">
- Try it out: 
-    
-```python
->>> x = 42
->>> y = 3 / 4
->>> name = "Nina"
->>> type(x)
->>> type(y)
->>> type(name)
-```
-</div>
 
 ---
 ## Functions
@@ -926,158 +859,6 @@ For example:
 'https://api.github.com/search/repositories'
 >>>
 ```
-
-### ⭐️ Practice
-
-#### Functions
-{: .no_toc }
-
-<div class="task" markdown="block">
-
-Let's try creating a basic function. Use tab to indent the second line, and press enter on an empty line to finish the function.
-
-```python
->>> def add_numbers(x, y):
-...     return x + y
-... # Press Enter
-```
-
-Now let's try our new function. Type this into your REPL:
-
-```python
->>> add_numbers(1, 2)
-# Let's use the string formatting we learned in the last chapter
->>> print(f"The sum of 1 and 2 is {add_numbers(1, 2)}")
-```
-
-</div>
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
-```python
->>> add_numbers(1, 2)
-3
-# Let's use the string formatting we learned in the last chapter
->>> print(f"The sum of 1 and 2 is {add_numbers(1, 2)}")
-The sum of 1 and 2 is 3
-```
-
-</div>
-</details>
-</html>
-
-
-#### The Importance of Whitespace
-{: .no_toc }
-
-Here's an error that you'll become very familiar with during your career as a Pythonista, the `IndentationError`. Whitespace is important for defining function scope in python, so missing or extra indentations or spaces will cause the runtime to throw this error. Let's redefine our `add_numbers` function, but we'll forget to indent the second line, `return x + y`. Notice that the second line is directly under (at the same indentation level) as the `def`:
-
-```python
->>> def add_numbers(x, y):
-... return x + y
-  File "<stdin>", line 2
-    return x + y
-         ^
-IndentationError: expected an indented block
-```
-
-Notice how the runtime tells us the line that failed (`line 2`), gives you a copy of the line with an arrow pointing to the offending error (`return x + y`), and then tells you the error (`IndentationError`) with additional information (`expected an indented block`).
-
-#### Function Scope
-{: .no_toc }
-
-As we saw earlier, scoping in Python happens with whitespace. Let's see this in action:
-
-```python
->>> x = 1
->>> y = 2
->>> def add_numbers(x, y):
-...     print(f"Inside the function, x = {x} and y = {y}")
-...     return x + y
-...
->>> print(f"Outside the function, x = {x} and y = {y}")
->>> print(f"The sum of 5 and 6 is {add_numbers(5, 6)}")
-```
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
-```python
->>> x = 1
->>> y = 2
->>> def add_numbers(x, y):
-...     print(f"Inside the function, x = {x} and y = {y}")
-...     return x + y
-...
->>> print(f"Outside the function, x = {x} and y = {y}")
-Outside the function, x = 1 and y = 2
->>>
->>> print(f"The sum of 5 and 6 is {add_numbers(5, 6)}")
-Inside the function, x = 5 and y = 6
-The sum of 5 and 6 is 11
-```
-
-</div>
-</details>
-</html>
-
-#### Positional Arguments vs Keyword Arguments
-{: .no_toc }
-
-The `x` and `y` arguments for our `add_numbers()` function are called positional arguments. Python also lets us declare *keyword* arguments. Keyword arguments are great for setting default values, because passing them is optional. Just remember that keyword arguments must come *after* any positional arguments. 
-
-<div class="task" markdown="block">
-
-Let's define a more generic function for doing math:
-
-```python
->>> def calculate_numbers(x, y, operation="add"):
-...     if operation == "add":
-...         return x + y
-...     elif operation == "subtract":
-...         return x - y
-...
-# Let's try our new function. Remember, if we don't pass the operation keyword argument, the default is "add"
->>> calculate_numbers(2, 3)
-# You can pass a keyword argument as a normal positional argument
->>> calculate_numbers(2, 3, "subtract")
-# You can also use the argument's keyword. This helps with readability
->>> calculate_numbers(2, 3, operation="subtract")
-```
-
-</div>
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
-```python
->>> def calculate_numbers(x, y, operation="add"):
-...     if operation == "add":
-...         return x + y
-...     elif operation == "subtract":
-...         return x - y
-...
-# Let's try our new function. Remember, if we don't pass the operation keyword argument, the default is "add"
->>> calculate_numbers(2, 3)
-5
-# You can pass a keyword argument as a normal positional argument
->>> calculate_numbers(2, 3, "subtract")
--1
-# You can also use the argument's keyword. This helps with readability
->>> calculate_numbers(2, 3, operation="subtract")
--1
-```
-
-</div>
-</details>
-</html>
 
 ---
 ## Data Collections
