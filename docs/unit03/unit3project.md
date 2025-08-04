@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "💻Unit 3 Project"
+title: "💻 Unit 3 Project"
 projectname: "Full-Stack C.R.U.D. App"
 parent: "3️⃣ Flask Web Apps"
 nav_order: 5
