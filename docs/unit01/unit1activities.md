@@ -2,7 +2,7 @@
 layout: notes
 title: "🎯 Unit 1 Activities" 
 parent: "1️⃣ Python Bootcamp"
-nav_order: 4
+nav_order: 5
 ---
 
 ## Table of Contents
