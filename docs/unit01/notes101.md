@@ -475,11 +475,11 @@ val = foo()
 print(val)
 ```
 
-{:.highlight}
 As we explore simple functions, our `return` statements will usually be at the **END** of the function, but that's not the only way they can be used. A function can have multiple `return` statements, and those `return` statements can be used to help control the flow of the program.
 
 
-### Indentation
+#### Indentation
+{: .no_toc }
 
 One of the most important aspects of functions is **indentation**. Remember, Python doesn't use curly braces to figure out what's inside a function like other languages you've seen like JavaScript or Java.
 > Python _knows what code is related to a function_ by how it's indented. Anything that's indented **one level deep** under the function declaration is part of the function, no matter how many spaces there are between lines.
@@ -614,7 +614,7 @@ Traceback (most recent call last):
 TypeError: say_greeting() missing 1 required positional argument: 'greeting'
 ```
 
-#### You can pass in none, some, or all of the keyword arguments.
+#### You can pass in none, some, or all of the keyword arguments
 {: .no_toc }
 
 If your function takes keyword arguments, you can provide zero, one, or all of them when you call it. You don't need to pass these arguments in order either.
