@@ -847,5 +847,11 @@ For example:
 >>>
 ```
 
+---
 
+#### Acknowledgement
+{: .no_toc }
+
+Content on this page is adapted from [LearnPython - Nina Zakharenko](https://www.learnpython.dev/).
+{: .fs-2 }
 
