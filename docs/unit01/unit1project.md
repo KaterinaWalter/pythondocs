@@ -17,7 +17,7 @@ In this project, students will demonstrate understanding of Python programming b
 
 <html>
   <details>
-    <summary>📥 <strong>SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
+    <summary class="text-green-100">📥 <strong>SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
     
 <div class="setup" markdown="block">
 
