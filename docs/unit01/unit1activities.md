@@ -59,7 +59,7 @@ In this activity, you’ll write Python functions that represent steps in cookin
 
 You'll also **call** your functions, and sometimes **store the result** if the function returns a value.
 
-### PART A: Functions with No Arguments and No Return
+### PART A: Functions with No Arguments + No Return
 
 <div class="task" markdown="block">
 
@@ -84,7 +84,7 @@ def welcome_message():
 
 ---
 
-### PART B: Functions with Arguments and No Return
+### PART B: Functions with Arguments + No Return
 
 <div class="task" markdown="block">
 
@@ -101,7 +101,7 @@ def list_ingredients(main_ingredient, side_dish):
 
 </div> 
 
-### PART C: Functions with Arguments and Return
+### PART C: Functions with Arguments + Return
 
 <div class="task" markdown="block">
 
@@ -162,9 +162,9 @@ def cook_recipe():
 
 ## 💿 ACTIVITY #2: Data Collection Drills
 
-In this activity, you’ll practice working with the 4 built-in data collections: `Lists`, `Tuples`, `Sets`, and `Dictionaries`.
+In this activity, you’ll practice working with the 4 built-in **data collections**: `Lists`, `Tuples`, `Sets`, and `Dictionaries`.
 
-Each **drill** is short and focused. **TYPE the code**, **RUN it**, and then **record your observations as comments** (`#`) in your program. 
+Each drill is short and focused. **TYPE the code**, **RUN it**, and then **record your observations as comments** (`#`) in your program. 
 
 ### PART A: Lists
 
@@ -267,51 +267,39 @@ Tuples are like lists, but **immutable** — once created, they **can’t be cha
 <div class="task" markdown="block">
 
 1. Create a simple tuple:
-
 ```python
 my_tuple = ("red", "green", "blue")
 print(my_tuple)
 # What values are inside this tuple?
 ```
-
 1. Access individual items:
-
 ```python
 print(my_tuple[0])
 print(my_tuple[-1])
 # What was printed in each case? Why does negative indexing work?
 ```
-
 1. Try to change a value:
-
 ```python
 my_tuple[1] = "yellow"
 # What happens? What error do you get?
 ```
-
 1. Create a single-item tuple:
-
 ```python
 one_item = ("hello",)
 print(one_item)
 # What do you notice about the syntax?
 ```
-
 1. Count how many times an item appears:
-
 ```python
 colors = ("red", "blue", "red", "green", "red")
 print(colors.count("red"))
 # How many "red" entries are there?
 ```
-
 1. Find the index of the first match:
-
 ```python
 print(colors.index("green"))
 # What position is "green" in the tuple?
 ```
-
 </div>
 
 
@@ -322,46 +310,35 @@ Sets are **unordered** collections that only keep **unique values**.
 <div class="task" markdown="block">
 
 1. Make a set:
-
 ```python
 my_set = {"apple", "banana", "cherry"}
 print(my_set)
 # Does the order match what you typed? Why or why not?
 ```
-
 1. Add a new item:
-
 ```python
 my_set.add("orange")
 print(my_set)
 # What changed?
 ```
-
 1. Try adding a duplicate:
-
 ```python
 my_set.add("banana")
 print(my_set)
 # Did anything change? Why or why not?
 ```
-
 1. Remove an item:
-
 ```python
 my_set.remove("apple")
 print(my_set)
 # Which item is gone?
 ```
-
 1. Use `discard()` instead of `remove()`:
-
 ```python
 my_set.discard("pear")
 # What happened? Was there an error?
 ```
-
 1. Combine sets:
-
 ```python
 tropical = {"banana", "mango", "papaya"}
 all_fruits = my_set.union(tropical)
@@ -378,60 +355,45 @@ Dictionaries store data in **key-value pairs** — think of them like labeled co
 <div class="task" markdown="block">
 
 1. Make a dictionary:
-
 ```python
 my_dict = {"name": "Sam", "age": 16, "grade": "11th"}
 print(my_dict)
 # What keys and values are present?
 ```
-
 1. Get a value using its key:
-
 ```python
 print(my_dict["age"])
 # What value did this return?
 ```
-
 1. Try accessing a missing key:
-
 ```python
 print(my_dict["school"])
 # What error do you get?
 ```
-
 1. Change the grade:
-
 ```python
 my_dict["grade"] = "12th"
 print(my_dict)
 # Did the value update?
 ```
-
 1. Add a new key-value pair:
-
 ```python
 my_dict["school"] = "Central High"
 print(my_dict)
 # What’s the new key and value?
 ```
-
 1. Remove a key:
-
 ```python
 del my_dict["age"]
 print(my_dict)
 # Which key is missing now?
 ```
-
 1. Use `.get()` to safely access a key:
-
 ```python
 print(my_dict.get("locker"))
 # What value was returned? Was there an error?
 ```
-
 1. Loop through keys and values:
-
 ```python
 for key, value in my_dict.items():
     print(key, "->", value)
