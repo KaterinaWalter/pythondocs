@@ -16,7 +16,7 @@ nav_order: 2
 
 <html>
   <details>
-    <summary>📓 <strong class="text-green-200">PROGRAM SETUP INSTRUCTIONS FOR CLASS NOTES</strong></summary>
+    <summary>📓 <strong class="text-green-200">NOTES PROGRAM SETUP INSTRUCTIONS</strong></summary>
     
 <div class="setup" markdown="block">
 
