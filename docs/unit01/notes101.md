@@ -244,7 +244,7 @@ long_greeting = """
 
 #### The `print()` Function
 
-Strings can be printed out using the `print()` function in Python.
+Strings can be printed out (_displayed_) using the `print()` function in Python.
 
 To use the `print()` function, call it with a **string literal** or a **variable**:
 
@@ -263,8 +263,7 @@ Python has a very easy way of determining the type of something, with the `type(
 num = 42
 print(type(num))
 ```
-
-The output in this case would be: `<class 'int'>`.
+> The output in this case would be: `<class 'int'>`.
 
 #### No-Value, `None`, or Null Value
 {: .no_toc }
@@ -279,7 +278,7 @@ print(x)
 
 #### String Formatting
 
-There are several types of string formatting in Python. If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called **f-strings**.
+There are several types of string formatting in Python. If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called **f-Strings**.
 
 {:.highlight}
 With f-Strings, your string is prepended with the letter `f` and your **variables** or **expressions to interpret** are placed in `{brackets}`.
@@ -291,11 +290,9 @@ print(f"Hello, my name is {name} and I pay ${rent / 30} in rent per day")
 ```
 Hello, my name is Nina and I pay $16.0 in rent per day
 ```
-
-**f-strings** allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster to type.
+> **f-Strings** allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster to type.
 
 ### Common Mistakes
-{:.no_toc}
 
 There are a few common errors that you'll encounter when working with Strings and numbers. In Python programs, errors are called `Exceptions`. By going over what they are, you'll be able to recognize them immediately.
 
@@ -356,9 +353,10 @@ There are two possible solutions here, for two different scenarios.
 ```
 
 ---
+
 ## Functions
 
-The purpose of functions in Python are to **create reusable code**. If we find ourselves copying and pasting the same code multiple times, that's a good sign that a function might help!
+The purpose of _functions_ in Python are to **create reusable code**. If we find ourselves copying and pasting the same code multiple times, that's a good sign that a function might help!
 
 ### Defining Functions
 
