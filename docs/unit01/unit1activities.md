@@ -160,410 +160,326 @@ def cook_recipe():
 
 ---
 
-## ACTIVITY #2: Data Collection Drills
+## 💿 ACTIVITY #2: Data Collection Drills
+
+In this activity you will practice working with the 4 built-in data collections: `Lists`, `Tuples`, `Sets`, and `Dictionaries`. 
+
+Great call! Adding reflection questions with comments deepens understanding and reinforces good habits. Here's the updated version with those prompts woven into the drills:
+
+---
+
+## 💿 ACTIVITY #2: Data Collection Drills
+
+In this activity, you’ll practice your skills with the 4 built-in data collections: `Lists`, `Tuples`, `Sets`, and `Dictionaries`.
+
+Each **drill** is short and focused. **TYPE the code**, **RUN it**, and then **record your observations as comments** (`#`) in your program. 
+
+---
 
 ### PART A: Lists
 
-Lists are great for storing an ordered sequence of objects. 
+Lists are **ordered**, **changeable** collections. 
 
 <div class="task" markdown="block">
 
-Remember that you can see the current state of your list at any time by typing the name of your list by itself. Check your list after every operation to see if it has changed.
+1. Create a list of letters:
 
 ```python
->>> my_list = ["h", "e", "l", "l", "o"]
-# Let's look at our list:
->>> my_list
-# Let's add to my_list:
->>> my_list.append("!")
-# Now let's see it again:
->>> my_list
+my_list = ["h", "e", "l", "l", "o"]
 ```
-</div>
 
-<div class="task" markdown="block">
-
-Let's play with slices. How do we get the last two elements of our list?
+1. Print the list to check it:
 
 ```python
-# We know the number of items in our list is 6...
->>> len(my_list)
-6
-# So the last two indexes are 4 and 5. Since the first number in the slice is inclusive, and the second number is exclusive, we can ask for everything between index 4 and 6
->>> my_list[4:6]
-# We can also say "Give me everything after index 4
->>> my_list[4:]
-# Or, we can ask for just the last two items without caring how big the list is. This means "give me everything starting from two before the end":
->>> my_list[-2:]
+print(my_list)
+# What do you see? Record it here:
 ```
-</div>
 
-<div class="task" markdown="block">
-
-There are many other ways to interact with our lists as well:
+1. Add an exclamation mark to the end:
 
 ```python
-# Remove the first L:
->>> my_list.remove("l")
-# Let's put it back at index 2
->>> my_list.insert(2, "l")
-
-# Delete any element
->>> del my_list[0]
-# Remove and return the last element. Useful for queues!
->>> last_item = my_list.pop()
->>> last_item
-
-# We can also look at individual items my using an index:
->>> my_list[2]
-# Or we can see if a certain value exists in the list:
->>> "!" in my_list
-# Let's sort our list in reverse order
->>> my_list.sort(reverse=True)
->>> my_list
-# Note that sort() doesn't return anything, it sorts the list in-place
-# You can also use the sorted() function to return a new, sorted list without modifying the old one
->>> sorted(my_list, reverse=False)
->>> my_list
+my_list.append("!")
 ```
-</div>
 
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
+1. Print the list again:
 
 ```python
->>> my_list = ["h", "e", "l", "l", "o"]
->>> my_list
-['h', 'e', 'l', 'l', 'o']
->>> my_list.append("!")
->>> my_list
-['h', 'e', 'l', 'l', 'o', '!']
+print(my_list)
+# What changed? Describe the difference between the original and updated list:
+```
 
->>> len(my_list)
-6
->>> my_list[4:6]
-['o', '!']
->>> my_list[4:]
-['o', '!']
->>> my_list[-2:]
-['o', '!']
+1. How many items are in the list?
 
->>> my_list.remove("l")
->>> my_list.insert(2, "l")
->>> del my_list[0]
->>> last_item = my_list.pop()
->>> last_item
-'o'
->>> my_list[2]
-'l'
->>> "!" in my_list
-False
->>> my_list.sort(reverse=True)
->>> my_list
-['o', 'l', 'l', 'h', 'e', '!']
->>> sorted(my_list, reverse=False)
-['!', 'e', 'h', 'l', 'l', 'o']
+```python
+print(len(my_list))
+# How many elements are there? Record it:
+```
+
+1. Get the last two items using positive indexes:
+
+```python
+print(my_list[4:6])
+# What values were returned? Why do those indexes work?
+```
+
+1. Try slicing from index 4 to the end:
+
+```python
+print(my_list[4:])
+# What do you notice? Is the result the same as above?
+```
+
+1. Now try negative indexing:
+
+```python
+print(my_list[-2:])
+# What does this do? Why is it useful?
+```
+
+1. Remove the first `"l"`:
+
+```python
+my_list.remove("l")
+print(my_list)
+# What changed? Where did it remove the "l" from?
+```
+
+1. Put it back at index 2:
+
+```python
+my_list.insert(2, "l")
+print(my_list)
+# Did it go where you expected? What is at index 2 now?
+```
+
+1. Delete the first element:
+
+```python
+del my_list[0]
+print(my_list)
+# What item got removed?
+```
+
+1. Remove and save the last item:
+
+```python
+last_item = my_list.pop()
+print(last_item)
+print(my_list)
+# What item was removed? What’s left in the list?
+```
+
+1. Print the item at index 2:
+
+```python
+print(my_list[2])
+# What is it?
+```
+
+1. Check if `"!"` is in the list:
+
+```python
+print("!" in my_list)
+# True or False? Why?
+```
+
+1. Sort the list in reverse order:
+
+```python
+my_list.sort(reverse=True)
+print(my_list)
+# What is the new order? Did sort() return anything?
+```
+
+1. Create a sorted copy without changing the original:
+
+```python
+print(sorted(my_list))
+print(my_list)
+# Did the original change? What’s the difference between sorted() and sort()?
 ```
 
 </div>
-</details>
-</html>
 
 ### PART B: Tuples
 
-Tuples are a lightweight way to hold information that describes something, like a person - their name, age, and hometown. You can think about it kind of like a row in a spreadsheet. Tuples are represented inside parentheses, however parentheses are not required to create a tuple, just a sequence of objects followed by commas.
+Tuples are like lists, but **immutable** — once created, they **can’t be changed**.
 
 <div class="task" markdown="block">
 
-Try this:
+1. Create a simple tuple:
 
 ```python
->>> my_tuple = 1,
->>> my_tuple
-# Let's add to our tuple
->>> my_tuple[1] = 2
+my_tuple = ("red", "green", "blue")
+print(my_tuple)
+# What values are inside this tuple?
+```
+
+1. Access individual items:
+
+```python
+print(my_tuple[0])
+print(my_tuple[-1])
+# What was printed in each case? Why does negative indexing work?
+```
+
+1. Try to change a value:
+
+```python
+my_tuple[1] = "yellow"
+# What happens? What error do you get?
+```
+
+1. Create a single-item tuple:
+
+```python
+one_item = ("hello",)
+print(one_item)
+# What do you notice about the syntax?
+```
+
+1. Count how many times an item appears:
+
+```python
+colors = ("red", "blue", "red", "green", "red")
+print(colors.count("red"))
+# How many "red" entries are there?
+```
+
+1. Find the index of the first match:
+
+```python
+print(colors.index("green"))
+# What position is "green" in the tuple?
 ```
 
 </div>
 
-Oops! Remember that tuples are immutable, so you can't change them once they've been created. Tuples are great for moving data around in a lightweight way, because you can unpack them easily into multiple variables.
-
-<div class="task" markdown="block">
-Try this:
-    
-```python
->>> person = ('Jim', 29, 'Austin, TX')
->>> name, age, hometown = person
->>> name
->>> age
->>> hometown
-```
-
-</div>
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
-```python
->>> my_tuple = 1,
->>> my_tuple
-(1,)
->>> my_tuple[1] = 2
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: 'tuple' object does not support item assignment
-```
-
-```python
->>> person = ('Jim', 29, 'Austin, TX')
->>> name, age, hometown = person
->>> name
-'Jim'
->>> age
-29
->>> hometown
-'Austin, TX'
-```
-
-</div>
-</details>
-</html>
 
 ### PART C: Sets
 
-Sets are a great data type for storing unique data - you can only have one of any given object in a set. Sets are unordered, thus you can't access them with `[]` indexing syntax, but they do have some handy functions.
+Sets are **unordered** collections that only keep **unique values**.
 
 <div class="task" markdown="block">
 
-Let's play with some set operations:
+1. Make a set:
 
 ```python
-# Create an empty set
->>> my_set = {}
->>> type(my_set)
-# Gotcha: using {} actually creates an empty dictionary. To create an empty set, use set()
->>> my_set = set()
->>> my_set
-
-# Let's create a non-empty set
->>> my_set = {1, 2, 3}
-# We can add and remove items from the set
->>> my_set.add(4)
->>> my_set.remove(2)
-# We can test if an item exists in the set
->>> 2 in my_set
-
-# Unlike lists, every item in a set must be unique
->>> my_set
->>> my_set.add(3)
->>> my_set
-# There is still only one 3 in the set
-
->>> my_set
-# my_set should equal {1, 3, 4}
->>> my_other_set = {1, 2, 3}
-# We can combine two sets
->>> my_set.union(my_other_set)
-# We can get the intersection of two sets
->>> my_set.intersection(my_other_set)
-# We can get the difference of two sets
->>> my_set.difference(my_other_set)
-
+my_set = {"apple", "banana", "cherry"}
+print(my_set)
+# Does the order match what you typed? Why or why not?
 ```
-</div>
 
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
+1. Add a new item:
+
 ```python
->>> my_set = {}
->>> type(my_set)
-<class 'dict'>
->>> my_set = set()
->>> type(my_set)
-<class 'set'>
+my_set.add("orange")
+print(my_set)
+# What changed?
+```
 
->>> my_set = {1, 2, 3}
->>> my_set.add(4)
->>> my_set.remove(2)
->>> 2 in my_set
-False
+1. Try adding a duplicate:
 
->>> my_set
-{1, 3, 4}
->>> my_set.add(3)
->>> my_set
-{1, 3, 4}
+```python
+my_set.add("banana")
+print(my_set)
+# Did anything change? Why or why not?
+```
 
->>> my_other_set = {1, 2, 3}
->>> my_set.union(my_other_set)
-{1, 2, 3, 4}
->>> my_set.intersection(my_other_set)
-{1, 3}
->>> my_set.difference(my_other_set)
-{4}
+1. Remove an item:
+
+```python
+my_set.remove("apple")
+print(my_set)
+# Which item is gone?
+```
+
+1. Use `discard()` instead of `remove()`:
+
+```python
+my_set.discard("pear")
+# What happened? Was there an error?
+```
+
+1. Combine sets:
+
+```python
+tropical = {"banana", "mango", "papaya"}
+all_fruits = my_set.union(tropical)
+print(all_fruits)
+# What items are in the result? Any duplicates?
 ```
 
 </div>
-</details>
-</html>
 
 ### PART D: Dictionaries
 
-Dictionaries are great for storing data that you can index with keys. The keys must be unique, and the dictionaries *are* stored in the order you inserted items, however this is only guaranteed as of Python 3.7.
+Dictionaries store data in **key-value pairs** — think of them like labeled containers.
 
 <div class="task" markdown="block">
 
-Try this:
-    
+1. Make a dictionary:
+
 ```python
->>> my_dict = {"key": "value"}
-# Remember, dictionaries don't have numerical indexes like lists, so if you try to use an index number...
-# Unless 0 happens to be a key.
->>> my_dict[0]
-# You'll get a KeyError!
-
-# Let's put some more things into our dictionary
->>> my_dict["hello"] = "world"
->>> my_dict["foo"] = "bar"
->>> my_dict
-
-# What was the value for "hello" again?
->>> my_dict["hello"]
-# You can also use get() to get a key
->>> my_dict.get("hello")
-# What if the key you want doesn't exist?
->>> my_dict["baz"]
-# If you're not sure if a key exists, you can ask:
->>> "baz" in my_dict
-# Or you can use a default value. If "baz" doesn't exist, return "boo":
->>> my_dict.get("baz", "boo")
-
-# Let's try separating the dictionary into lists of keys and values:
->>> my_dict.keys()
->>> my_dict.values()
-
-# What if we want to iterate over a dictionary's items? We can use the items() function to get a list of tuples:
->>> my_dict.items()
+my_dict = {"name": "Sam", "age": 16, "grade": "11th"}
+print(my_dict)
+# What keys and values are present?
 ```
-</div>
 
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
+1. Get a value using its key:
+
 ```python
->>> my_dict = {"key": "value"}
->>> my_dict[0]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-KeyError: 0
+print(my_dict["age"])
+# What value did this return?
+```
 
->>> my_dict["hello"] = "world"
->>> my_dict["foo"] = "bar"
->>> my_dict
-{'foo': 'bar', 'hello': 'world', 'key': 'value'}
+1. Try accessing a missing key:
 
->>> my_dict["hello"]
-'world'
->>> my_dict.get("hello")
-'world'
->>> my_dict["baz"]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-KeyError: 'baz'
->>> "baz" in my_dict
-False
->>> my_dict.get("baz", "default response")
-'default response'
+```python
+print(my_dict["school"])
+# What error do you get?
+```
 
->>> my_dict.keys()
-['foo', 'hello', 'key']
->>> my_dict.values()
-['bar', 'world', 'value']
+1. Change the grade:
 
->>> my_dict.items()
-[('foo', 'bar'), ('hello', 'world'), ('key', 'value')]
+```python
+my_dict["grade"] = "12th"
+print(my_dict)
+# Did the value update?
+```
+
+1. Add a new key-value pair:
+
+```python
+my_dict["school"] = "Central High"
+print(my_dict)
+# What’s the new key and value?
+```
+
+1. Remove a key:
+
+```python
+del my_dict["age"]
+print(my_dict)
+# Which key is missing now?
+```
+
+1. Use `.get()` to safely access a key:
+
+```python
+print(my_dict.get("locker"))
+# What value was returned? Was there an error?
+```
+
+1. Loop through keys and values:
+
+```python
+for key, value in my_dict.items():
+    print(key, "->", value)
+# What got printed? How does this help you read the dictionary?
 ```
 
 </div>
-</details>
-</html>
-
-
-### PART E: Mutability
-
-Remember, in Python, some data types are **immutable** -- that means that once they're created, their contents can't be changed. Tuples are immutable - once you make one, you can't alter it, you can only make a new one. Conversely, lists, dictionaries, and sets are mutable - you can change them without making new ones.
-
-<div class="task" markdown="block">
-
-Let's see this in practice:
-
-```python
-# Lists are mutable
->>> my_list = [1, 2, 3]
->>> my_list[0] = 'a'
->>> my_list
-
-# Dictionaries are also mutable
->>> my_dict = {"hello": "world"}
->>> my_dict["foo"] = "bar"
->>> my_dict
-
-# Sets are mutable, but don't support indexing or item assignment, so you have to use add() and remove()
->>> my_set = {1, 2, 3}
->>> my_set[0] = 'a' # This will throw a TypeError
->>> my_set.add('a')
->>> my_set
-
-# Tuples are immutable
->>> my_tuple = (1, 2, 3)
->>> my_tuple[0] = 'a' # This will throw a TypeError
-```
-</div>
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-    
-```python
->>> my_list = [1, 2, 3]
->>> my_list[0] = 'a'
->>> my_list
-['a', 2, 3]
-
->>> my_dict = {"hello": "world"}
->>> my_dict["foo"] = "bar"
->>> my_dict
-{'hello': 'world', 'foo': 'bar'}
-
->>> my_set = {1, 2, 3}
->>> my_set[0] = 'a'
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: 'set' object does not support item assignment
->>> my_set.add('a')
->>> my_set
-{1, 2, 3, 'a'}
-
->>> my_tuple = (1, 2, 3)
->>> my_tuple[0] = 'a'
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: 'tuple' object does not support item assignment
-```
-
-</div>
-</details>
-</html>
 
 ---
 
