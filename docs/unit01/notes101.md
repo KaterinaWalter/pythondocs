@@ -110,6 +110,7 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
 **Variables** in Python allow us to store information and give it a label that we can use to retrieve that information later. We can use variables to store numbers, strings (a sequence of characters), or even more complex data types like lists and dictionaries.
 
+{: .highlight }
 We assign _values_ to _variables_ by putting the _value_ to the right of an equal sign.
 
 Because Python is a *dynamic* language, we **don't need to declare the type** of the variables before we store data in them.
@@ -119,8 +120,9 @@ That means that this is valid Python code:
 ```python
 x = 42
 ```
+> Compare to variable initialization in Java: `int x = 42;`
 
-Unlike strictly-typed languages, the **type** of what's contained in Python variables can change at any time!
+Unlike strictly-typed languages, the **type** of what's contained in Python variables can CHANGE at any time!
 
 For example, the below is perfectly valid Python code:
 
@@ -146,7 +148,7 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
 
 <div class="warn" markdown="block">
 
-* You can't start your variable name with a numerical digit, although your variable name can end in a digit. 
+* You can't _start_ your variable name with a numerical digit, although your variable name can _end_ in a digit. 
 * Your variable name can't contain special characters, such as `!`,  `@`,  `#`, `$`,  `%` and more.
 * There are some things that you can't name your variables, such as `and`, `if`, `True`, or `False`. That's because Python uses these names for program control structure.
 * 💣 Python will let you override built-in methods and types without a warning so don't name your Python variables things like `list`, `str`, or `int`.
@@ -155,7 +157,7 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
 </div>
 
 ### Numbers
-There are three different types of numbers in Python: `int` for Integer, Float, and Complex.
+There are three different types of numbers in Python: `int` for **Integer**, **Float**, and **Complex**.
 
 ```python
 # These are all integers
@@ -179,6 +181,7 @@ x = 42j
 In Python, Integers and other simple data types are just **objects** under the hood. That means that you can create new ones by calling methods. You can provide either a number, or a string. This will come in handy later on in the course.
 
 ```python
+# Converting number types
 x = int(4)
 y = int('4')
 z = float(5.0)
@@ -201,11 +204,9 @@ In Python, Booleans are of type `bool`. Surprisingly, the boolean types `True` a
 * `True` is `1` under the hood.
 * `False` is `0` under the hood.
 
-That means you can do silly things, like add two Boolean numbers together, but I'll cover why this is a useful Python feature later in the course.
-
 ### Strings
 
-Strings in Python can be enclosed either with single quotes like `'hello'` or double quotes, like `"hello"`.
+String text in Python can be enclosed either with single quotes like `'hello'` or double quotes, like `"hello"`.
 
 Strings can also be **concatenated** (added together) using the `+` operator to combine an arbitrary number of Strings. For example:
 
