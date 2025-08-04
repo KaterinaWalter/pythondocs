@@ -18,7 +18,7 @@ nav_order: 0
 ## Assignments & Grading
 
 ### Projects (40% of overall grade)
-* 💻 **Creative Projects** serve as the bulk of our coursework. There will be one major project assigned per unit that we will work on in class over several weeks. 
+* 💻 **Projects** serve as the bulk of our coursework. There will be one major project assigned per unit that we will work on in class over several weeks. These projects have minimum requirements but are largely graded on your **creative effort**.   
 * Projects will always follow this workflow:
 > 1. A link to a **GitHub template repository** will be provided as starter code. A `repository`, or "repo," is like a 📂 _project folder_ 📂 that contains several code files.
 > 2. You will write your code in the **GitHub Codespaces IDE**. An `IDE` is an "Integrated Development Environment," which means an application (or web-app) where you can _write and run code_.
