@@ -70,8 +70,7 @@ print(len(names))
 ```
 > Returns `3`
 
-### Indexes and Indices
-{: .no_toc }
+#### Indexes/Indices
 
 **Lists retain the order** of the items in them. In the next section, you'll learn about some data structures that don't.
 
@@ -92,7 +91,7 @@ print(names[2])
 
 </div>
 
-#### Updating an item in a list
+##### Updating an item in a list
 {: .no_toc }
 
 To update a particular item in a `list` use square-bracket notion and assign a new value. `my_list[pos] = new_value`
@@ -188,7 +187,7 @@ To reverse the items of a list in-place, call `my_list.reverse()` on it.
 [11, 45, 2, 32423, 4, 1]
 ```
 
-#### `list` operations cheat sheet
+#### `list` Operations
 
 | action                                           	| method                                	| returns           	| possible errors                            	|
 |--------------------------------------------------	|---------------------------------------	|-------------------	|--------------------------------------------	|
@@ -250,21 +249,6 @@ Use `my_list.insert(pos, item)` to insert items in an arbitrary position in the 
 ['Rose', 'Nina', 'Max', 'John']
 ```
 
-You can call `dir()` on our names list to verify that it's actually of type `list`. If you forget which order insert is called in, don't forget you can always use the `help()` function on the REPL. **Remember: Press `q` to quit the help screen.** Let's try it now:
-
-```python
->>> type(names)
-<class 'list'>
->>> help(names.insert)
-
-Help on method_descriptor:
-
-insert(self, index, object, /)
-    Insert object before index.
-```
-
-You can also call help on `names.insert`. Because `names` is already of type `list`, it achieves the same result.
-
 ##### `my_list.extend(other_list)` adds all the contents of `other_list` to `my_list`
 {: .no_toc }
 
@@ -278,8 +262,7 @@ You can also call help on `names.insert`. Because `names` is already of type `li
 ['Nina', 'Max', 'Red', 'Blue']
 ```
 
-#### Looking for Items
-{: .no_toc }
+#### Searching for Items
 
 Looking for items in a list is *slow*. Each item needs to be checked in order to find a match.
 
@@ -331,7 +314,6 @@ ValueError: 'Rose' is not in list
 ```
 
 #### Updating Items
-{: .no_toc }
 
 To update items in a list, use the *position* of the item you'd like to change using square bracket `[]` syntax. Like: `my_list[pos] = new_item`
 
@@ -368,7 +350,6 @@ IndexError: list assignment index out of range
 ```
 
 #### Removing Items
-{: .no_toc }
 
 There are a few ways to remove items from a list.
 
@@ -779,7 +760,7 @@ We use dictionaries when we want to be able to quickly access additional data as
 
 Looking for a key in a large dictionary is extremely fast. Unlike lists, we don't have to check every item for a match.
 
-### `dict`ionary cheat sheet
+#### Dictionary cheat sheet
 {: .no_toc }
 
 | type               	| `dict`                                                                                                                                             	|
@@ -793,29 +774,10 @@ Looking for a key in a large dictionary is extremely fast. Unlike lists, we don'
 | mutable?           	| **Yes**. Can add or remove keys from `dict`s.                                                                                                      	|
 | in-place sortable? 	| **No**. `dict`s don't have an index, only keys.                                                                                                    	|
 
-### Examples
-{: .no_toc }
-
-#### Empty `dict`s
-{: .no_toc }
-
-We already learned one of the methods of creating an empty `dict` when we tried (and failed) to create an empty set with `{}`. The other way is to use the `dict()` method.
-
-```python
->>> my_dict = {}
->>> type(my_dict)
-<class 'dict'>
-
->>> my_dict = dict()
->>> type(my_dict)
-<class 'dict'>
-```
-
 #### Creating `dict`s with items
 {: .no_toc }
 
 If we want to create `dict`s with items in them, we need to pass in key, value pairs. A `dict` is declared with curly braces `{}`, followed by a key and a value, separated with a colon `:`. Multiple key and value pairs are separated with commas `,`.
-
 
 We can call familiar methods on our dictionary, like finding out how many key / value pairs it contains with the built-in `len(my_dict)` method.
 
@@ -826,7 +788,7 @@ We can call familiar methods on our dictionary, like finding out how many key / 
 3
 ```
 
-#### Side note: What can be used as keys?
+##### Side note: What can be used as keys?
 {: .no_toc }
 
 Any type of object, mutable or immutable, can be used as a value but just like `set`s, `dict`ionaries can only use immutable types as keys. That means you can use `int`, `str`, or even `tuple` as a key, but **not** a `set`, `list`, or other `dict`ionary.
@@ -848,8 +810,7 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
-#### Accessing
-{: .no_toc }
+#### Accessing Dictionary Items
 
 Our `dict` contains `key`, `value` pairs. Because a `dict`ionary isn't ordered, we *can't access the items in it by position*. Instead, to access the items in it, we use square-bracket `my_dict[key]` notation, similar to how we access items in a list with square bracket notation containing the position.
 
@@ -861,9 +822,7 @@ Our `dict` contains `key`, `value` pairs. Because a `dict`ionary isn't ordered, 
 'two'
 ```
 
-Q: What happens when we try to access a key in a `dict`ionary with square bracket notation, but the key isn't present?
-
-{:.highlight}
+{:.warning}
 We'll get a `KeyError: key` if we try to access `my_dict[key]` with square bracket notation, but `key` isn't in the dictionary.
 
 ```python
@@ -928,10 +887,10 @@ Just like with `list`s an `set`s, you can update the items in a dictionary with 
 {'r': 'Red', 'g': 'Green', 1: 'one', 2: 'two'}
 ```
 
-### Complex Dictionaries
+#### Complex Dictionaries
 {: .no_toc }
 
-One incredibly useful scenario for dictionaries is storing the values in a `list` or other sequence. Going into too much detail is outside of the scope of the class, but I'll show you a quick example:
+One incredibly useful scenario for dictionaries is storing the values in a `list` or other sequence. 
 
 ```python
 >>> colors = {"Green": ["Spinach"]}
@@ -942,8 +901,7 @@ One incredibly useful scenario for dictionaries is storing the values in a `list
 {'Green': ['Spinach', 'Apples']}
 ```
 
-### Working with `items`, `keys`, and `values`
-{: .no_toc }
+#### Working with `items`, `keys`, & `values`
 
 There are three useful methods you need to remember about `dict`ionary access:
 
@@ -951,7 +909,7 @@ There are three useful methods you need to remember about `dict`ionary access:
 2. `my_dict.values()`
 3. `my_dict.items()`
 
-#### 1. `my_dict.keys()` Getting all the keys in a dictionary
+##### 1. `my_dict.keys()` Getting all the keys in a dictionary
 {: .no_toc }
 
 ```python
@@ -960,7 +918,7 @@ There are three useful methods you need to remember about `dict`ionary access:
 dict_keys([1, 2, 3, 8])
 ```
 
-#### 2. `my_dict.values()` Getting all the values in a dictionary.
+##### 2. `my_dict.values()` Getting all the values in a dictionary.
 {: .no_toc }
 
 ```python
@@ -969,7 +927,7 @@ dict_keys([1, 2, 3, 8])
 dict_values(['one', 'two', 'three', 'eight'])
 ```
 
-#### 3. `my_dict.items()` Getting all the items (key, value pairs) in a dictionary
+##### 3. `my_dict.items()` Getting all the items (key, value pairs) in a dictionary
 {: .no_toc }
 
 Notice that `my_dict.items()` returns a type that looks like a list. It contains two-item `tuple`s containing the key, value pairs.
