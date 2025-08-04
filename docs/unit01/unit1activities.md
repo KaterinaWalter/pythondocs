@@ -82,8 +82,6 @@ def welcome_message():
 
 </div> 
 
----
-
 ### PART B: Functions with Arguments + No Return
 
 <div class="task" markdown="block">
@@ -117,8 +115,6 @@ def make_dish(ingredient1, ingredient2):
 
 </div> 
 
----
-
 ### PART D: Functions with Optional Arguments
 
 <div class="task" markdown="block">
@@ -134,8 +130,6 @@ def add_spice(dish, spice="paprika"):
 📣 Call it once **with** the spice and once **without** the spice.
 
 </div> 
-
----
 
 ### PART E: Review Challenge
 
