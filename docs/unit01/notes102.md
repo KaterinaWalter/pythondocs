@@ -806,8 +806,8 @@ Your set will update with each character of the `str`ing, which was probably not
 #### `set` operations cheat sheet
 {: .no_toc }
 
- method operation    	| symbol operation 	| result                                                                        	|
-|---------------------	|------------------	|-------------------------------------------------------------------------------	|
+| Method Operation    	| Symbol Operation 	| Result    |
+| ---------------------	| ------------------	| ---------------------------	|
 | `s.union(t)`        	| <code>s &#124; t</code> | creates a new set with all the items **from both `s` and `t`**             |
 | `s.intersection(t)` 	| `s & t`          	| creates a new set containing *only* items that are **both in `s` and in `t`** 	|
 | `s.difference(t)`    	| `s ^ t`          	| creates a new set containing items that are **not in both `s` and in `t`**                        	|
