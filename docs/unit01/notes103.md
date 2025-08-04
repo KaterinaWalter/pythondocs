@@ -1,8 +1,8 @@
 ---
 layout: notes
-title: "📓1.2: Control Structures" 
+title: "📓1.3: Control Structures" 
 parent: "1️⃣ Python Bootcamp"
-nav_order: 2
+nav_order: 3
 ---
 
 ## Table of Contents
