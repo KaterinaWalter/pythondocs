@@ -16,7 +16,7 @@ nav_order: 1
 
 <html>
   <details>
-    <summary>📓 <strong class="text-green-200">NOTES PROGRAM SETUP</strong></summary>
+    <summary>📓 <strong class="text-green-200">PROGRAM SETUP INSTRUCTIONS FOR CLASS NOTES</strong></summary>
     
 <div class="setup" markdown="block">
 
@@ -30,6 +30,8 @@ nav_order: 1
 7. 📝 Take notes in this Codespace during class, writing `code` & `comments` along with the instructor.
 
 </div>
+
+<br>
 
 <div class="warn" markdown="block">
 
