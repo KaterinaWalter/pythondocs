@@ -106,7 +106,7 @@ _There are multiple steps to saving in GitHub Codespaces:_
   </details>
 </html>
 
-### Variables
+### Variables Store Data
 
 **Variables** in Python allow us to store information and give it a label that we can use to retrieve that information later. We can use variables to store numbers, strings (a sequence of characters), or even more complex data types like lists and dictionaries.
 
@@ -120,7 +120,7 @@ That means that this is valid Python code:
 x = 42
 ```
 
-Unlike typed languages, the type of what's contained in Python variables can change at any time.
+Unlike strictly-typed languages, the **type** of what's contained in Python variables can change at any time!
 
 For example, the below is perfectly valid Python code:
 
@@ -128,8 +128,7 @@ For example, the below is perfectly valid Python code:
 x = 42
 x = "hello"
 ```
-
-Here, the value of the variable `x` changed from a number to a string.
+> Here, the value of the variable `x` changed from a number to a string.
 
 #### Naming Variables
 {: .no_toc }
@@ -243,27 +242,26 @@ long_greeting = """
                 """
 ```
 
-### The `print()` Function
+#### The `print()` Function
 
 Strings can be printed out using the `print()` function in Python.
 
-To use the `print()` function, call it with a regular or formatted string.
+To use the `print()` function, call it with a **string literal** or a **variable**:
 
 ```python
->>> print("Hello")
-Hello
->>> name = "Nina"
->>> print(name)
-Nina
+print("Hello")
+
+name = "Katerina"
+print(name)
 ```
 
-### The `type()` Function
+#### The `type()` Function
 
 Python has a very easy way of determining the type of something, with the `type()` function.
 
 ```python
 num = 42
->>> type(num)
+print(type(num))
 ```
 
 The output in this case would be: `<class 'int'>`.
@@ -273,30 +271,31 @@ The output in this case would be: `<class 'int'>`.
 
 There's a special type in Python that signifies no value at all. In other languages, it might be called Null. In Python, it's called `None`.
 
-If you try to examine a variable on the REPL that's been set to `None`, you won't see any output. We'll talk more about the `None` type later in the class.
+```python
+x = None
+print(x)
+```
+> If you try to examine a variable that's been set to `None`, you won't see any output. We'll talk more about the `None` type later in the class.
+
+#### String Formatting
+
+There are several types of string formatting in Python. If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called **f-strings**.
+
+{:.highlight}
+With f-Strings, your string is prepended with the letter `f` and your **variables** or **expressions to interpret** are placed in `{brackets}`.
 
 ```python
->>> x = None
->>> x
+name = "Nina"
+print(f"Hello, my name is {name} and I pay ${rent / 30} in rent per day")
+```
+```
+Hello, my name is Nina and I pay $16.0 in rent per day
 ```
 
-### String Formatting
-
-There are several types of string formatting in Python.
-
-If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called **f-strings**.
-
-```python
->>> name = "Nina"
->>> greeting = f"Hello, {name}"
-
->>> print(greeting)
-Hello, Nina
-```
-
-**f-strings** allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster.
+**f-strings** allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster to type.
 
 ### Common Mistakes
+{:.no_toc}
 
 There are a few common errors that you'll encounter when working with Strings and numbers. In Python programs, errors are called `Exceptions`. By going over what they are, you'll be able to recognize them immediately.
 
@@ -354,21 +353,6 @@ There are two possible solutions here, for two different scenarios.
 >>> str_num = "3"
 >>> print(int(str_num) + 5)
 8
-```
-
-### Formatting Strings
-
-The current recommended way to format string data is with **f-Strings**. f-Strings are much more readable and easier to maintain than the previous methods. 
-
-{:.highlight}
-With f-Strings, your string is prepended with the letter `f` and your **variables** or **expressions to interpret** are placed in `{brackets}`.
-
-```python
-name = "Nina"
-print(f"Hello, my name is {name} and I pay ${rent / 30} in rent per day")
-```
-```
-Hello, my name is Nina and I pay $16.0 in rent per day
 ```
 
 ---
