@@ -53,18 +53,16 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
 ---
 
-## Flask Web App
+## 🌐 ACTIVITY #1: Fun Web App
 
 For your project, you will create a **custom Flask web application** that demonstrates your mastery of Flask, Jinja templates, and the concepts covered in the tutorial. The project is intentionally open-ended to encourage creativity. Choose a theme that interests you and build an app that is interactive, visually appealing, and functional.
 
-#### Project Goal
+#### Objective
+{:.no_toc}
+
 Design and develop a **themed Flask web application** with at least **three interconnected pages**, using templates, routing, static files, and basic control structures. The app should showcase your skills in creating a dynamic and engaging user experience.
 
----
-
-### Project Instructions
-
-#### 1. Choose a Theme
+### PART A: Choose a Theme
 Pick a theme for your app that excites you! _Examples:_
 - **Interactive Museum**: A virtual tour showcasing exhibits with descriptions and images.
 - **Game Hub**: A hub featuring game stats, leaderboards, or interactive minigames.
@@ -73,7 +71,7 @@ Pick a theme for your app that excites you! _Examples:_
 - **Recipe Book**: A site with recipes and an interactive ingredient search.
 - **Music Library**: A site where users can explore albums or songs, complete with audio previews.
 
-#### 2. Create Your Flask App
+### PART B: Create Your Flask App
 1. **App Structure**: Organize your app into the following folders and files:
     ```
     project/
@@ -99,19 +97,21 @@ Pick a theme for your app that excites you! _Examples:_
    - Include navigation links to all pages.
    - Use Jinja placeholders and control structures for dynamic content.
 
-#### 3. Add Styling and Interactivity
+### PART C: Add Styling and Interactivity
 - **CSS**: Style your app to match the theme using custom CSS in the `static/style.css` file.
 - **JavaScript** (optional): Add simple interactivity, like a button that displays a message or a dynamic clock.
 - **Images and Icons**: Add images or icons in the `static` folder for visual appeal.
 
-#### 4. Showcase Flask Features
+### PART D: Showcase Flask Features
 Incorporate the following features:
 - **Dynamic Data**: Use variables, URL parameters, or data from a JSON file to populate your pages.
 - **Control Structures**: Use `if` statements, loops, or conditions in your templates.
 - **Static Files**: Include at least one custom CSS file and one image.
 - **API Endpoint**: Create a route that serves a JSON response.
 
-### Minimum Requirements
+#### Minimum Requirements
+{:.no_toc}
+
 1. **Pages**: A minimum of three HTML pages, extending a base template.
 2. **Dynamic Content**:
    - At least one page must dynamically change based on input or URL parameters.
@@ -120,17 +120,13 @@ Incorporate the following features:
 5. **Static Files**: Use at least one image and one stylesheet.
 6. **Documentation**: Include comments in your code explaining key sections.
 
-### Bonus Challenges
+#### Bonus Challenges
+{:.no_toc}
+
 - Use HTML **forms** to gather user input. 
 - Add **user authentication** (e.g., login/logout with dummy data).
 - Incorporate **JavaScript** to enhance interactivity.
 - Use Flask's `flash` or `session` for notifications or user session data.
 - Implement a basic database with `Flask-SQLAlchemy`.
 
----
-
-#### Acknowledgement
-{: .no_toc }
-
-Content on this page is adapted from []().
-{: .fs-2 }
+--- 
