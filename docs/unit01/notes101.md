@@ -493,7 +493,7 @@ To add a level of **indentation**, just press the `Tab` key on your keyboard aft
 Once you've defined a function, you can call it from your Python code as many times as you'd like.
 
 {:.important}
-To call a Python function: type its **name**, along with **parentheses** `( )`, and pass in any *required* **arguments** to the function.
+📣 To CALL a Python function: type its **name**, along with **parentheses** `( )`, and pass in any *required* **arguments** to the function.
 
 #### With no arguments
 {: .no_toc }
@@ -501,45 +501,42 @@ To call a Python function: type its **name**, along with **parentheses** `( )`, 
 Let's try it now, with a function that doesn't require arguments.
 
 ```python
->>> def hello_world():
-...     print("Hello, World!")
-...
->>> hello_world()
-Hello, World!
+def hello_world():
+    print("Hello, World!")
+
+# Call function
+hello_world()
 ```
 
 #### With arguments
 {: .no_toc }
 
-Let's try it again, this time with a function that does accept arguments.
+Let's try it again, this time with a function that does accept arguments – it needs **INPUT** to work. 
 
 {:.highlight}
-Here, note that the function accepts **names** for the arguments. But, when we call the function, we're passing in **values**.
+Here, note that the function _definition_ accepts **variable names** for the arguments. But, when we _call_ the function, we're passing in actual **values**.
 
 ```python
->>> def add_numbers(x, y):
-...     return x + y
-...
->>> add_numbers(3, 5)
-8
->>>
+def add_numbers(x, y):
+    return x + y
+
+# Call function
+add_numbers(3, 5)
 ```
 
-#### Storing the `return`ed value of a function.
+#### Storing the `return` value of a function
 {: .no_toc }
 
-Storing the `return`ed value of a function is easy. All you need to do is assign it to a variable.
+Storing the `return`ed value (**OUTPUT**) of a function is easy. All you need to do is assign the function call to a variable: 
 
 ```python
->>> def add_numbers(x, y):
-...     return x + y
-...
->>> new_number = add_numbers(3, 5)
->>> new_number
-8
-```
+def add_numbers(x, y):
+    return x + y
 
-The variable `new_number` now contains the result of running our `add_numbers` function with our arguments `3` and `5`.
+new_number = add_numbers(3, 5)
+print(new_number)
+```
+> The variable `new_number` now contains the result of running our `add_numbers` function with our arguments `3` and `5`.
 
 ### Arguments in Practice
 {: .no_toc }
@@ -547,22 +544,22 @@ The variable `new_number` now contains the result of running our `add_numbers` f
 #### Positional arguments are required
 {: .no_toc }
 
-Positional arguments are all required, and must be given in the order they are declared.
+Positional arguments are all **required**, and must be given in the **order** they are declared.
 
-For example, this function doesn't do what we expected, because we passed in our arguments in the wrong order.
+For example, this function doesn't do what we expected, because we passed in our arguments in the wrong order:
 
 ```python
->>> def say_greeting(name, greeting):
-...     print(f"{greeting}, {name}.")
-...
->>> say_greeting("Hello!", "Nina")
-Nina, Hello!.
+def say_greeting(name, greeting):
+    print(f"{greeting}, {name}.")
+
+say_greeting("Hello!", "Nina")
 ```
 
 #### Keyword arguments with default values
 {: .no_toc }
 
-Functions can accept two types of named arguments, ones without default values, and ones with default values. Arguments that have default values are called **keyword arguments**. The nice thing about defaults is they can be overridden when needed.
+Functions can accept two types of named arguments, ones without default values, and ones with default values. Arguments that have default values are called **keyword arguments**. 
+> The nice thing about defaults is they can be _overridden_ when needed.
 
 Let's see this in practice, by writing two functions that print out a greeting. One function will have a default argument to make things easier for us.
 
@@ -570,42 +567,15 @@ Let's see this in practice, by writing two functions that print out a greeting. 
 # No default arguments
 def say_greeting(greeting, name):
     print(f"{greeting}, {name}.")
+```
 
-# Default argument - greeting will always be
-# Hello, if one isn't provided.
+Let's make a new function, `say_greeting_with_default` that accepts two arguments -- `name`, and a now **optional** argument, `greeting`. 
+```python
+# Default argument
 def say_greeting_with_default(name, greeting="Hello", punctuation="!"):
     print(f"{greeting}, {name}{punctuation}")
 ```
-
-#### Without default arguments
-{: .no_toc }
-
-Now, let's try calling our function with no default arguments:
-
-```python
->>> # No Default arguments
->>> def say_greeting(greeting, name):
-...     print(f"{greeting}, {name}.")
-...
->>> say_greeting("Good Day", "Nina")
-Good Day, Nina.
-```
-
-#### Using default arguments
-{: .no_toc }
-
-Let's make a new function, `say_greeting_with_default` that accepts two arguments -- `name`, and a now **optional** argument, `greeting`. If `greeting` is not passed in, it will default to `Hello`.
-
-```python
->>> # With Default Arguments
->>> def say_greeting_with_default(name, greeting="Hello", punctuation="!"):
-...     print(f"{greeting}, {name}{punctuation}")
-...
->>> say_greeting_with_default("Nina")
-Hello, Nina!
->>> say_greeting_with_default("Nina", "Good Day")
-Good Day, Nina!
-```
+> If `greeting` is not passed in, it will default to `Hello`.
 
 #### Order matters!
 {: .no_toc }
@@ -634,7 +604,6 @@ There are a few important things to know about calling functions with arguments.
 
 Arguments without default values are **required** by Python. Otherwise your function wouldn't know what to do! If you don't pass in all the required arguments, you'll get a `TypeError`.
 
-In the REPL:
 ```python
 >>> def say_greeting(name, greeting):
 ...     print(f"{greeting}, {name}.")
@@ -734,7 +703,7 @@ A great resource to help you figure out the best naming conventions to use in yo
 
 ### Function Scope
 
-Inside of a function in Python, the **scope** changes.
+🔎 Inside of a function in Python, the **scope** changes.
 
 Think about it this way: scoping in Python happens with **whitespace**. When we delineate the code a function contains by indenting it under a function definition, it's scope **changes** to a new internal scope. It has access to the variables defined outside of it, but it can't change them.
 
