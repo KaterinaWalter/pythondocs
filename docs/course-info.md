@@ -18,18 +18,19 @@ nav_order: 0
 ## Assignments & Grading
 
 ### Projects (40% of overall grade)
-* 💻 **Projects** serve as the bulk of our coursework. There will be one major project assigned per unit that we will work on in class over several weeks. These projects have minimum requirements, but are largely graded on your **creative effort**!   
-* Projects will always follow this workflow:
+* 💻 **Projects** serve as the bulk of our coursework. There will be one major project assigned per unit that we will work on in class over several weeks.
+ * These projects have minimum requirements to test your technical skills, but are largely graded on your 🎨 **creative effort**!   
+* _Projects will always follow this workflow:_
 > 1. A link to a **GitHub template repository** will be provided as starter code. A `repository`, or "repo," is like a 📂 _project folder_ 📂 that contains several code files.
 > 2. You will write your code in the **GitHub Codespaces IDE**. An `IDE` is an "Integrated Development Environment," which means an application (or web-app) where you can _write and run code_.
 > 3. Your completed project will be submitted on **Blackbaud** by copying your 🔗 _repository link_ 🔗. 
 
 * 💯 **GRADE IMPROVEMENT POLICY**: You may <span class="highlighter">re-submit projects for a full RE-GRADE</span>, but you must email me to let me know which project, and it must be completed at least one week BEFORE the end of the current quarter.
-  * When re-working your projects, you are encouraged to come to office hours for help or more feedback. I am way more likely to grade your work favorably if you've shown effort towards improving your skills...
-  * Coding is an iterative process which means it is VERY normal not to have your programs working perfectly the first time! Programmers often have to edit their code many times.
+  * When re-working your projects, you are encouraged to come to office hours for help or additional feedback. I am way more likely to grade your work favorably if you have shown effort towards improving your skills...
+  * Coding is an **iterative process** which means it is VERY normal not to have your programs working perfectly the first time! Programmers often have to edit their code many times.
   
 {: .warning .fs-3 }
-✉️ Whenever you update or resubmit a project, especially after the assignment has been graded on Blackbaud, you must **SEND ME AN EMAIL**! _Otherwise I will not be notified._
+📧 Whenever you update or resubmit a project, especially after the assignment has been graded on Blackbaud, you must **SEND ME AN EMAIL**! _Otherwise I will not be notified._
 
 * Projects are graded on a 5-point scale, and **EXTRA CREDIT** is always available to encourage effort and creativity. _See the rubric section below for details._
 
@@ -95,14 +96,14 @@ nav_order: 0
 {: .highlight .fs-3 }
 CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
-* _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on Blackbaud** that includes a **GitHub repository link** to a working program that you will **analyze collaboratively**.
-  * To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate.
-  * See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
+* _How it works:_
+> 1. At the beginning of each week, I will **post a DISCUSSION assignment on Blackbaud** that includes a **GitHub repository link** to a working program that you will **analyze collaboratively**.
+> 2. To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate. See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
 
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 {: .warning .fs-3 }
-✉️ Whenever you submit homework late, especially after the assignment has been graded on Blackbaud, you must **SEND ME AN EMAIL**! _Otherwise I will not be notified._
+📧 Whenever you submit homework late, especially after the assignment has been graded on Blackbaud, you must **SEND ME AN EMAIL**! _Otherwise I will not be notified._
 
 ### Classwork (30% of overall grade)
 * 📝 **Classwork** involves a mix of note-taking lessons and interactive coding activities:
@@ -178,15 +179,18 @@ If these steps are not followed, your use of GenAI will be considered an **acade
 ⏰ If you are **over 5 minutes late**, you must first get a LATE PASS from the Upper School Office and then enter the classroom QUIETLY as to not disrupt the class. 
 
 ### Other Classroom Policies
-* 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter"> TBD </span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you want to stop by during those periods.  
+* 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> during <span class="highlighter"> TBD </span>.
+  * Drop-ins are welcome, meaning there is no need to let me know in advance if you want to stop by during those periods.  
  
 {: .highlight .fs-3 } 
 You may email me to schedule an appointment at a different time, ONLY IF you have other classes during my scheduled office hours. _Include a list of your free periods in your email!_
 
 * 📝 You can leave a **sticky note on my desk** for anything you want me to remember to do.
-  * _Ex: “Please re-grade my project”_
-* 🖊️ **Student supplies** (pens, pencils, sticky notes, etc.) will always be available to borrow, located up front by the whiteboard. No need to ask, but please return pens/pencils after class! 
-* 🤞 **SILENTLY SIGNAL** that you need to leave for the bathroom or water by holding up crossed fingers. Just make sure I acknowledge you are leaving the room first - wait for me to give a thumbs up 👍
+  * _Ex: “Please re-grade my Unit 1 Project”_
+* 🖊️ **Student supplies** (pens, pencils, sticky notes, etc.) will always be available to borrow, located up front by the whiteboard.
+  * No need to ask, but please return pens/pencils after class! 
+* 🤞 **SILENTLY SIGNAL** that you need to leave for the bathroom or water by holding up crossed fingers.
+  * Just make sure I acknowledge you are leaving the room first - wait for me to give a thumbs up 👍
 * 📱 **NO-PHONE ZONE!** → as per the new BWL Upper School policy, phones must be locked up downstairs while you are in the building.
   * If you are caught with a cell phone in class, it will be confiscated immediately and you will be sent to the Upper School office.
 * 🖥️ Using your personal **LAPTOP** is a _privilege_.
