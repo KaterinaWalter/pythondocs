@@ -1057,11 +1057,11 @@ Notice that `my_dict.items()` returns a type that looks like a list. It contains
 dict_items([(1, 'one'), (2, 'two'), (3, 'three'), (8, 'eight')])
 ```
 
-### Mutability
+## Mutability
 
 Mutability, simply put: the contents of a mutable object can be changed, while the contents of an immutable object cannot be.
 
-#### Simple Types
+### Simple Data Types
 {: .no_toc }
 
 All of the simple data types we covered first are **immutable**
@@ -1072,7 +1072,7 @@ All of the simple data types we covered first are **immutable**
 | `str`                     	| store strings           	| **no**   	|
 | `bool`                    	| store `True` or `False` 	| **no**   	|
 
-#### Container Types
+### Collection/Container Types
 {: .no_toc }
 
 For the mutability of the container types we covered in this chapter, check this helpful list:
