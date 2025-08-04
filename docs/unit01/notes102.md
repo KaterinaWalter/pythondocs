@@ -49,33 +49,26 @@ Lists are one of the most powerful data types in Python. Generally, they're cont
 | in-place sortable?        	| Yes. `my_list.sort()` will sort the list in-place. `my_list.sort(reverse=True)` will sort the list in-place in *descending* order. `my_list.reverse()` will *reverse the items* in `my_list` in-place.           	|
 
 
-Let's create a few lists to see how they work.
-
-An empty list can be created in two ways. The first, by calling the `list()` method. More commonly, it's created with two empty brackets `[]`. Don't forget to check the type of the list with the `type` built-in function.
+An _empty list_ can be created in two ways. The first, by calling the `list()` method. More commonly, it's created with two empty brackets `[]`. 
 
 ```python
->>> list()
-[]
->>> []
-[]
->>> type(list())
-<class 'list'>
->>> type([])
-<class 'list'>
+empty_list = list()
+another_empty_list = []
 ```
+> Confirm the data type of the list with the `type()` built-in function
 
-Let's create our list with a few items in it. Let's say we want to keep track of a list of names. We add items to our list, and separate them with commas `,`.
+Let's create a list with a few items in it. Let's say we want to keep track of a list of names. We add items to our list as strings, and separate them with commas `,`:
 
 ```python
->>> names = ["Nina", "Max", "Jane"]
+names = ["Nina", "Max", "Jane"]
 ```
 
-We can check its length with the built-in `len()` method, like so:
+We can check its **length** with the built-in `len()` method, like so:
 
 ```python
->>> len(names)
-3
+print(len(names))
 ```
+> Returns `3`
 
 ### Indexes and Indices
 {: .no_toc }
@@ -89,11 +82,12 @@ In order to *access* items in a list, we'll need to use an *index*. (Multiple in
 
 <div class="task" markdown="block">
 
+Try accessing the individual items in our list: 
+
 ```python
->>> names = ["Nina", "Max", "Jane"]
->>> names[0]
->>> names[1]
->>> names[2]
+print(names[0])
+print(names[1])
+print(names[2])
 ```
 
 </div>
@@ -106,14 +100,13 @@ To update a particular item in a `list` use square-bracket notion and assign a n
 <div class="task" markdown="block">
 
 ```python
->>> names = ["Nina", "Max", "Jane"]
->>> names[2] = "Floyd"
->>> names
+names[2] = "Floyd"
+print(names)
 ```
 </div>
 
-{:.highlight}
-If you try to access an index that is greater than or equal to (>=) the length of the list, you'll get an `IndexError`.
+{:.warning}
+If you try to access an index that is greater than or equal to (>=) the **length** of the list, you'll get an `IndexError`.
 
 ```python
 >>> names = ["Nina", "Max", "Jane"]
@@ -125,28 +118,11 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-#### Formatting
+
+#### Common Mistakes
 {: .no_toc }
 
-{:.highlight}
-We can *optionally* add new lines after the commas. This helps with readability for more complex list items.
-
-Notice that we can also *optionally* add a trailing comma after the last item. A trailing comma isn't required to create a valid list, but it does help minimize version control differences when working on a Python codebase with a team.
-
-```python
->>> names = [
-... "Nina",
-... "Max",
-... "Jane",
-... ]
-```
-
-
-### Common Mistakes
-{: .no_toc }
-
-{:.highlight}
-If you forget to include commas between your items, you'll get a `SyntaxError`.
+If you forget to include commas between your items, you'll get a `SyntaxError`:
 
 ```python
 >>> numbers = [1, 2 3]
@@ -156,38 +132,16 @@ If you forget to include commas between your items, you'll get a `SyntaxError`.
 SyntaxError: invalid syntax
 ```
 
-The REPL makes it difficult to forget the closing bracket, but if you forget it while writing code in a Python file, you'll see a `SyntaxError` with a different name. It'll say: `SyntaxError: unexpected EOF while parsing` or `SyntaxError: invalid syntax`.
+If you forget the closing bracket, you'll see a `SyntaxError` with a different name. It'll say: `SyntaxError: unexpected EOF while parsing` or `SyntaxError: invalid syntax`. In these cases, you also need to check the line of code **before** the line with the `SyntaxError`. 
 
-For example:
-
-```python
-# Python file: program.py
-names = ["Nina",
-x = 5
-```
-
-Notice how the `SyntaxError` points to a completely valid line of Python code. In these cases, you also need to check the line of code **before** the line with the `SyntaxError`. There, we'll notice that we forgot the closing bracket of our `names` list.
-
-```bash
-# In a shell
-(env) $ python program.py
-  File "/Users/nina/Desktop/program.py", line 2
-    x = 5
-      ^
-SyntaxError: invalid syntax
-```
-
-### Sorting
-{: .no_toc }
+#### Sorting Lists
 
 Sorting sounds complicated, but in practice, it's just one method call away!
 
-#### Sorting a Copy Of Your List
+##### Sorting a copy of your list
 {: .no_toc }
 
 If you'd like sort to return a brand new copy of your list, instead of modifying your original copy, you can use the built-in `sorted(my_list)` function on your list to return a *new* `list`, sorted in increasing (ascending) order. Or use `sorted(my_list, reverse=True)` to create a new `list` sorted backwards, in decreasing (or descending) order. This operation will **not modify** the underlying list.
-
-Either of these operations will return a *new* list.
 
 ```python
 >>> lottery_numbers = [1, 4, 32423, 2, 45, 11]
@@ -201,7 +155,7 @@ Either of these operations will return a *new* list.
 [1, 4, 32423, 2, 45, 11]
 ```
 
-#### Sorting the list in-place
+##### Sorting in-place
 {: .no_toc }
 
 You can call `my_list.sort()` on your list to sort it in increasing (ascending) order, or `my_list.sort(reverse=True)` on the list to sort it backwards, in decreasing (or descending) order. This operation will modify the underlying list, and *doesn't return a value*.
@@ -222,7 +176,7 @@ You can call `my_list.sort()` on your list to sort it in increasing (ascending) 
 ['Apple', 'Fox', 'Umbrella']
 ```
 
-#### Reverse the list in-place
+##### Reverse a list in-place
 {: .no_toc }
 
 To reverse the items of a list in-place, call `my_list.reverse()` on it.
@@ -234,14 +188,7 @@ To reverse the items of a list in-place, call `my_list.reverse()` on it.
 [11, 45, 2, 32423, 4, 1]
 ```
 
-### Finding Methods
-{: .no_toc }
-
-Remember, if you ever forget which methods are available on `list`, just call `dir` on it. Ignore the methods that start with underscores. If you need help remembering what a method does, you can call `help()` on it. For example, for append, call `help(list.append)`.
-
-#### Adding, Removing, Changing, and Finding Items in `list`s cheat sheet
-{: .no_toc }
-
+#### `list` operations cheat sheet
 
 | action                                           	| method                                	| returns           	| possible errors                            	|
 |--------------------------------------------------	|---------------------------------------	|-------------------	|--------------------------------------------	|
@@ -257,7 +204,7 @@ Remember, if you ever forget which methods are available on `list`, just call `d
 | **remove** the last item, or an item at an index 	| `my_list.pop()` or `my_list.pop(pos)` 	| `item`            	| `IndexError` if `pos` >= `len(my_list)`    	|
 
 
-#### Checking Length
+##### Checking Length
 {: .no_toc }
 
 Before we add or remove items, it's usually a good idea to check a list's length. We do that with the `len` built in function. We can even use the `len` built in function to check the lengths of other types, like strings.
@@ -272,7 +219,7 @@ Let's see it in action on a names `list` with two items, and a name `str`ing wit
 4
 ```
 
-### Adding Items
+#### Adding Items
 {: .no_toc }
 
 Let's start with a list of two names.
@@ -331,7 +278,7 @@ You can also call help on `names.insert`. Because `names` is already of type `li
 ['Nina', 'Max', 'Red', 'Blue']
 ```
 
-### Looking for Items
+#### Looking for Items
 {: .no_toc }
 
 Looking for items in a list is *slow*. Each item needs to be checked in order to find a match.
@@ -359,7 +306,7 @@ False
 
 Notice that only the *first* index of the string `"Nina"` is returned. We'll learn more about what an index is in the next chapter.
 
-{:.highlight}
+{:.warning}
 If the item we're looking for *is not* in the list, Python will throw a `ValueError`.
 
 You'll learn how to deal with exceptions later. For now, you can use the `in` operator to check if an item is present in the list before finding its index.
@@ -383,7 +330,7 @@ ValueError: 'Rose' is not in list
 0
 ```
 
-### Updating Items
+#### Updating Items
 {: .no_toc }
 
 To update items in a list, use the *position* of the item you'd like to change using square bracket `[]` syntax. Like: `my_list[pos] = new_item`
@@ -407,7 +354,7 @@ Or, when used with `my_list.index(item)`:
 ['Nina', 'Rose']
 ```
 
-{:.highlight}
+{:.warning}
 You'll see a `IndexError: list assignment index out of range` if you try to update an item in a position that doesn't exist, that is *if the position is greater than or equal to `>=` the length of the list*.
 
 ```python
@@ -420,7 +367,7 @@ Traceback (most recent call last):
 IndexError: list assignment index out of range
 ```
 
-### Removing Items
+#### Removing Items
 {: .no_toc }
 
 There are a few ways to remove items from a list.
@@ -443,7 +390,7 @@ Be careful. `remove()` only removes the first instance of the item from the list
 ['Max', 'Nina']
 ```
 
-{:.highlight}
+{:.warning}
 If we try to remove an item that's not in the list, we'll get a `ValueError: list.remove(x): x not in list`.
 
 ```python
@@ -471,7 +418,7 @@ Using `pop()` will also **return** the item that was in that position. That's us
 ['Nina']
 ```
 
-{:.highlight}
+{:.warning}
 If we try to pop an item from an index that is longer than or equal to the length of the list, we'll get an `IndexError: pop index out of range`.
 
 ```python
@@ -503,15 +450,11 @@ You might ask, why tuples when Python already has lists? Tuples are different in
 | mutable?           	| **No**                                                                                                  	|
 | in-place sortable? 	| **No**                                                                                                  	|
 
-#### Uses
-{: .no_toc }
-A good use of a `tuple` might be for storing the information for a *row* in a spreadsheet. That data is information only. We don't necessarily care about updating or manipulating that data. We just want a read-only snapshot.
 
+A good use of a `tuple` might be for storing the information for a *row* in a spreadsheet. That data is information only. We don't necessarily care about updating or manipulating that data. We just want a _read-only_ snapshot.
+> Tuples are an interesting and powerful datatype, and one of the more unique aspects of Python. Most other programming languages have ways of representing lists and dictionaries, but only a small subset contain tuples. Use them to your advantage.
 
-Tuples are an interesting and powerful datatype, and one of the more unique aspects of Python. Most other programming languages have ways of representing lists and dictionaries, but only a small subset contain tuples. Use them to your advantage.
-
-### Examples
-{: .no_toc }
+<!--
 
 #### Empty and one-item `tuple`s
 {: .no_toc }
@@ -542,16 +485,18 @@ It didn't work! `type((1))` is an `int`eger. In order to create a one-item tuple
 {:.highlight}
 If you're creating a one-item tuple, you **must** include a trailing comma, like this: `(1, )`
 
-#### Creation
+-->
+
+#### Tuple Creation
 {: .no_toc }
 
 Let's say we have a spreadsheet of students, and we'd like to represent each row as a tuple.
 
 ```python
->>> student = ("Marcy", 8, "History", 3.5)
+student = ("Marcy", 8, "History", 3.5)
 ```
 
-#### Access by index
+#### Tuple Access by index
 {: .no_toc }
 
 We can access items in the `tuple` by index, but we **can't change them**.
@@ -566,19 +511,18 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 ```
 
-{:.highlight}
+{:.warning}
 We'll see `TypeError: 'tuple' object does not support item assignment` if we try to change the items in a tuple.
 
 `tuple`s also don't have an `append` or `extend` method available on them like lists do, because they can't be changed.
 
-### `tuple` unpacking.
+#### Tuple unpacking
 {: .no_toc }
 
 Sounds like a lot of work for not a lot of benefit, right? Not so. `tuple`s are great when you depend on your data staying unchanged. Because of this guarantee, we can use `tuples` in other types of containers like `set`s and `dict`ionaries.
+> It's also a great way to quickly consolidate information.
 
-It's also a great way to quickly consolidate information.
-
-You can also use `tuples` for something called unpacking. Let's see it in action:
+You can also use `tuples` for something called **unpacking**. Let's see it in action:
 
 ```python
 >>> student = ("Marcy", 8, "History", 3.5)
@@ -592,19 +536,6 @@ You can also use `tuples` for something called unpacking. Let's see it in action
 'History'
 >>> grade
 3.5
-```
-
-You can return tuples from functions, and use unpacking.
-
-```python
->>> def http_status_code():
-...     return 200, "OK"
-...
->>> code, value = http_status_code()
->>> code
-200
->>> value
-'OK'
 ```
 
 ### Sets
@@ -624,8 +555,7 @@ Sets are a datatype that allows you to store other **immutable** types in an uns
 | mutable?           	| **Yes**. Can add to or remove from `set`s.                                                                                    	|
 | in-place sortable? 	| **No**, because items aren't ordered.                                                                                                                        	|
 
-### Examples
-{: .no_toc }
+<!--
 
 #### Empty `set`s
 {: .no_toc }
@@ -649,12 +579,14 @@ You can't create an empty `set` with `{}`. That creates a `dict`. Create an empt
 {:.highlight}
 While you're learning Python, it's useful to use `type()`, `dir()` and `help()` as often as possible.
 
-#### `set`s with items
+-->
+
+#### Creating sets with items
 {: .no_toc }
 
-Now, let's make a new set with some items in it, and test out important set concepts.
+Let's make a new set with some items in it, and test out important set concepts.
 
-#### `set`s can't contain duplicate values
+##### `set`s can't contain duplicate values
 {: .no_toc }
 
 ```python
@@ -665,7 +597,7 @@ Now, let's make a new set with some items in it, and test out important set conc
 2
 ```
 
-#### `set`s can't contain mutable types
+##### `set`s can't contain mutable types
 {: .no_toc }
 
 The way that `set`s allow you to quickly check if an item is contained in them or not is with an algorithm called a hash. I won't cover the details, but an algorithm is a way of representing an immutable data type with a unique numerical representation. In Python, there's a built-in `hash()` function.
@@ -681,7 +613,7 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
-{:.highlight}
+{:.warning}
 You'll see a `TypeError: unhashable type: 'list'` if you try to add a mutable data type (like a `list`) to a set.
 
 If you try to add a mutable data type (like a `list`) to a set, you'll see the same `TypeError`, complaining about an `unhashable type`.
@@ -695,7 +627,7 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
-#### `set`s can be used to de-duplicate the items in a list
+##### `set`s can be used to de-duplicate the items in a list
 {: .no_toc }
 
 **Tip:** *If you don't care about order*, you can quickly de-duplicate the items in a `list` by passing the `list` into the `set` constructor.
@@ -706,7 +638,7 @@ TypeError: unhashable type: 'list'
 {'Red', 'Green', 'Yellow'}
 ```
 
-#### `set`s don't have an order
+##### `set`s don't have an order
 {: .no_toc }
 
 Sets don't have an order. That means that when you print them, the items won't be displayed in the order they were entered in the list.
@@ -727,7 +659,7 @@ Traceback (most recent call last):
 TypeError: 'set' object does not support indexing
 ```
 
-{:.highlight}
+{:.warning}
 You'll see `TypeError: 'set' object does not support indexing` if you try to access the items in a `set` by index with `my_set[pos]`
 
 **Tip:** If your set contains items of the same type, and you want to sort the items, you'll need to convert the `set` to a `list` first. Or, you can use the built-in `sorted(sequence)` method, which will do the conversion for you.
@@ -740,12 +672,12 @@ You'll see `TypeError: 'set' object does not support indexing` if you try to acc
 ['a', 'b', 'cat', 'dog', 'red']
 ```
 
-#### adding to and removing from `set`s
+#### Adding to and removing from `set`s
 {: .no_toc }
 
 Since a set has no order, we can't add or remove items to it by index. We need to call the operations with the item itself.
 
-#### Add items to a set with `my_set.add(item)`.
+##### Add items to a set with `my_set.add(item)`.
 {: .no_toc }
 
 ```python
@@ -755,7 +687,7 @@ Since a set has no order, we can't add or remove items to it by index. We need t
 {'Orange', 'Green', 'Blue', 'Red'}
 ```
 
-#### Remove items with `my_set.discard(item)`
+##### Remove items with `my_set.discard(item)`
 {: .no_toc }
 
 You can remove an item from a `set` if it's present with `my_set.discard(item)`. If the set doesn't contain the item, no error occurs.
@@ -773,7 +705,7 @@ You can remove an item from a `set` if it's present with `my_set.discard(item)`.
 You can also remove items from a `set` with `my_set.remove(item)`, which will raise a `KeyError` if the item doesn't exist.
 
 
-#### Update a set with another sequence using `my_set.update(sequence)`
+##### Update a set with another sequence using `my_set.update(sequence)`
 {: .no_toc }
 
 You can update a `set` by passing in another sequence, meaning another `set`, `list`, or `tuple`.
@@ -798,24 +730,15 @@ Be careful passing in a `str`ing to `my_set.update(sequence)`. That's because a 
 
 Your set will update with each character of the `str`ing, which was probably not your intended result.
 
-### `set` operations
-{: .no_toc }
-
-`sets` allow quick and easy operations to compare items between two sets.
-
 #### `set` operations cheat sheet
-{: .no_toc }
+`sets` allow quick and easy operations to _compare items_ between two sets:
+
 
 | Method Operation    	| Symbol Operation 	| Result    |
 | ---------------------	| ------------------	| ---------------------------	|
 | `s.union(t)`        	| <code>s &#124; t</code> | creates a new set with all the items **from both `s` and `t`**             |
 | `s.intersection(t)` 	| `s & t`          	| creates a new set containing *only* items that are **both in `s` and in `t`** 	|
 | `s.difference(t)`    	| `s ^ t`          	| creates a new set containing items that are **not in both `s` and in `t`**                        	|
-
-#### examples
-{: .no_toc }
-
-Let's see it in action.
 
 We have two sets, `rainbow_colors`, which contain the colors of the rainbow, and `favorite_colors`, which contain my favorite colors.
 
