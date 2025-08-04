@@ -16,6 +16,21 @@ nav_order: 2
 
 ## Data Collections
 
+Python provides 4 **built-in data structures** that allow you to store _collections of data_ in a _single named variable_:
+
+<html>
+<dl>
+  <dt>Lists</dt>
+  <dd>Ordered, mutable sequences, declared with square brackets <code>[ ]</code>. Suitable for storing collections of items that can be changed.</dd>
+  <dt>Tuples</dt>
+  <dd>Ordered, immutable sequences, declared with parentheses <code>( )</code>. Useful for storing fixed collections of items that should not be modified.</dd>
+  <dt>Sets</dt>
+  <dd>Unordered collections of unique, immutable elements, declared with curly braces <code>{ }</code>. Ideal for storing distinct items and performing set operations.</dd>
+  <dt>Dictionaries</dt>
+  <dd>Unordered collections of key-value pairs, declared with curly braces <code>{ }</code>. Excellent for storing data with associated labels for quick retrieval.</dd>
+</dl>
+</html>
+
 ### Lists
 Lists are one of the most powerful data types in Python. Generally, they're container objects used to **store related items together**.
 
@@ -1069,3 +1084,10 @@ For the mutability of the container types we covered in this chapter, check this
 | `tuple`        	| contain ordered groups of items in an **immutable** collection                                          	| **no**   	|
 | `dict`         	| contains key value pairs                                                                                	| **yes**  	|
 
+---
+
+#### Acknowledgement
+{: .no_toc }
+
+Content on this page is adapted from [LearnPython - Nina Zakharenko](https://www.learnpython.dev/).
+{: .fs-2 }
