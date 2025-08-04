@@ -11,7 +11,7 @@ nav_order: 2
 {: .highlight } 
 Code not working? Follow the steps in the **debugging process** below _before_ asking a peer or your teacher! Fixing your own errors, no matter how small, is one of the _best_ ways to become a better coder. 
 
-### Python Debugging Process
+### 🐍 Python Debugging Process
 
 1. **Read the Error Message**
 
