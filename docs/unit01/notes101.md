@@ -44,7 +44,8 @@ Python is considered to be a "batteries included" language, because the standard
 #### PEP8 STYLE GUIDELINES
 {:.no_toc}
 
-[PEP8](https://pep8.org/) is a Python  **coding standard**, that sets guidelines for how our Python code should look like.
+[PEP8](https://pep8.org/) is a Python **coding standard**, that sets guidelines for how our Python code should look like. 
+> 💬 How does the style guide for the Python language compare to the conventions we learned in Java last year? Or JavaScript from the year before?
 
 #### GitHub Account Setup
 
