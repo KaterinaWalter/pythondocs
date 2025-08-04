@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "📓2.2: Matplotlib Plotting" 
+title: "📓2.2: Matplotlib Plots" 
 parent: "2️⃣ Data Science"
 nav_order: 2
 ---
