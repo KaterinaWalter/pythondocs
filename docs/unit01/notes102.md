@@ -689,7 +689,7 @@ You can also remove items from a `set` with `my_set.remove(item)`, which will ra
 ##### Update a set with another sequence using `my_set.update(sequence)`
 {: .no_toc }
 
-You can update a `set` by passing in another sequence, meaning another `set`, `list`, or `tuple`.
+You can update a `set` by passing in another **sequence**, meaning another `set`, `list`, or `tuple`.
 
 ```python
 >>> colors = {"Red", "Green"}
@@ -708,10 +708,11 @@ Be careful passing in a `str`ing to `my_set.update(sequence)`. That's because a 
 >>> numbers
 {1, 3, 'h', 5, 'o', 'e', 'l'}
 ```
+> Your set will update with each character of the `str`ing, which was probably not your intended result.
 
-Your set will update with each character of the `str`ing, which was probably not your intended result.
+#### `set` operations
+{: .no_toc }
 
-#### `set` operations cheat sheet
 `sets` allow quick and easy operations to _compare items_ between two sets:
 
 
@@ -790,7 +791,7 @@ We can call familiar methods on our dictionary, like finding out how many key / 
 ##### Side note: What can be used as keys?
 {: .no_toc }
 
-Any type of object, mutable or immutable, can be used as a value but just like `set`s, `dict`ionaries can only use immutable types as keys. That means you can use `int`, `str`, or even `tuple` as a key, but **not** a `set`, `list`, or other `dict`ionary.
+Any type of object, mutable or immutable, can be used as a value but just like `set`s, `dict`ionaries can only use immutable types as keys. That means you can use `int`, `str`, or even `tuple` as a key, but *not* a `set`, `list`, or other `dict`ionary.
 
 The follow is OK:
 
@@ -799,7 +800,7 @@ The follow is OK:
 >>> my_dict = {1: []}
 ```
 
-{:.highlight}
+{:.warning}
 You'll see a `TypeError: unhashable type: 'list'` if you try to use a mutable type, like a `list` as a `dict`ionary key.
 
 ```python
