@@ -14,15 +14,11 @@ nav_order: 7
 
 ---
 
-## Pandas Movie Data
-
-### Overview & Setup
+## 🐼 ACTIVITY #1: Pandas Movie Data
 
 Data scientists have to deal with a lot of data at once. While Google Sheets and Excel are great ways to visualize and manipulate data, they are not as _versatile_ as we might want. In this project, you will practice using **data frames** and learn to use them to obtain information from data.
 
-### Instructions
-
-#### PART A: Exploring the Data
+### PART A: Exploring the Data
 
 We're going to be using a dataset about movies to try out processing some data with the `Pandas` library. A [Python Library](https://www.geeksforgeeks.org/libraries-in-python/) is a collection of related modules. It contains bundles of code that can be used repeatedly in different programs.
 
@@ -92,7 +88,7 @@ df.info()
 </details>
 </html>
 
-#### PART B: Filtering the Data
+### PART B: Filtering the Data
 
 Let’s start by only looking at films that cost over a million dollars to make.
 
@@ -154,7 +150,7 @@ budget_lookup_A_B = budget_lookup[condition]
 
 > 💬: ***How many** movies with a budget of over a million dollars AND whose title starts with an "A" or a "B" are there?*
 
-#### PART C: Numbers as Indices
+### PART C: Numbers as Indices
 
 Enough about movie budgets, it's time to budget my time instead. Because I
 schedule my day to the minute, I like to be able to look up movies by their
@@ -249,7 +245,7 @@ print(movies_by_runtime.loc[7])
 > 💬: What is the **155th** shortest movie in this collection? (_Make sure you are using `iloc` and not `loc`!_)
 
 
-#### PART D: Dealing with Multiple DataFrames
+### PART D: Dealing with Multiple DataFrames
 
 Forget about budget or runtimes as criteria for selecting a movie, let's take a
 look at **popular opinion**. Our dataset has two relevant columns: ``vote_average``
@@ -304,19 +300,14 @@ my_votes = {
 
 ---
 
-## Visualize Our Class
+## 📊 ACTIVITY #2: Visualize Our Class
 
-### Overview & Setup
-
-In this project, you will work together to create a Pandas DataFrame containing data on each member of the class, which you will later use to create data visualizations using `matplotlib`. This assignment has two parts: 
+In this activity, you will work together to create a Pandas DataFrame containing data on each member of the class, which you will later use to create data visualizations using `matplotlib`. This activity has two parts: 
 
 1. **Collaborative Data Collection**: You will work together as a class to design and collect data into a single DataFrame.
 2. **Independent Visualization**: You will choose an aspect of the data to create your own data visualization using `matplotlib`.
 
-### Instructions
-
-
-#### 🐼 Part A: Collaborative Data Collection
+### PART A: Collaborative Data Collection
 
 In this part, the class will work together to design a Pandas DataFrame that contains data on each student. You will be interviewing your classmates to gather this data.
 
@@ -355,7 +346,7 @@ In this part, the class will work together to design a Pandas DataFrame that con
       ```
 </div>
 
-#### 📊 Part B: Independent Data Visualization
+### PART B: Independent Data Visualization
 
 Now that we have a class DataFrame, you will each work independently to create your own **unique** data visualizations. You will choose any subset of the data to visualize using `matplotlib`. You are free to explore any kind of visualization that helps you understand the data better.
 
@@ -395,13 +386,12 @@ Here are some common types of visualizations that `matplotlib` can create:
 
 ---
 
-## Medical Data with Seaborn
-
-### Overview & Setup
+## 🌊 ACTIVITY #3: Medical Data with Seaborn
 
 In this project, you will visualize and make calculations from medical examination data using `matplotlib`, `seaborn`, and `pandas`. The dataset values were collected during medical examinations.
 
 #### STARTER CODE
+{:.no_toc}
 
 ```python
 import pandas as pd
@@ -463,7 +453,8 @@ draw_heat_map()
 
 ```
 
-#### Data description
+#### Data Description
+{:.no_toc}
 
 The rows in the dataset represent patients and the columns represent information like body measurements, results from various blood tests, and lifestyle choices. You will use the dataset to explore the relationship between cardiac disease, body measurements, blood markers, and lifestyle choices.
 
@@ -484,9 +475,7 @@ File name: `medical_examination.csv`
 | Physical activity | Subjective Feature | `active` | binary |
 | Presence or absence of cardiovascular disease | Target Variable | `cardio` | binary |
 
-### Instructions
-
-#### Part A
+### PART A: Categorical Plot
 
 <div class="task" markdown="1">
 
@@ -507,7 +496,7 @@ _Your plot should look like this:_
 ![image](proj203-example1.png)
 
 
-#### Part B
+### PART B: Heat Map
 
 <div class="task" markdown="1">
 
