@@ -65,7 +65,7 @@ Python is considered to be a "batteries included" language, because the standard
 
 ---
 
-## Basic Data Types
+## Variables & Data Types
 
 First, make sure you have a blank Python program to take notes and code along as we dive into the lesson:
 
@@ -154,29 +154,6 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
     * If you notice your program behaving oddly and you can't find the source of the bug, double check the list of [built-in functions](https://docs.python.org/3/library/functions.html) and [built-in types](https://docs.python.org/3/library/stdtypes.html) to make sure that your variable names don't conflict.
 
 </div>
-
-### The `type()` Function
-
-Python has a very easy way of determining the type of something, with the `type()` function.
-
-```python
-num = 42
->>> type(num)
-```
-
-The output in this case would be: `<class 'int'>`.
-
-#### No-Value, `None`, or Null Value
-{: .no_toc }
-
-There's a special type in Python that signifies no value at all. In other languages, it might be called Null. In Python, it's called `None`.
-
-If you try to examine a variable on the REPL that's been set to `None`, you won't see any output. We'll talk more about the `None` type later in the class.
-
-```python
->>> x = None
->>> x
-```
 
 ### Numbers
 There are three different types of numbers in Python: `int` for Integer, Float, and Complex.
@@ -280,8 +257,30 @@ Hello
 Nina
 ```
 
-#### String Formatting
+### The `type()` Function
+
+Python has a very easy way of determining the type of something, with the `type()` function.
+
+```python
+num = 42
+>>> type(num)
+```
+
+The output in this case would be: `<class 'int'>`.
+
+#### No-Value, `None`, or Null Value
 {: .no_toc }
+
+There's a special type in Python that signifies no value at all. In other languages, it might be called Null. In Python, it's called `None`.
+
+If you try to examine a variable on the REPL that's been set to `None`, you won't see any output. We'll talk more about the `None` type later in the class.
+
+```python
+>>> x = None
+>>> x
+```
+
+### String Formatting
 
 There are several types of string formatting in Python.
 
