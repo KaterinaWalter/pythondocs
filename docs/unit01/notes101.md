@@ -1080,7 +1080,7 @@ Let's define a more generic function for doing math:
 </html>
 
 ---
-## Advanced Data Types
+## Data Collections
 
 ### Lists
 Lists are one of the most powerful data types in Python. Generally, they're container objects used to **store related items together**.
