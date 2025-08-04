@@ -2,7 +2,7 @@
 layout: notes
 title: "🎯 Unit 3 Challenges" 
 parent: "3️⃣ Flask Web Apps"
-nav_order: 5
+nav_order: 4
 ---
 
 ## Table of Contents
