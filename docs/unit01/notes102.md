@@ -14,17 +14,20 @@ nav_order: 2
 
 ---
 
-#### USING A GITHUB CODESPACE TO TAKE CLASS NOTES
-{:.no_toc}
-
+<html>
+  <details>
+    <summary>📓 <strong class="text-green-200">NOTES PROGRAM SETUP INSTRUCTIONS</strong></summary>
+    
 <div class="setup" markdown="block">
 
-1. Go to GitHub and click on your picture in the _TOP RIGHT_ corner
-2. Select `Your repositories`
-3. Open `CS3-Unit1-Notes`
+1. Go to the public template **repository** for our class: [BWL-CS Python Template](https://github.com/BWL-CS/python-template)
+2. Click the <button type="button" name="button" class="btn btn-green">Use this template</button> button above the list of files then select `Create a new repository`
+3. Specify the **repository name**: `CS3-Notes-Unit1-Python`
+4. Click <button type="button" name="button" class="btn btn-green">Create repository</button>
+    > Now you have **your own personal copy** of this starter code that you can always access under the `Your repositories` section of GitHub! 
 5. Now on your repository, click <button type="button" name="button" class="btn btn-green"> < > Code </button> and select the `Codespaces` tab
-6. Click `Create Codespace on main` (unless you already have one listed there), wait for the environment to load, _then you're ready to code_!
-7. 📝 Take notes in this Codespace during class, coding along with the instructor.
+6. Click `Create Codespace on main` and wait for the environment to load, _then you're ready to code_!
+7. 📝 Take notes in this Codespace during class, writing `code` & `comments` along with the instructor.
 
 </div>
 
@@ -43,6 +46,10 @@ nav_order: 2
 
 </div>
 
+  </details>
+</html>
+
+---
 
 ## Boolean Logic
 
