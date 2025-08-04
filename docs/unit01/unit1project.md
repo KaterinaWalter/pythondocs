@@ -3,7 +3,7 @@ layout: project
 title: "💻 Unit 1 Project"
 projectname: "Trivia Quiz App"
 parent: "1️⃣ Python Bootcamp"
-nav_order: 5
+nav_order: 6
 ---
 
 ### Project Overview
