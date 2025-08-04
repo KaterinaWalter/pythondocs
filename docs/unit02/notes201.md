@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "📓2.1: Pandas" 
+title: "📓2.1: Pandas DataFrames" 
 parent: "2️⃣ Data Science"
 nav_order: 1
 ---
