@@ -53,9 +53,13 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
 ---
 
-## ACTIVITY #1: Variables & Data Types Practice
+## ACTIVITY #1: Fun with Functions
 
-### PART : Lists
+---
+
+## ACTIVITY #2: Data Collections Practice
+
+### PART A: Lists
 
 Lists are great for storing an ordered sequence of objects. 
 
@@ -164,7 +168,7 @@ False
 </details>
 </html>
 
-### PART : Tuples
+### PART B: Tuples
 
 Tuples are a lightweight way to hold information that describes something, like a person - their name, age, and hometown. You can think about it kind of like a row in a spreadsheet. Tuples are represented inside parentheses, however parentheses are not required to create a tuple, just a sequence of objects followed by commas.
 
@@ -226,7 +230,7 @@ TypeError: 'tuple' object does not support item assignment
 </details>
 </html>
 
-### PART : Sets
+### PART C: Sets
 
 Sets are a great data type for storing unique data - you can only have one of any given object in a set. Sets are unordered, thus you can't access them with `[]` indexing syntax, but they do have some handy functions.
 
@@ -307,7 +311,7 @@ False
 </details>
 </html>
 
-### PART : Dictionaries
+### PART D: Dictionaries
 
 Dictionaries are great for storing data that you can index with keys. The keys must be unique, and the dictionaries *are* stored in the order you inserted items, however this is only guaranteed as of Python 3.7.
 
@@ -391,7 +395,7 @@ False
 </html>
 
 
-### PART : Mutability
+### PART E: Mutability
 
 Remember, in Python, some data types are **immutable** -- that means that once they're created, their contents can't be changed. Tuples are immutable - once you make one, you can't alter it, you can only make a new one. Conversely, lists, dictionaries, and sets are mutable - you can change them without making new ones.
 
@@ -460,7 +464,7 @@ TypeError: 'tuple' object does not support item assignment
 
 ---
 
-## ACTIVITY #2: 
+## ACTIVITY #3: 
 
 ---
 
