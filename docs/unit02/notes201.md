@@ -13,7 +13,7 @@ nav_order: 1
 {:toc}
 
 ---
-## What is Data Science?
+## What is Data Science? 🧪
 
 <html>
 <dl>
