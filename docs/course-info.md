@@ -18,7 +18,7 @@ nav_order: 0
 ## Assignments & Grading
 
 ### Projects (40% of overall grade)
-* 💻 **Projects** serve as the bulk of our coursework. There will be one major project assigned per unit that we will work on in class over several weeks. These projects have minimum requirements but are largely graded on your **creative effort**.   
+* 💻 **Projects** serve as the bulk of our coursework. There will be one major project assigned per unit that we will work on in class over several weeks. These projects have minimum requirements, but are largely graded on your **creative effort**!   
 * Projects will always follow this workflow:
 > 1. A link to a **GitHub template repository** will be provided as starter code. A `repository`, or "repo," is like a 📂 _project folder_ 📂 that contains several code files.
 > 2. You will write your code in the **GitHub Codespaces IDE**. An `IDE` is an "Integrated Development Environment," which means an application (or web-app) where you can _write and run code_.
@@ -106,29 +106,18 @@ CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
 ### Classwork (30% of overall grade)
 * 📝 **Classwork** involves a mix of note-taking lessons and interactive coding activities:
- * 📓 **Notes:** Each unit begins with a series of tutorial-style lessons where you will write code alongside the instructor, learning new concepts through practical demonstrations while building your own working program to use as a reference.
- * **🎯 Activities:** Between note-taking sessions, you will also be tasked with coding exercises that provide you opportunities to check your understanding, play around with new skills, think creatively, practice debugging, solve challenges, and collaborate with peers. _Think of these activities as mini-projects._
+  * 📓 **Notes:** Each unit begins with a series of tutorial-style lessons where you will write code alongside the instructor, learning new concepts through practical demonstrations while building your own working program to use as a reference.
+  * **🎯 Activities:** Between note-taking sessions, you will also be tasked with coding exercises that provide you opportunities to check your understanding, play around with new skills, think creatively, practice debugging, solve challenges, and collaborate with peers. _Think of these activities as mini-projects._
 * Expect at least one classwork-type assignment to be **graded** each week:
- * Either in the form of a "note check" to confirm you are caught up with the content,
- * or a completion grade for a coding activity. 
+  * Either a "note check" to confirm you are caught up on new content,
+  * or a completion grade for an in-class coding activity. 
 
 {: .warning .fs-3 }
-‼️ If you are ABSENT, you are expected to take initiative on catching up on missed classwork – _everything_ we cover in class is on the **course website**! Refer to the **Blackbaud** classwork assignment each week to see which 📓 **note sections** were covered or which 🎯 **activities** need to be completed. 
+‼️ If you are ABSENT, you are expected to take initiative to catch up on missed classwork! _Everything_ we cover in class is on the **course website**. Refer to the **Blackbaud** classwork assignment each week to see which 📓 **note sections** were covered or which 🎯 **activities** need to be completed. 
 
 ---
 
 ## Expectations & Policies
-
-### Classroom Values
-
-* As a member of our class, it is important to be mindful of these _3 key values_: be **respectful**, **prepared**, and **engaged**.
-  * Being <span class="highlighter">respectful</span> of your community means being mindful of and kind toward your environment, and the people within – this includes arriving **on-time** to commitments.
-
-{: .warning .fs-3 }
-⏰ If you are **over 5 minutes late**, you must first get a LATE PASS from the Upper School Office and then enter the classroom QUIETLY as to not disrupt the class. 
-
-  * Being <span class="highlighter">prepared</span> for class means you have your laptop ready (unless otherwise instructed) within the first 5 minutes of class. It also means you arrive with a positive attitude and are ready to learn!
-  * Show you are <span class="highlighter">engaged</span> by volunteering answers/comments, staying on task, and completing classwork as directed. You are expected to take your own notes while new material is being introduced, to contribute during group activities, and be open to collaborating with all classmates.
 
 ### AI Usage Policies 
 * **Generative Artificial Intelligence (GenAI)** tools like ChatGPT are a significant technological advancement that has the potential to support your learning, especially in Computer Science. But with any new technology, there are significant limitations and risks associated with its use, misuse, and overuse. *[Source](https://www.aiforeducation.io/ai-resources/drafting-a-genai-academic-policy)*
@@ -177,6 +166,16 @@ If these steps are not followed, your use of GenAI will be considered an **acade
 
 </details>
 </html>
+
+### Community Values
+
+* As a member of our class, it is important to be mindful of these _3 key values_: be **PREPARED**, **ENGAGED**, and **RESPECTFUL**.
+  * Being <span class="highlighter">prepared</span> for class means you have your laptop ready (unless otherwise instructed) within the first 5 minutes of class. It also means you arrive with a positive attitude and are ready to learn!
+  * Show you are <span class="highlighter">engaged</span> by volunteering answers/comments, staying on task, and completing classwork as directed. You are expected to take your own notes while new material is being introduced, to contribute during group activities, and be open to collaborating with all classmates.
+  * Being <span class="highlighter">respectful</span> of your community means being mindful of and kind toward your environment, and the people within – this includes arriving **on-time** to commitments.
+
+{: .warning .fs-3 }
+⏰ If you are **over 5 minutes late**, you must first get a LATE PASS from the Upper School Office and then enter the classroom QUIETLY as to not disrupt the class. 
 
 ### Other Classroom Policies
 * 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter"> TBD </span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you want to stop by during those periods.  
