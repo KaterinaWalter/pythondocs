@@ -53,15 +53,114 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
 ---
 
-## ACTIVITY #1: Fun with Functions
+## 🧑‍🍳 ACTIVITY #1: Cooking with Functions
+
+In this activity, you’ll write Python functions that represent steps in cooking simple recipes. Your goal is to **practice different types of function definitions** — with and without _arguments_, with and without _return_ values.
+
+You'll also **call** your functions, and sometimes **store the result** if the function returns a value.
+
+### PART A: Functions with No Arguments and No Return
 
 <div class="task" markdown="block">
+
+Define two functions that **just print steps**, like a recipe card.
+
+```python
+#Function that prints the steps to boil water
+def boil_water():
+    print("Fill a pot with water.")
+    print("Put the pot on the stove.")
+    print("Turn on the heat and wait for it to boil.")
+
+# Function that prints a welcome message for the recipe
+def welcome_message():
+    print("Welcome to Python's Virtual Kitchen!")
+    print("Today, we’ll learn how to make delicious recipes using functions.")
+```
+
+📣 **Call** both of these functions in your code to test them out!
 
 </div> 
 
 ---
 
-## ACTIVITY #2: Data Collections Practice
+### PART B: Functions with Arguments and No Return
+
+<div class="task" markdown="block">
+
+Now define a function that takes in **ingredients** and **prints them out** as part of a recipe.
+
+```python
+# Function that prints the ingredients for a recipe
+def list_ingredients(main_ingredient, side_dish):
+    print(f"Main Ingredient: {main_ingredient}")
+    print(f"Side Dish: {side_dish}")
+```
+
+📣 Call your function with two different combinations of ingredients.
+
+</div> 
+
+### PART C: Functions with Arguments and Return
+
+<div class="task" markdown="block">
+
+Define a function that **returns a string** representing a combined dish.
+
+```python
+# Function that returns a final dish name
+def make_dish(ingredient1, ingredient2):
+    return f"{ingredient1} and {ingredient2} Surprise!"
+```
+
+📣 Call the function and store the result in a **variable**, then print the result using `print()`.
+
+</div> 
+
+---
+
+### PART D: Functions with Optional Arguments
+
+<div class="task" markdown="block">
+
+Define a function that makes a recipe with a **default spice** unless the user specifies one.
+
+```python
+# Define a function with a default argument
+def add_spice(dish, spice="paprika"):
+    print(f"Adding a dash of {spice} to the {dish}. Yum!")
+```
+
+📣 Call it once **with** the spice and once **without** the spice.
+
+</div> 
+
+---
+
+### PART E: Review Challenge
+
+<div class="task" markdown="block">
+
+Write a `cook_recipe()` function that calls 3 or more of your previous functions in the correct order to simulate making a dish from start to finish.
+
+_Example idea:_
+```python
+def cook_recipe():
+    welcome_message()
+    boil_water()
+    list_ingredients("Pasta", "Garlic Bread")
+    dish = make_dish("Pasta", "Tomato Sauce")
+    print("Dish created:", dish)
+    add_spice(dish)
+```
+
+📣 Then, call `cook_recipe()` at the end of your script to run the full simulation.
+
+</div> 
+
+---
+
+## ACTIVITY #2: Data Collection Drills
 
 ### PART A: Lists
 
