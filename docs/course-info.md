@@ -93,12 +93,13 @@ nav_order: 0
 ### Homework (30% of overall grade)
 * 💬 **Homework** is assigned in the form of a `CodeCollab`: like posting on a discussion board, but instead of talking about a book or article, the class has a shared goal of figuring out how some 🔍 mystery code 🔍 works.
 
+* _Homework assignments follow this workflow:_
+> 1. At the beginning of each week, I will **post a DISCUSSION assignment on Blackbaud** that includes a **GitHub repository link** to a working program that you will **analyze collaboratively**.
+> 2. You will "fork the repository" (_make your own copy of the program_) to run it, experiment with it, and figure out how it works. 
+> 3. To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate. See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
+
 {: .highlight .fs-3 }
 CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
-
-* _How it works:_
-> 1. At the beginning of each week, I will **post a DISCUSSION assignment on Blackbaud** that includes a **GitHub repository link** to a working program that you will **analyze collaboratively**.
-> 2. To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate. See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
 
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
@@ -123,7 +124,6 @@ Expect at least one classwork-type assignment to be **graded** each week: Either
 ### AI Usage Policies 
 * **Generative Artificial Intelligence (GenAI)** tools like ChatGPT are a significant technological advancement that has the potential to support your learning, especially in Computer Science. But with any new technology, there are significant limitations and risks associated with its use, misuse, and overuse. *[Source](https://www.aiforeducation.io/ai-resources/drafting-a-genai-academic-policy)*
 * To support appropriate use of GenAI tools in your learning, these **three steps** should always be taken when determining if and when to use GenAI tools:
-
 > 1. **Check with your teacher** if the task or assignment can be completed with the _support_ of a GenAI tool.
 > 2. If the tool is allowed, **track your conversation** with the tool by screenshotting or copy-pasting the interaction in a document that you can share with your teacher.
 > 3. **Cite the use of the tool** when submitting your work. Here is an example with APA style formatting: `OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/chat`
@@ -190,7 +190,7 @@ You may email me to schedule an appointment at a different time, ONLY IF you hav
 * 🖊️ **Student supplies** (pens, pencils, sticky notes, etc.) will always be available to borrow, located up front by the whiteboard.
   * No need to ask, but please return pens/pencils after class! 
 * 🤞 **SILENTLY SIGNAL** that you need to leave for the bathroom or water by holding up crossed fingers.
-  * Just make sure I acknowledge you are leaving the room first - wait for me to give a thumbs up 👍
+  * Just make sure I acknowledge you are leaving the room first!
 * 📱 **NO-PHONE ZONE!** → as per the new BWL Upper School policy, phones must be locked up downstairs while you are in the building.
   * If you are caught with a cell phone in class, it will be confiscated immediately and you will be sent to the Upper School office.
 * 🖥️ Using your personal **LAPTOP** is a _privilege_.
