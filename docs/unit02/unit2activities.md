@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "🎯 Unit 2 Challenges" 
+title: "🎯 Unit 2 Activities" 
 parent: "2️⃣ Data Science"
 nav_order: 7
 ---
