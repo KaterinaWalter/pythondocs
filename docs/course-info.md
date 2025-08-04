@@ -25,13 +25,6 @@ nav_order: 0
 > 2. You will write your code in the **GitHub Codespaces IDE**. An `IDE` is an "Integrated Development Environment," which means an application (or web-app) where you can _write and run code_.
 > 3. Your completed project will be submitted on **Blackbaud** by copying your 🔗 _repository link_ 🔗. 
 
-* 💯 **GRADE IMPROVEMENT POLICY**: You may <span class="highlighter">re-submit projects for a full RE-GRADE</span>, but you must email me to let me know which project, and it must be completed at least one week BEFORE the end of the current quarter.
-  * When re-working your projects, you are encouraged to come to office hours for help or additional feedback. I am way more likely to grade your work favorably if you have shown effort towards improving your skills...
-  * Coding is an **iterative process** which means it is VERY normal not to have your programs working perfectly the first time! Programmers often have to edit their code many times.
-  
-{: .warning .fs-3 }
-📧 Whenever you update or resubmit a project, especially after the assignment has been graded on Blackbaud, you must **SEND ME AN EMAIL**! _Otherwise I will not be notified._
-
 * Projects are graded on a 5-point scale, and **EXTRA CREDIT** is always available to encourage effort and creativity. _See the rubric section below for details._
 
 <html>
@@ -90,6 +83,13 @@ nav_order: 0
 </details>
 </html>
 
+* 💯 **GRADE IMPROVEMENT POLICY**: You may <span class="highlighter">re-submit projects for a full RE-GRADE</span>, but you must email me to let me know which project, and it must be completed at least one week BEFORE the end of the current quarter.
+  * When re-working your projects, you are encouraged to come to office hours for help or additional feedback. I am way more likely to grade your work favorably if you have shown effort towards improving your skills...
+  * Coding is an **iterative process** which means it is VERY normal not to have your programs working perfectly the first time! Programmers often have to edit their code many times.
+  
+{: .warning .fs-3 }
+📧 You must **SEND ME AN EMAIL** whenever you update or resubmit a project, especially after the assignment has been graded on Blackbaud! _Otherwise I will not be notified._
+
 ### Homework (30% of overall grade)
 * 💬 **Homework** is assigned in the form of a `CodeCollab`: like posting on a discussion board, but instead of talking about a book or article, the class has a shared goal of figuring out how some 🔍 mystery code 🔍 works.
 
@@ -103,18 +103,18 @@ CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 {: .warning .fs-3 }
-📧 Whenever you submit homework late, especially after the assignment has been graded on Blackbaud, you must **SEND ME AN EMAIL**! _Otherwise I will not be notified._
+📧 You must **SEND ME AN EMAIL** whenever you submit homework late, especially after the assignment has been graded on Blackbaud! _Otherwise I will not be notified._
 
 ### Classwork (30% of overall grade)
-* 📝 **Classwork** involves a mix of note-taking lessons and interactive coding activities:
+* 📝 **Classwork** involves a mix of note-taking lessons and interactive coding activities.
   * 📓 **Notes:** Each unit begins with a series of tutorial-style lessons where you will write code alongside the instructor, learning new concepts through practical demonstrations while building your own working program to use as a reference.
-  * **🎯 Activities:** Between note-taking sessions, you will also be tasked with coding exercises that provide you opportunities to check your understanding, play around with new skills, think creatively, practice debugging, solve challenges, and collaborate with peers. _Think of these activities as mini-projects._
-* Expect at least one classwork-type assignment to be **graded** each week:
-  * Either a "note check" to confirm you are caught up on new content,
-  * or a completion grade for an in-class coding activity. 
+  * 🎯 **Activities:** Between note-taking sessions, you will also be tasked with coding exercises that provide you opportunities to check your understanding, play around with new skills, think creatively, practice debugging, solve challenges, and collaborate with peers. _Think of these activities as mini-projects._
+
+{: .highlight .fs-3 }
+Expect at least one classwork-type assignment to be **graded** each week: Either a "note check" to confirm you are caught up on new material, or a completion grade for a coding activity. _It should be easy to get 100% in this category if you are engaged during class!_
 
 {: .warning .fs-3 }
-‼️ If you are ABSENT, you are expected to take initiative to catch up on missed classwork! _Everything_ we cover in class is on the **course website**. Refer to the **Blackbaud** classwork assignment each week to see which 📓 **note sections** were covered or which 🎯 **activities** need to be completed. 
+‼️ If you are ABSENT, you are expected to take initiative to catch up on any missed classwork! _Everything_ we cover in class is on the **course website**. Refer to the **Blackbaud** classwork assignment each week to see which 📓 **note sections** were covered or which 🎯 **activities** need to be completed. 
 
 ---
 
