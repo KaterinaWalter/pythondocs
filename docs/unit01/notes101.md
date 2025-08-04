@@ -251,7 +251,8 @@ To use the `print()` function, call it with a **string literal** or a **variable
 
 ```python
 print("Hello")
-
+```
+```python
 name = "Katerina"
 print(name)
 ```
@@ -293,7 +294,7 @@ Hello, my name is Nina and I pay $16.0 in rent per day
 ```
 > **f-Strings** allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster to type.
 
-### Common Mistakes
+### Common Errors
 
 There are a few common errors that you'll encounter when working with Strings and numbers. In Python programs, errors are called `Exceptions`. By going over what they are, you'll be able to recognize them immediately.
 
@@ -379,13 +380,12 @@ This is the recipe for defining a Python function:
 A function in Python is defined with the `def` keyword, followed by the function names, zero or more argument names contained in parenthesis `()`, and a colon `:` to indicate the start of the function. The contents of the function then follow. Then, an *optional* `return` statement can follow, if the function plans on passing data back to the caller.
 
 ```python
-# A Basic Function that accepts no arguments and returns nothing.
+# Function that accepts no arguments and returns nothing.
 def hello_world():
     print("Hello, World!")
-
-
-# A Function that accepts two arguments, and returns the value of
-# those numbers added together.
+```
+```python
+# Function that accepts two arguments and returns the sum.
 def add_numbers(x, y):
     return x + y
 ```
@@ -432,7 +432,7 @@ The recipe for **function contents**:
 
 A `return` statement is a way to "short-circuit" the function.
 
-Using a `return` statement, you can optionally pass back data to the caller of your function.
+Using a `return` statement, you can optionally **pass back data** to the caller of your function.
 
 #### with no `return` statement
 {: .no_toc }
@@ -440,25 +440,25 @@ Using a `return` statement, you can optionally pass back data to the caller of y
 If a function doesn't have a return statement, it implicitly returns `None`.
 
 ```python
->>> def foo():
-...     x = 5
-...
->>> val = foo()
->>> type(val)
+def foo():
+    x = 5
+
+val = foo()
+print(type(val))
 ```
 
 #### with a `return` statement, but no value
 {: .no_toc }
 
-If a function has a return statement, but no value, it also returns `None`. This is typically used to control the flow of a program.
+If a function has a return statement, but no value, it also returns `None`. This is typically used to control the **flow** of a program.
 
 ```python
->>> def foo():
-...     x = 5
-...     return
-...
->>> val = foo()
->>> type(val)
+def foo():
+    x = 5
+    return
+
+val = foo()
+print(type(val))
 ```
 
 #### with a `return` statement and a value
@@ -467,68 +467,38 @@ If a function has a return statement, but no value, it also returns `None`. This
 To return a value from a function, just type it after the `return` statement. You can return anything from a Python function, including other functions! For today, we'll focus on simple and complex data types.
 
 ```python
->>> def foo():
-...     x = 5
-...     return x
-...
->>> val = foo()
->>> val
-5
+def foo():
+    x = 5
+    return x
+
+val = foo()
+print(val)
 ```
 
-As we explore simple functions, our `return` statements will usually be at the end of the function, but that's not the only way they can be used. A function can have multiple `return` statements, and those `return` statements can be used to help control the flow of the program.
+{:.highlight}
+As we explore simple functions, our `return` statements will usually be at the **END** of the function, but that's not the only way they can be used. A function can have multiple `return` statements, and those `return` statements can be used to help control the flow of the program.
 
 
 ### Indentation
 
 One of the most important aspects of functions is **indentation**. Remember, Python doesn't use curly braces to figure out what's inside a function like other languages you've seen like JavaScript or Java.
+> Python _knows what code is related to a function_ by how it's indented. Anything that's indented **one level deep** under the function declaration is part of the function, no matter how many spaces there are between lines.
 
-Python knows what code is related to a function by how it's indented. Anything that's indented one level deep under the function declaration is part of the function, no matter how many spaces there are between lines.
+{:.highlight}
+To add a level of **indentation**, just press the `Tab` key on your keyboard after entering a new line, or type 4 `spaces`.
 
-To add a level of indentation, just press the **Tab** key on your keyboard after entering a new line.
 
-If you're using the REPL, once you're done entering your function, you'll need to press enter an additional time, to mark the end of the function. You know you're done defining your function when you see the 3 input arrows `>>>` again.
+### Calling Functions
 
-Let's try it together. Type the following code in your REPL. Note that the 3 dots '...' indicate that those lines are *indented* in the REPL. If you type your code in a Python file, you won't see the `...` dots.
+Once you've defined a function, you can call it from your Python code as many times as you'd like.
 
-<div class="task" markdown="block">
-
-```python
->>> def add_numbers(x, y):
-...     return x + y
-...
-```
-
-</div>
-
-<html>
-<details>
-<summary><strong>🆘 Getting an error? Expand this section:</strong></summary>
-<div markdown="block"> 
-    
-**Note:** If you get an `IndentationError`, that means that you didn't correctly indent your code after your function definition. Try typing your function into the REPL one more time.
-
-```python
-# The error you'll see if you didn't indent your function correctly.
->>> def add_numbers(x, y):
-... return x + y
-File "<stdin>", line 2
-    return x + y
-        ^
-IndentationError: expected an indented block
-```
-</div>
-</details>
-</html>
-
-### Arguments & Calling Functions
+{:.important}
+To call a Python function: type its **name**, along with **parentheses** `( )`, and pass in any *required* **arguments** to the function.
 
 #### With no arguments
 {: .no_toc }
 
-Once you've defined a function, you can call it from your Python code as many times as you'd like.
-
-To call a Python function, type in it's name, along with parenthesis, and any *required* arguments to the function. Let's try it now, with a function that doesn't require arguments.
+Let's try it now, with a function that doesn't require arguments.
 
 ```python
 >>> def hello_world():
