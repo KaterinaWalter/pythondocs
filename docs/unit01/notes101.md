@@ -102,7 +102,7 @@ First, make sure you have a blank Python program to take notes and code along as
 
 <div class="warn" markdown="block">
 
-🛑 When class ends, don't forget to **SAVE YOUR WORK**! **Codespaces** are TEMPORARY environments – you need to COMMIT changes in order to update the **repository** that other people can access. 
+🛑 When class ends, don't forget to **SAVE YOUR WORK**! **Codespaces** are TEMPORARY editing environments, so you need to COMMIT changes properly in order to update the main **repository** for your program. 
 
 _There are multiple steps to saving in GitHub Codespaces:_
 
