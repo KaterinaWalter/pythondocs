@@ -162,19 +162,9 @@ def cook_recipe():
 
 ## 💿 ACTIVITY #2: Data Collection Drills
 
-In this activity you will practice working with the 4 built-in data collections: `Lists`, `Tuples`, `Sets`, and `Dictionaries`. 
-
-Great call! Adding reflection questions with comments deepens understanding and reinforces good habits. Here's the updated version with those prompts woven into the drills:
-
----
-
-## 💿 ACTIVITY #2: Data Collection Drills
-
-In this activity, you’ll practice your skills with the 4 built-in data collections: `Lists`, `Tuples`, `Sets`, and `Dictionaries`.
+In this activity, you’ll practice working with the 4 built-in data collections: `Lists`, `Tuples`, `Sets`, and `Dictionaries`.
 
 Each **drill** is short and focused. **TYPE the code**, **RUN it**, and then **record your observations as comments** (`#`) in your program. 
-
----
 
 ### PART A: Lists
 
@@ -183,116 +173,85 @@ Lists are **ordered**, **changeable** collections.
 <div class="task" markdown="block">
 
 1. Create a list of letters:
-
 ```python
 my_list = ["h", "e", "l", "l", "o"]
 ```
-
 1. Print the list to check it:
-
 ```python
 print(my_list)
 # What do you see? Record it here:
 ```
-
 1. Add an exclamation mark to the end:
-
 ```python
 my_list.append("!")
 ```
-
 1. Print the list again:
-
 ```python
 print(my_list)
 # What changed? Describe the difference between the original and updated list:
 ```
-
 1. How many items are in the list?
-
 ```python
 print(len(my_list))
 # How many elements are there? Record it:
 ```
-
 1. Get the last two items using positive indexes:
-
 ```python
 print(my_list[4:6])
 # What values were returned? Why do those indexes work?
 ```
-
 1. Try slicing from index 4 to the end:
-
 ```python
 print(my_list[4:])
 # What do you notice? Is the result the same as above?
 ```
-
 1. Now try negative indexing:
-
 ```python
 print(my_list[-2:])
 # What does this do? Why is it useful?
 ```
-
 1. Remove the first `"l"`:
-
 ```python
 my_list.remove("l")
 print(my_list)
 # What changed? Where did it remove the "l" from?
 ```
-
 1. Put it back at index 2:
-
 ```python
 my_list.insert(2, "l")
 print(my_list)
 # Did it go where you expected? What is at index 2 now?
 ```
-
 1. Delete the first element:
-
 ```python
 del my_list[0]
 print(my_list)
 # What item got removed?
 ```
-
 1. Remove and save the last item:
-
 ```python
 last_item = my_list.pop()
 print(last_item)
 print(my_list)
 # What item was removed? What’s left in the list?
 ```
-
 1. Print the item at index 2:
-
 ```python
 print(my_list[2])
 # What is it?
 ```
-
 1. Check if `"!"` is in the list:
-
 ```python
 print("!" in my_list)
 # True or False? Why?
 ```
-
 1. Sort the list in reverse order:
-
 ```python
 my_list.sort(reverse=True)
 print(my_list)
 # What is the new order? Did sort() return anything?
 ```
-
 1. Create a sorted copy without changing the original:
-
 ```python
 print(sorted(my_list))
 print(my_list)
