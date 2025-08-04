@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "🎯Unit 3 Challenges" 
+title: "🎯 Unit 3 Challenges" 
 parent: "3️⃣ Flask Web Apps"
 nav_order: 5
 ---
