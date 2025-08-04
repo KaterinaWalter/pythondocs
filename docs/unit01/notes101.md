@@ -142,9 +142,9 @@ Python variable names are entirely **lowercase**, with multiple words separated 
 
 > Unlike other languages that name multi-word variables with **camelCase** (like `Java`).
 
-Because Python is a** dynamic language** and you don't have type hints to explain what's stored inside a variable while reading code, you should do your best naming your variables to describe what is stored inside of them.
+Because Python is a **dynamic language** and you don't have type hints to explain what's stored inside a variable while reading code, you should do your best naming your variables to **clearly describe** what is stored inside of them.
 
-It's ok to be _verbose_. For example, `n` is a poor variable name, while `numbers` is a better one. If you're storing a collection of items, name your variable as a plural.
+It's ok to be _verbose_. For example, `n` is a poor variable name, while `numbers` is a better one. If you're storing a collection of items, name your variable as a **plural**.
 
 <div class="warn" markdown="block">
 
@@ -160,25 +160,25 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
 There are three different types of numbers in Python: `int` for **Integer**, **Float**, and **Complex**.
 
 ```python
-# These are all integers
+# These are all INTEGERS
 x = 4
 y = -193394
 z = 0
 ```
 
 ```python
-# These are all floats
+# These are all FLOATS
 x = 5.0
 y = -3983.2
 z = 0.
 ```
 
 ```python
-# This is a complex number
+# This is a COMPLEX number
 x = 42j
 ```
 
-In Python, Integers and other simple data types are just **objects** under the hood. That means that you can create new ones by calling methods. You can provide either a number, or a string. This will come in handy later on in the course.
+In Python, Integers and other simple data types are just considered **"objects"** under the hood. That means that you can create new ones by calling methods. You can provide either a number, or a string. This will come in handy later on in the course.
 
 ```python
 # Converting number types
