@@ -219,6 +219,8 @@ df.loc['c':'o']
 ```
 </div>
 
+<br>
+
 <div class="task" markdown="block">
   
 1. Create a Series called ``movies_by_runtime`` that is indexed by runtime and has the
