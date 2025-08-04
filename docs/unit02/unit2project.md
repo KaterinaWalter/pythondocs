@@ -10,9 +10,21 @@ nav_order: 8
 
 This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a large, real-world dataset of your choice to perform EDA.
 
+The long-term project consists of THREE main deliverables:
+
+1. A descriptive **markdown** text file
+2. A **python** code script
+3. An academic conference-style **poster** 
+> 📰 Make a copy of this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the poster!
+
+#### Dataset Sources:
+- [Kaggle](https://www.kaggle.com/)
+- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
+- [Data.gov](https://www.data.gov/)
+
 <html>
   <details>
-    <summary>📥 <strong class="text-green-100">SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
+    <summary>📥 <strong class="text-green-200">SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
     
 <div class="setup" markdown="block">
 
@@ -26,18 +38,6 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 </details>
 </html>
-
-The long-term project consists of THREE main deliverables:
-
-1. A descriptive **markdown** text file
-2. A **python** code script
-3. An academic conference-style **poster** 
-> 📰 Make a copy of this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the poster!
-
-#### Dataset Sources:
-- [Kaggle](https://www.kaggle.com/)
-- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
-- [Data.gov](https://www.data.gov/)
 
 ---
 
