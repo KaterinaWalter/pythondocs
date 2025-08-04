@@ -756,9 +756,8 @@ Find out more by reading the [documentation](https://docs.python.org/3/library/s
 ### Dictionaries
 Dictionaries are a useful type that allow us to store our data in key, value pairs. Dictionaries themselves are **mutable**, *but*, dictionary keys can only be **immutable** types.
 
-We use dictionaries when we want to be able to quickly access additional data associated with a particular key. A great practical application for dictionaries is memoization. Let's say you want to save computing power, and store the result for a function called with particular arguments. The arguments could be the key, with the result stored as the value. Next time someone calls your function, you can check your dictionary to see if the answer is pre-computed.
-
-Looking for a key in a large dictionary is extremely fast. Unlike lists, we don't have to check every item for a match.
+We use dictionaries when we want to be able to quickly access additional data associated with a particular **key**. 
+> Looking for a key in a large dictionary is extremely fast. Unlike lists, we don't have to check every item for a match.
 
 #### Dictionary cheat sheet
 {: .no_toc }
@@ -853,7 +852,7 @@ If we want to provide a *default value* if the key is missing, we also pass an *
 'default'
 ```
 
-#### Adding, Removing
+#### Adding & Removing Items
 {: .no_toc }
 
 To add a new key value pair to the dictionary, you'll use square-bracket notation.
@@ -874,7 +873,7 @@ If you try to put a key into a dictionary that's already there, you'll just end 
 True
 ```
 
-#### Updating
+#### Updating Items
 {: .no_toc }
 
 Just like with `list`s an `set`s, you can update the items in a dictionary with the items from another dictionary.
