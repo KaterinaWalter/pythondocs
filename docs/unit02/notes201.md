@@ -51,7 +51,7 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 
 ---
 
-## 🐼 Data Manipulation with Pandas
+## Data Manipulation with Pandas 🐼
 
 ![image](https://miro.medium.com/max/800/1*9PJob-rUG-_m5hbqsaQ2Ig.jpeg)
 
