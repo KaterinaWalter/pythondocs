@@ -17,11 +17,6 @@ The long-term project consists of THREE main deliverables:
 3. An academic conference-style **poster** 
 > 📰 Make a copy of this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the poster!
 
-#### Dataset Sources:
-- [Kaggle](https://www.kaggle.com/)
-- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
-- [Data.gov](https://www.data.gov/)
-
 <html>
   <details>
     <summary>📥 <strong class="text-green-200">SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
@@ -42,6 +37,11 @@ The long-term project consists of THREE main deliverables:
 ---
 
 ### Instructions & Requirements
+
+#### Dataset Sources:
+- [Kaggle](https://www.kaggle.com/)
+- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
+- [Data.gov](https://www.data.gov/)
 
 #### ① Markdown file:
 
