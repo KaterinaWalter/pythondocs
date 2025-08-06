@@ -4,8 +4,10 @@ $body-line-height: 1.2;
 $content-line-height: 1.4;
 $body-heading-line-height: 1.1;
 $jtdpurple: #5739ce;
+$nav-width: 15.5rem !important;
+$nav-width-md: 15.5rem !important;
 
-dt{
+dt {
 	color: $jtdpurple;
 }
 
@@ -161,5 +163,12 @@ blockquote {
 	color: #67656c !important;
 	font-size: 0.775rem !important;
 }
+
+a.nav-list-link {
+	font-size: 0.7rem !important;
+}
+
+
+
 
 
