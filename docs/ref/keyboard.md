@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "🔣 Keyboard Symbols" 
-parent: "📚 References"
+parent: "📖 References"
 nav_order: 1
 ---
 
