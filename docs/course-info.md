@@ -7,6 +7,15 @@ nav_order: 0
 # Course Information
 {: .no_toc }
 
+## Table of Contents
+{: .no_toc .text-delta }
+
+{: .fs-2 }
+- TOC
+{:toc}
+
+---
+
 <html>
 <details>
  <summary><strong>COURSE DESCRIPTION</strong></summary>
@@ -19,13 +28,6 @@ nav_order: 0
 </details>
 </html>
 
-## Table of Contents
-{: .no_toc .text-delta }
-
-{: .fs-2 }
-- TOC
-{:toc}
-
 ---
 
 ## Assignments & Grading
@@ -34,9 +36,9 @@ nav_order: 0
 * 💻 **Projects** serve as the bulk of our coursework. There will be one major coding project assigned per unit that we will work on in class over several weeks.
   * These projects have minimum requirements to test your technical skills, but are largely graded on your 🎨 **creative effort**!   
 * _Projects follow this workflow:_
-> 1. A link to a **GitHub template repository** will be provided as starter code. A `repository`, or "repo," is like a 📂 _project folder_ 📂 that contains several code files.
+> 1. A link to a **GitHub template repository** will be provided as starter code. A `repository`, or "repo," is like a 📂 _project folder_ that contains several code files.
 > 2. You will write your code in the **GitHub Codespaces IDE**. An `IDE` is an "Integrated Development Environment," which means an application (or web-app) where you can _write and run code_.
-> 3. Your completed project will be submitted on **Blackbaud** by copying your 🔗 _repository link_ 🔗. 
+> 3. Your completed project will be submitted on **Blackbaud** by copying your 🔗 _repository link_. 
 
 * Projects are graded on a 5-point scale, and **EXTRA CREDIT** is always available to encourage effort and creativity. _See the rubric section below for details._
 
