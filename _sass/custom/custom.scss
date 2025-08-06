@@ -1,11 +1,6 @@
-//$body-font-family: roboto, sans-serif;
-//$mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
-$body-line-height: 1.2;
-$content-line-height: 1.4;
-$body-heading-line-height: 1.1;
-$jtdpurple: #5739ce;
-$nav-width: 15.5rem !important;
-$nav-width-md: 15.5rem !important;
+$jtdpurple: #4e26af; // $purple-200
+$jtdpurple-lt: #5e41d0; // $purple-100
+$jtdpurple-dk: #381885; // $purple-300
 
 dt {
 	color: $jtdpurple;
@@ -19,8 +14,8 @@ dd {
 
 p #back-to-top {
 	color: #fff;
-    background-color: #5739ce;
-    background-image: linear-gradient(#6f55d5, #5739ce);
+    background-color: $jtdpurple-lt;
+    background-image: linear-gradient(#6f55d5, $jtdpurple-lt);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.12);
 	border-width: 0;
     border-radius: 4px;
@@ -168,6 +163,14 @@ a.nav-list-link {
 	font-size: 0.7rem !important;
 }
 
+@media (min-width: 50rem) {
+    .side-bar {
+        width: 12.5rem !important;
+    }
+    .side-bar + .main {
+        margin-left: 12.5rem !important;
+    }
+}
 
 
 
