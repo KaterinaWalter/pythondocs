@@ -172,6 +172,17 @@ a.nav-list-link {
     }
 }
 
+@media (min-width: 66.5rem) {
+    .side-bar {
+        width: calc((100% - 66.5rem) / 2 + 13rem) !important;
+    }
+    .side-bar + .main {
+	margin-left: calc((100% - 66.5rem) / 2 + 13rem) !important;
+    }
+}
+
+
+
 
 
 
