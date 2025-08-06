@@ -3,23 +3,23 @@ $jtdpurple-lt: #5e41d0; // $purple-100
 $jtdpurple-dk: #381885; // $purple-300
 
 dt {
-	color: $jtdpurple;
+    color: $jtdpurple;
 }
 
 dd {
-	background-color: #E3DEF7;
-	border-radius: 5px;
-	padding: 2px;
+    background-color: #E3DEF7;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 p #back-to-top {
-	color: #fff;
+    color: #fff;
     background-color: $jtdpurple-lt;
     background-image: linear-gradient(#6f55d5, $jtdpurple-lt);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.12);
-	border-width: 0;
+    border-width: 0;
     border-radius: 4px;
-	text-decoration: none;
+    text-decoration: none;
     vertical-align: baseline;
     box-sizing: border-box;
     padding: 0.3em 1em;
@@ -78,7 +78,7 @@ h5 {
 }
 
 .task::before {
-	color: $purple-300;
+    color: $purple-300;
     content: "Task";
     display: block;
     font-weight: bold;
@@ -96,7 +96,7 @@ h5 {
 }
  
 .setup::before {
-		color: $green-300;
+    color: $green-300;
     content: "Setup";
     display: block;
     font-weight: bold;
@@ -114,7 +114,7 @@ h5 {
 }
 
 .warn::before {
-	color: $red-300;
+    color: $red-300;
     content: "Warning";
     display: block;
     font-weight: bold;
@@ -132,7 +132,7 @@ h5 {
 }
 
 .imp::before {
-	color: $blue-300;
+    color: $blue-300;
     content: "Important";
     display: block;
     font-weight: bold;
@@ -166,17 +166,23 @@ a.nav-list-link {
 @media (min-width: 50rem) {
     .side-bar {
         width: 13rem !important;
-	min-width: 13rem !important;
+        min-width: 13rem !important;
     }
     .side-bar + .main {
         margin-left: 13rem !important;
+    }
+    .site-nav {
+        padding-top: 1.5rem !important;
+    }
+    .main-content-wrap {
+        padding-top: 0rem !important;
     }
 }
 
 @media (min-width: 66.5rem) {
     .side-bar {
         width: calc((100% - 66.5rem) / 2 + 13rem) !important;
-	min-width: 13rem !important;
+        min-width: 13rem !important;
     }
     .side-bar + .main {
 	margin-left: max((100% - 66.5rem) / 2 + 13rem) !important;
@@ -185,6 +191,7 @@ a.nav-list-link {
         width: 13rem !important;
     }
 }
+
 
 
 
