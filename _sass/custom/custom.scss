@@ -46,6 +46,11 @@ img[alt=image-small] {
 	margin-left: 25%;
 	border-radius: 4px;
 }
+video {
+width: 90% !important;
+margin-left: 5% !important;
+margin-right: 5% !important;
+}
 h1 {
 	color: $jtdpurple;
 	font-weight: bold;	
@@ -159,10 +164,6 @@ blockquote {
 	font-size: 0.775rem !important;
 }
 
-a.nav-list-link {
-	font-size: 0.7rem !important;
-}
-
 @media (min-width: 50rem) {
     .side-bar {
         width: 13rem !important;
@@ -177,6 +178,9 @@ a.nav-list-link {
     .main-content-wrap {
         padding-top: 0rem !important;
     }
+a.nav-list-link {
+	font-size: 0.7rem !important;
+}
 }
 
 @media (min-width: 66.5rem) {
