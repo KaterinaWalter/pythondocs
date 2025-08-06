@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "🐞 Debugging Errors" 
-parent: "📚 References"
+parent: "📖 References"
 nav_order: 2
 ---
 
