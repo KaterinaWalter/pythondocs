@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "💬 CodeCollab HW" 
-parent: References
+parent: "📚 References"
 nav_order: 0
 ---
 
