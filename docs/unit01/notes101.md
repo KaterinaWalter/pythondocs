@@ -14,12 +14,11 @@ nav_order: 1
 
 ---
 
-
----
-
-## Variables & Data Types
-
-First, make sure you have a blank Python program to take notes and code along as we dive into the lesson:
+<div style="text-align: center;">
+<span class="highlighter-green"> 
+<strong>✴✴✴ NEW UNIT/SECTION! ✴✴✴</strong><br>Create a blank Python program to take your class notes in for the next few lessons.<br><em>Click on the collapsed heading below for GitHub instructions</em> ⤵  
+</span>
+</div>
 
 <html>
   <details>
@@ -57,6 +56,11 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
   </details>
 </html>
+
+
+---
+
+## Variables & Data Types
 
 ### Variables Store Data
 
