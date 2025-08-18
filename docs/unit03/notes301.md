@@ -14,6 +14,12 @@ nav_order: 1
 
 ---
 
+<div style="text-align: center;">
+<span class="highlighter-green"> 
+<strong>✴✴✴ NEW UNIT/SECTION! ✴✴✴</strong><br>Create a blank Python program to take your class notes in for the next few lessons.<br><em>Click on the collapsed heading below for GitHub instructions</em> ⤵  
+</span>
+</div>
+
 <html>
   <details>
     <summary>📓 <strong class="text-green-200">NOTES PROGRAM SETUP INSTRUCTIONS</strong></summary>
