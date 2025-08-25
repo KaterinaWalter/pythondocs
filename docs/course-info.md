@@ -88,7 +88,7 @@ nav_order: 0
     <td class="text-center">60%</td>
   </tr>
   <tr>
-    <td class="fs-1">Assignment “submitted” but has insufficient evidence of individual work.</td>
+    <td class="fs-1">Assignment submitted but has insufficient evidence of individual work.</td>
     <td class="text-center">0/5</td>
     <td class="text-center">50%</td>
   </tr>
@@ -116,8 +116,8 @@ nav_order: 0
 {: .highlight .fs-3 }
 CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
-* ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
-
+* ⏰ **LATE HW GRADING PENALTIES**: Late homework will recieve **no penalty** if submitted _within one week_ of the deadline, a **5% deduction** if submitted in the _2nd week past_ the deadline, and a **10% deduction** if submitted _later than 3 weeks_.
+  
 {: .warning .fs-3 }
 📧 You must **SEND ME AN EMAIL** whenever you submit homework late, especially after the assignment has been graded on Blackbaud! _Otherwise I will not be notified._
 
