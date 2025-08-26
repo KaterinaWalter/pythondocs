@@ -47,7 +47,7 @@ nav_order: 0
 <details>
 <summary><strong class="text-purple-100">PROJECT GRADING RUBRIC</strong></summary>
 
-<p class="fs-3 highlight">Programming projects are evaluated via a <strong>qualitative system</strong> considering a program’s efficiency, legibility, correctness, completeness, comments, etc. The grading rubric employs a 5-point scale. The assignment score is then adjusted to be out of 10 points, such that students earn a baseline of 50% credit for submitted work. Extra credit may be awarded for exceptional effort!</p>
+<p class="fs-3 highlight">Programming projects are evaluated via a <strong>qualitative system</strong> considering a program’s efficiency, legibility, correctness, completeness, comments, etc. The grading rubric employs a 5-point scale. The overall assignment score is then adjusted to be out of 10 points, such that students earn a baseline grade of 50% ("scaled zero"). Extra credit may be awarded for exceptional effort!</p>
 
 <div>
 <table><thead>
@@ -88,7 +88,7 @@ nav_order: 0
     <td class="text-center">60%</td>
   </tr>
   <tr>
-    <td class="fs-1">Assignment submitted but has insufficient evidence of individual work.</td>
+    <td class="fs-1">Work that fails to demonstrate understanding and/or has insufficient evidence of individual work may be graded as low as scaled zero (50%). Missing assignments also receive a scaled zero (50%).</td>
     <td class="text-center">0/5</td>
     <td class="text-center">50%</td>
   </tr>
