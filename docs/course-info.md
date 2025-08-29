@@ -120,7 +120,7 @@ nav_order: 0
 {: .highlight .fs-3 }
 CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
-* ⏰ **LATE HW GRADING PENALTIES**: Late homework assignments will receive **no penalty** if submitted _within one week_ of the deadline (_i.e. by the following Friday_), a **5% deduction** in points if submitted in the _2nd week past_ the deadline, and a **10% deduction** if submitted _later than 3 weeks_.
+* ⏰ **LATE HOMEWORK**: Students are expected to submit work by the assigned due date. This helps you participate fully in class, engage in the lesson, better prepare for assessments, and earn a satisfactory grade in the class. While there may be **grading penalties** for work submitted late, the goal is to help you successfully complete assignments on time, so you are prepared to learn and progress in class. If you require an **extension**, it is _your responsibility_ to let me know and have a plan in place for submission. 
 
 {: .warning .fs-3 }
 📧 You must **SEND ME AN EMAIL** whenever you submit homework late, especially after the assignment has been graded on Blackbaud! _Otherwise I will not be notified._
