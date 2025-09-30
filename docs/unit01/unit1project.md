@@ -21,9 +21,9 @@ In this project, students will demonstrate understanding of Python programming b
     
 <div class="setup" markdown="block">
 
-1. Go to the `CS3 Unit 1 Project` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
-  > 📁 Clicking the link generates a **private repository** for your project with the appropriate starter code. Note that **projects** are stored within the [BWL-CS Organization](https://github.com/BWL-CS), so you _cannot_ access it from the "Your Repositories" page!
-2. Open the repository in a **Codespace** whenever you spend time working on the program, in class or at home. 
+1. Go to this starter code repository: [Python Web Wrapper](https://github.com/KaterinaWalter/python-web-wrapper)
+2. Click **FORK** to create your own copy, name it: `Python-Trivia-Quiz`
+3. Open the repository in a **Codespace** whenever you spend time working on the program, in class or at home. 
   > ⚠️ Always remember to `commit changes` after every coding session!
 3. When your project is complete, **submit the link to your repository** in the `CS3 Unit 1 Project` assignment on Blackbaud.
 
