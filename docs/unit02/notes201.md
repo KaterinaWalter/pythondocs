@@ -480,6 +480,14 @@ for index, row in poke.iterrows():
 
 #### Conditional Slicing
 
+* `df[df['col'] > 10]` – rows where column > 10
+
+* `df[(df['A'] > 5) & (df['B'] < 3)]` – multiple conditions (use `&`, `|` instead of `and`, `or`)
+
+* `df.query('A > 5 and B < 3')` – same using query syntax
+
+* `df[df['col'].isin(['x', 'y'])]` – rows where column is in list
+
 ---
 
 ## ⭐️ Glossary
