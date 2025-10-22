@@ -327,56 +327,7 @@ print(pokemon.columns)
 ```
 </div>
 
-### Viewing Data & Basic Statistics
-
-***Attributes:***
-* `df.shape` - tuple of (rows, columns)
-* `df.columns` - list of column names
-* `df.index` - row index info
-* `df.dtypes` - data type of each column
-
-***Functions:***
-* `df.head(n)` - show first _n_ rows (default 5)
-* `df.tail(n)` - show last _n_ rows (default 5)
-* `df.sample(n)` - show random sample of _n_ rows
-* `df.info()` - summary of columns, non-null counts, data types
-* `df.describe()` - numeric summary (mean, std, min, max)
-* `df.describe(include='all')` - includes non-numeric columns
-* `df.count()` - number of non-null values per column
-* `df['col'].value_counts()` - frequency counts for values in a column
-* `df.sort_values('col')[:10]` - top 10 after sorting
-* `df.nlargest(5, 'col')` - 5 largest values in col
-* `df.nsmallest(5, 'col')` - 5 smallest values in col
-
-### Splitting Data into Groups with `.groupby`
-
-* Average stats by primary type:
-  ```python
-  df.groupby('Type 1')[['Attack', 'Defense', 'Speed']].mean()
-  ```
-  > **Output:** Shows mean Attack, Defense, and Speed for each Pokémon type (e.g., Fire, Water, Grass).
-
-* Count of Pokémon by type:
-  ```python
-  df.groupby('Type 1').size().sort_values(ascending=False)
-  ```
-  > **Output:** Number of Pokémon per primary type, sorted from most to least common.
-
-* Average total stats by generation:
-  ```python
-  df['Total'] = df[['HP', 'Attack', 'Defense', 'Speed']].sum(axis=1)
-  df.groupby('Generation')['Total'].mean()
-  ```
-  > **Output:** Average combined stats per generation.
-
-* Compare legendary vs. non-legendary averages:
-  ```python
-  df.groupby('Legendary')[['Attack', 'Defense', 'Speed']].mean()
-  ```
-  > **Output:** two rows, `False` (normal Pokémon) and `True` (legendary), with mean values for each stat.
-
-
-### Selecting Columns & Rows in DataFrames
+### Selecting Columns in DataFrames
 
 Recall that a `DataFrame` acts in many ways like a two-dimensional _array_, and in other ways like a _dictionary_ of `Series` structures sharing the same **index**. These analogies can be helpful to keep in mind as we explore **data selection** within this structure.
 
@@ -405,6 +356,59 @@ Like with the `Series` objects discussed earlier, this dictionary-style syntax c
 # Compute ratio of Attack stat to Special Attack stat
 pokemon['Attack Ratio'] = pokemon['Attack'] / pokemon['Sp. Atk']
 ```
+
+### Viewing Data & Basic Statistics
+
+***Attributes:***
+* `df.shape` - tuple of (rows, columns)
+* `df.columns` - list of column names
+* `df.index` - row index info
+* `df.dtypes` - data type of each column
+
+***Functions:***
+* `df.head(n)` - show first _n_ rows (default 5)
+* `df.tail(n)` - show last _n_ rows (default 5)
+* `df.sample(n)` - show random sample of _n_ rows
+* `df.info()` - summary of columns, non-null counts, data types
+* `df.describe()` - numeric summary (mean, std, min, max)
+* `df.describe(include='all')` - includes non-numeric columns
+* `df.count()` - number of non-null values per column
+* `df['col'].value_counts()` - frequency counts for values in a column
+* `df.sort_values('col')[:10]` - top 10 after sorting
+* `df.nlargest(5, 'col')` - 5 largest values in col
+* `df.nsmallest(5, 'col')` - 5 smallest values in col
+
+#### Aggregation with `.groupby`
+
+* Average stats by primary type:
+  ```python
+  df.groupby('Type 1')[['Attack', 'Defense', 'Speed']].mean()
+  ```
+  > **Output:** Shows mean Attack, Defense, and Speed for each Pokémon type (e.g., Fire, Water, Grass).
+
+* Count of Pokémon by type:
+  ```python
+  df.groupby('Type 1').size().sort_values(ascending=False)
+  ```
+  > **Output:** Number of Pokémon per primary type, sorted from most to least common.
+
+* Average total stats by generation:
+  ```python
+  df['Total'] = df[['HP', 'Attack', 'Defense', 'Speed']].sum(axis=1)
+  df.groupby('Generation')['Total'].mean()
+  ```
+  > **Output:** Average combined stats per generation.
+
+* Compare legendary vs. non-legendary averages:
+  ```python
+  df.groupby('Legendary')[['Attack', 'Defense', 'Speed']].mean()
+  ```
+  > **Output:** two rows, `False` (normal Pokémon) and `True` (legendary), with mean values for each stat.
+
+
+### Selecting Rows in DataFrames
+
+Recall that a `DataFrame` acts in many ways like a two-dimensional _array_, and in other ways like a _dictionary_ of `Series` structures sharing the same **index**. These analogies can be helpful to keep in mind as we explore **data selection** within this structure.
 
 #### DataFrame as Two-Dimensional Array
 {:.no_toc}
