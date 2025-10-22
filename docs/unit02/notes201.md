@@ -310,50 +310,7 @@ pd.DataFrame({'population': population,
 
 ---
 
-## Data Indexing and Selection
-
-### Data Selection in Series
-
-As you saw in the previous chapter, a `Series` object acts in many ways like a one-dimensional NumPy array, and in many ways like a standard Python dictionary.
-
-#### Indexers: loc and iloc
-
-If your `Series` has an explicit integer index, an indexing operation such as `data[1]` will use the explicit indices, while a slicing operation like `data[1:3]` will use the implicit indices:
-
-
-```python
-data = pd.Series(['a', 'b', 'c'], index=[1, 3, 5])
-
-# explicit index when indexing
-data[1]
-
-# implicit index when slicing
-data[1:3]
-```
-
-Because of this potential confusion in the case of integer indexes, Pandas provides some special *indexer* attributes that explicitly expose certain indexing schemes.
-These are not functional methods, but attributes that expose a particular slicing interface to the data in the `Series`.
-
-First, the `loc` attribute allows indexing and slicing that always references the **explicit index**:
-
-```python
-data.loc[1]
-
-data.loc[1:3]
-```
-
-The `iloc` attribute allows indexing and slicing that always references the **implicit Python-style index**:
-
-```python
-data.iloc[1]
-
-data.iloc[1:3]
-```
-
-One guiding principle of Python code is that "explicit is better than implicit."
-The explicit nature of `loc` and `iloc` makes them helpful in maintaining clean and readable code; especially in the case of integer indexes, using them consistently can prevent subtle bugs due to the mixed indexing/slicing convention.
-
-### Selecting Columns & Rows in DataFrames
+## Helpful `DataFrame` Operations
 
 <div class="task" markdown="block">
  
@@ -370,7 +327,13 @@ print(pokemon.columns)
 ```
 </div>
 
-Recall that a `DataFrame` acts in many ways like a two-dimensional or structured _array_, and in other ways like a _dictionary_ of `Series` structures sharing the same index. These analogies can be helpful to keep in mind as we explore **data selection** within this structure.
+### Viewing Data and Basic Statistics
+
+
+
+### Selecting Columns & Rows in DataFrames
+
+Recall that a `DataFrame` acts in many ways like a two-dimensional _array_, and in other ways like a _dictionary_ of `Series` structures sharing the same **index**. These analogies can be helpful to keep in mind as we explore **data selection** within this structure.
 
 #### DataFrame as Dictionary
 {:.no_toc}
@@ -409,6 +372,8 @@ We can examine the raw underlying data array using the `values` attribute:
 pokemon.values
 ```
 
+#### Indexers: `loc` and `iloc`
+
 When it comes to indexing of a `DataFrame` object, Pandas again uses the `loc` and `iloc` indexers mentioned earlier.
 
 * Use `.iloc` when you want to access data by position.
@@ -435,7 +400,7 @@ grass_types = pokemon.loc[pokemon['Type 1'] == "Grass"]
 print(grass_types)
 ```
 
-#### Using String Indices
+#### Using `String` Indices
 
 If you modify your DataFrame to use string indices, such as the Pokémon names, you will likely use `.loc` more frequently than `.iloc`. You first need to set the Pokémon names as the index: 
 
@@ -463,6 +428,8 @@ When iterating with `.iterrows()`, it automatically provides the index (now Pok�
 for index, row in poke.iterrows():
     print(index, " - ", row['Type 1'])
 ```
+
+#### Conditional Slicing
 
 ---
 
