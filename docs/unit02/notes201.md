@@ -406,16 +406,50 @@ pokemon['Attack Ratio'] = pokemon['Attack'] / pokemon['Sp. Atk']
   > **Output:** two rows, `False` (normal Pokémon) and `True` (legendary), with mean values for each stat.
 
 
-#### Conditional Slicing
+#### Conditional Filtering
 
-* `df[df['col'] > 10]` – rows where column > 10
-
-* `df[(df['A'] > 5) & (df['B'] < 3)]` – multiple conditions (use `&`, `|` instead of `and`, `or`)
-
-* `df.query('A > 5 and B < 3')` – same using query syntax
-
-* `df[df['col'].isin(['x', 'y'])]` – rows where column is in list
-
+* Select Pokémon with HP greater than 100:
+  ```python
+  df[df['HP'] > 100]
+  ```
+* Select Fire-type Pokémon:
+  ```python
+  df[df['Type 1'] == 'Fire']
+  ```
+* Select Pokémon that are both Fire and Flying type:
+  ```python
+  df[(df['Type 1'] == 'Fire') & (df['Type 2'] == 'Flying')]
+  ```
+* Select Pokémon that are either Water or Ice type:
+  ```python
+  df[(df['Type 1'] == 'Water') | (df['Type 1'] == 'Ice')]
+  ```
+* Select Pokémon with Attack above 120 and Defense below 60:
+  ```python
+  df[(df['Attack'] > 120) & (df['Defense'] < 60)]
+  ```
+* Select Pokémon whose name contains “Mega”:
+  ```python
+  df[df['Name'].str.contains('Mega')]
+  ```
+* Exclude Legendary Pokémon:
+  ```python
+  df[df['Legendary'] == False]
+  # or equivalently
+  df[~df['Legendary']]
+  ```
+* Select Pokémon with Speed between 80 and 100:
+  ```python
+  df[(df['Speed'] >= 80) & (df['Speed'] <= 100)]
+  ```
+* Select only Grass-type Pokémon that are not Legendary:
+  ```python
+  df[(df['Type 1'] == 'Grass') & (df['Legendary'] == False)]
+  ```
+* Select top 5 Electric Pokémon with highest Attack: 
+  ```python
+  df[df['Type 1'] == 'Electric'].nlargest(5, 'Attack')
+  ```
 
 ### Selecting Rows in DataFrames
 
