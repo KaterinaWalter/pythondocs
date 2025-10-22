@@ -357,7 +357,7 @@ Like with the `Series` objects discussed earlier, this dictionary-style syntax c
 pokemon['Attack Ratio'] = pokemon['Attack'] / pokemon['Sp. Atk']
 ```
 
-### Viewing Data & Basic Statistics
+### Viewing Data, Statistics, Filtering
 
 ***Attributes:***
 * `df.shape` - tuple of (rows, columns)
@@ -406,6 +406,17 @@ pokemon['Attack Ratio'] = pokemon['Attack'] / pokemon['Sp. Atk']
   > **Output:** two rows, `False` (normal Pokémon) and `True` (legendary), with mean values for each stat.
 
 
+#### Conditional Slicing
+
+* `df[df['col'] > 10]` – rows where column > 10
+
+* `df[(df['A'] > 5) & (df['B'] < 3)]` – multiple conditions (use `&`, `|` instead of `and`, `or`)
+
+* `df.query('A > 5 and B < 3')` – same using query syntax
+
+* `df[df['col'].isin(['x', 'y'])]` – rows where column is in list
+
+
 ### Selecting Rows in DataFrames
 
 Recall that a `DataFrame` acts in many ways like a two-dimensional _array_, and in other ways like a _dictionary_ of `Series` structures sharing the same **index**. These analogies can be helpful to keep in mind as we explore **data selection** within this structure.
@@ -449,7 +460,7 @@ grass_types = pokemon.loc[pokemon['Type 1'] == "Grass"]
 print(grass_types)
 ```
 
-#### Using `String` Indices
+#### Using String Indices
 
 If you modify your DataFrame to use string indices, such as the Pokémon names, you will likely use `.loc` more frequently than `.iloc`. You first need to set the Pokémon names as the index: 
 
@@ -477,16 +488,6 @@ When iterating with `.iterrows()`, it automatically provides the index (now Pok�
 for index, row in poke.iterrows():
     print(index, " - ", row['Type 1'])
 ```
-
-#### Conditional Slicing
-
-* `df[df['col'] > 10]` – rows where column > 10
-
-* `df[(df['A'] > 5) & (df['B'] < 3)]` – multiple conditions (use `&`, `|` instead of `and`, `or`)
-
-* `df.query('A > 5 and B < 3')` – same using query syntax
-
-* `df[df['col'].isin(['x', 'y'])]` – rows where column is in list
 
 ---
 
