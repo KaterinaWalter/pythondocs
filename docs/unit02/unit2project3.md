@@ -1,9 +1,9 @@
 ---
 layout: project
-title: "💻 Unit 2 Project"
+title: "💻 Project #3"
 projectname: "Exploratory Data Analysis"
 parent: "2️⃣ Data Science"
-nav_order: 8
+nav_order: 9
 ---
 
 ### Project Overview
@@ -19,20 +19,40 @@ The long-term project consists of THREE main deliverables:
 
 <html>
   <details>
-    <summary>📥 <strong class="text-green-200">PROJECT SETUP & SUBMISSION INSTRUCTIONS</strong></summary>
+    <summary>💻 <strong class="text-green-200">PROJECT PROGRAM SETUP INSTRUCTIONS</strong></summary>
     
 <div class="setup" markdown="block">
 
-1. Go to the `CS3 Unit 2 Project` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
-  > 📁 Clicking the link generates a **private repository** for your project with the appropriate starter code. Note that **projects** are stored within the [BWL-CS Organization](https://github.com/BWL-CS), so you _cannot_ access it from the "Your Repositories" page!
-2. Open the repository in a **Codespace** whenever you spend time working on the program, in class or at home. 
-  > ⚠️ Always remember to `commit changes` after every coding session!
-3. When your project is complete, **submit the link to your repository** in the `CS3 Unit 2 Project` assignment on Blackbaud.
+1. Go to the public template **repository** for our class: [BWL-CS Python Template](https://github.com/BWL-CS/python-template)
+2. Click the <button type="button" name="button" class="btn btn-green">Use this template</button> button above the list of files then select `Create a new repository`
+3. Specify the **repository name**: `CS3-Project-EDA`
+4. Click <button type="button" name="button" class="btn btn-green">Create repository</button>
+    > Now you have **your own personal copy** of this starter code that you can always access under the `Your repositories` section of GitHub! 📂
+5. Now on your repository, click <button type="button" name="button" class="btn btn-green"> < > Code </button> and select the `Codespaces` tab
+6. Click `Create Codespace on main` and wait for the environment to load, _then you're ready to code_!
 
 </div>
 
-</details>
+<br>
+
+<div class="warn" markdown="block">
+
+🛑 When class ends, don't forget to **SAVE YOUR WORK**! **Codespaces** are TEMPORARY editing environments, so you need to COMMIT changes properly in order to update the main **repository** for your program. 
+
+_There are multiple steps to saving in GitHub Codespaces:_
+
+1. Navigate to the `Source Control` menu on the _LEFT_ sidebar
+2. Click the <button type="button" name="button" class="btn btn-green">commit changes</button> button on the _LEFT_ menu
+3. Type a brief **commit message** at the top of the file that opens, for example: `updated main.py`
+4. Click the small `✔️` **checkmark** in the _TOP RIGHT_ corner
+5. Click the <button type="button" name="button" class="btn btn-green">sync changes</button> button on the _LEFT_ menu
+6. _Finally you can close your Codespace!_
+
+</div>
+
+  </details>
 </html>
+
 
 ---
 
