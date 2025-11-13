@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "💻 Unit 1 Project"
+title: "💻 Project #1"
 projectname: "Trivia Quiz App"
 parent: "1️⃣ Python Bootcamp"
 nav_order: 6
