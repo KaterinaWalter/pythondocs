@@ -63,7 +63,7 @@ In this part, the class will work together to design a Pandas DataFrame that con
 <div class="task" markdown="block">
 
 1. **Choose the Columns for the DataFrame**: 
-    - Decide as a class what kinds of data to collect. This could include basic information such as:
+    - Decide as a class what kinds of data to collect. _Examples:_
       - Name
       - Age
       - Favorite Subject
@@ -77,11 +77,12 @@ In this part, the class will work together to design a Pandas DataFrame that con
     - Each student will interview the rest of the classmates to fill in the data in the Google Sheet.
     - Make sure you are accurate and respectful when collecting information.
 4. **Load CSV into a DataFrame**:
-    - Save the class DataFrame into a CSV file.
-    - _Example of saving the DataFrame to a file:_
-      ```python
-      df = pd.read_csv('class-data.csv')
-      ```
+    - **File** → **Download** the class data sheet as a `.csv` file.
+    - In your Python program, read the CSV into a pandas DataFrame.
+      - _Example:_
+        ```python
+        df = pd.read_csv('class-data.csv')
+        ```
 </div>
 
 ---
