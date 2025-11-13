@@ -8,7 +8,12 @@ nav_order: 8
 
 ### Project Overview & Setup
 
+In this project, you will work together to create a `pandas` DataFrame containing data on each member of the class, which you will later use to create data visualizations using `matplotlib`. 
 
+_This project has two phases:_
+
+1. **Collaborative Data Collection**: You will work together as a class to design and collect data into a single DataFrame.
+2. **Independent Visualization**: You will choose an aspect of the data to create your own data visualization using `matplotlib`.
 
 <html>
   <details>
@@ -51,13 +56,6 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
 ### Instructions & Requirements
 
-In this project, you will work together to create a Pandas DataFrame containing data on each member of the class, which you will later use to create data visualizations using `matplotlib`. 
-
-_This activity has two phases:_
-
-1. **Collaborative Data Collection**: You will work together as a class to design and collect data into a single DataFrame.
-2. **Independent Visualization**: You will choose an aspect of the data to create your own data visualization using `matplotlib`.
-
 #### PART A: Collaborative Data Collection
 
 In this part, the class will work together to design a Pandas DataFrame that contains data on each student. You will be interviewing your classmates to gather this data.
@@ -85,6 +83,8 @@ In this part, the class will work together to design a Pandas DataFrame that con
       df = pd.read_csv('class-data.csv')
       ```
 </div>
+
+---
 
 #### PART B: Independent Data Visualization
 
