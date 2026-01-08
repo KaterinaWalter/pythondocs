@@ -78,7 +78,7 @@ _There are multiple steps to saving in GitHub Codespaces:_
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
      
 {:.highlight}
-💡 Choosing an **appropriate visualization** is crucial for effectively *exploring datasets* and *communicating findings*. Use this interactive <a href="https://www.data-to-viz.com/"><button class="btn btn-secondary">Data Viz Decision Tree</button></a> tool to help you pick a chart based on the **type of data**.  
+💡 Choosing an **appropriate visualization** is crucial for effectively *exploring datasets* and *communicating findings*. Use this interactive <a href="https://www.data-to-viz.com/"><button class="btn btn-secondary">Data Viz Decision Tree</button></a> tool to help you pick a graph based on the **type of data**.  
 
 #### ② Python script:
 
