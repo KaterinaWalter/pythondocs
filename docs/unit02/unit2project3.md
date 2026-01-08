@@ -76,6 +76,9 @@ _There are multiple steps to saving in GitHub Codespaces:_
     > _How do values in a specific column change over time or categories?_
 - [ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
+     
+{:.highlight}
+💡 Choosing the right type of visualization is crucial for effectively **exploring** your dataset and **communicating** your findings. Try this <a href="https://www.data-to-viz.com/"><button class="btn btn-primary">Data Viz Decision Tree</button></a> tool to help you pick a chart based on your data! 
 
 #### ② Python script:
 
@@ -88,7 +91,7 @@ Your `main.py` script should be well-organized and demonstrate that you performe
   - Filter and/or group data for focused analysis.
 - [ ] Contain code for at least **4 different types of visualizations**
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
-  - Visualizations should be clear, informative, and appropriate for the data (_see guidelines below_)
+  - Visualizations should be clear, informative, and **appropriate for the data**.
   > See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration.
 - [ ] Be thoroughly **commented**
   - Explain the purpose of each section of the code.
@@ -116,23 +119,4 @@ A scientific poster for an academic conference must effectively communicate **ke
 - [ ] **References**
   - Cite the dataset and any external resources
   > 📚 Conduct _research_ on the topic to enhance your poster's **Introduction** and/or **Discussion** sections!
-
----
-
-### Choosing Appropriate Visualizations
-
-{:.highlight}
-💡 Choosing the right type of visualization is crucial for effectively communicating your findings. Below are some **guidelines** to help you decide. Check out this resource from [UC Berkeley](https://guides.lib.berkeley.edu/data-visualization/about) for additional tips.
-
-#### Example Chart Selection Table
-
-| **Question Type**              | **Recommended Chart Type**       |
-|--------------------------------|----------------------------------|
-| Proportions within a whole                    | Pie chart, Stacked bar plot, Word cloud      |
-| Trends over time, sequential events              | Line plot, Animated plots                        |
-| Distribution of a variable     | Histogram, Box plot (comparing between groups)             |
-| Comparison across categories   | Bar plot, Grouped bar plot (catplot)      |
-| Relationships between variables| Scatter plot (two variables), Heatmap (multiple variables)            |
-
-![image](data-viz-cheatsheet.jpeg)
 
