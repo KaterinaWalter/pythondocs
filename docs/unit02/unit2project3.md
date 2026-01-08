@@ -12,7 +12,7 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 The long-term project consists of THREE main deliverables:
 
-1. A descriptive **markdown** text file
+1. A descriptive **markdown** text file 
 2. A **python** code script
 3. An academic conference-style **poster** 
 > 📰 Make a copy of this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the poster!
@@ -65,20 +65,20 @@ _There are multiple steps to saving in GitHub Codespaces:_
 
 #### ① Markdown file:
 
-- [ ] **Dataset**:
+- [ ] **Dataset**
   - Provide a _link_ to the dataset you chose. 
     > In `markdown` syntax, you can format links like this: `[Link text](Link address)` 
-- [ ] **Column Descriptions**:
+- [ ] **Column Descriptions**
   - Write a brief description of each column in your dataset. Include data types and potential values.
-- [ ] **Hypotheses/Questions**:
+- [ ] **Hypotheses/Questions**
   - List at least 5 questions you want to explore using your dataset. 
     > _Is there a correlation between two variables?_
     > _How do values in a specific column change over time or categories?_
-- [ ] **Visualization Plan**:
+- [ ] **Visualization Plan**
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
      
 {:.highlight}
-💡 Choosing the right type of visualization is crucial for effectively **exploring** your dataset and **communicating** your findings. Try this <a href="https://www.data-to-viz.com/"><button class="btn btn-primary">Data Viz Decision Tree</button></a> tool to help you pick a chart based on your data! 
+💡 Choosing an **appropriate visualization** is crucial for effectively *exploring datasets* and *communicating findings*. Use this interactive <a href="https://www.data-to-viz.com/"><button class="btn btn-secondary">Data Viz Decision Tree</button></a> tool to help you pick a chart based on the **type of data**.  
 
 #### ② Python script:
 
@@ -91,8 +91,8 @@ Your `main.py` script should be well-organized and demonstrate that you performe
   - Filter and/or group data for focused analysis.
 - [ ] Contain code for at least **4 different types of visualizations**
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
-  - Visualizations should be clear, informative, and **appropriate for the data**.
-  > See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration.
+  - Visualizations should be clear, informative, and *appropriate for the data*.
+  > See the [Python Graph Gallery](https://python-graph-gallery.com/) for sample code.
 - [ ] Be thoroughly **commented**
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
@@ -100,6 +100,7 @@ Your `main.py` script should be well-organized and demonstrate that you performe
 #### ③ Poster: 
 
 A scientific poster for an academic conference must effectively communicate **key findings**. All captions and text should be concise and relevant.
+> 📰 Make a copy of this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the poster!
   
 - [ ] **Introduction**
   - Context for the dataset and why it is interesting/relevant.
