@@ -1,12 +1,12 @@
 ---
 layout: default
-title: References
+title: "📖 References"
 nav_order: 1
 has_children: true
 permalink: ref
 ---
 
-# References
+# 📖 References
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

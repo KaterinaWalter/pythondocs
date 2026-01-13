@@ -1,10 +1,56 @@
-//$body-font-family: roboto, sans-serif;
-//$mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
-$body-line-height: 1.2;
-$content-line-height: 1.4;
-$body-heading-line-height: 1.1;
-$jtdpurple: #5739ce;
+$jtdpurple: #4e26af; // $purple-200
+$jtdpurple-lt: #5e41d0; // $purple-100
+$jtdpurple-dk: #381885; // $purple-300
 
+dt {
+    color: $jtdpurple;
+}
+
+dd {
+    background-color: #E3DEF7;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+p #back-to-top {
+    color: #fff;
+    background-color: $jtdpurple-lt;
+    background-image: linear-gradient(#6f55d5, $jtdpurple-lt);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.12);
+    border-width: 0;
+    border-radius: 4px;
+    text-decoration: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    padding: 0.3em 1em;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+
+}
+
+img[alt=image] {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	border-radius: 4px;
+}
+img[alt=image-small] {
+	width: 50%;
+	margin-right: 25%;
+	margin-left: 25%;
+	border-radius: 4px;
+}
+iframe {
+width: 90% !important;
+margin-left: 5% !important;
+margin-right: 5% !important;
+}
 h1 {
 	color: $jtdpurple;
 	font-weight: bold;	
@@ -13,10 +59,23 @@ h2 {
 	font-weight: bold;
 }
 h3 {
+	font-size: 1.2rem !important;
 	background-color: #F5F6FA;
+	font-weight: bold;
+}
+h4 {
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+h5 {
+	color: $jtdpurple !important;
 }
 .highlighter {
 	background-color: #fcf2c2;
+	border-radius: 2px;	
+}
+.highlighter-green {
+	background-color: #DDF7E9;
 	border-radius: 2px;	
 }
 .task {
@@ -28,7 +87,7 @@ h3 {
 }
 
 .task::before {
-	color: $purple-300;
+    color: $purple-300;
     content: "Task";
     display: block;
     font-weight: bold;
@@ -46,7 +105,7 @@ h3 {
 }
  
 .setup::before {
-		color: $green-300;
+    color: $green-300;
     content: "Setup";
     display: block;
     font-weight: bold;
@@ -64,7 +123,7 @@ h3 {
 }
 
 .warn::before {
-	color: $red-300;
+    color: $red-300;
     content: "Warning";
     display: block;
     font-weight: bold;
@@ -82,8 +141,8 @@ h3 {
 }
 
 .imp::before {
-	color: $blue-300;
-    content: "Warning";
+    color: $blue-300;
+    content: "Important";
     display: block;
     font-weight: bold;
     text-transform: uppercase;
@@ -103,5 +162,47 @@ blockquote.setup, blockquote.task, blockquote.warn, blockquote.imp {
     margin-bottom: 0;
   }
 }
+
+blockquote {
+	color: #67656c !important;
+	font-size: 0.775rem !important;
+}
+
+@media (min-width: 50rem) {
+    .side-bar {
+        width: 13rem !important;
+        min-width: 13rem !important;
+    }
+    .side-bar + .main {
+        margin-left: 13rem !important;
+    }
+    .site-nav {
+        padding-top: 1.5rem !important;
+    }
+    .main-content-wrap {
+        padding-top: 0rem !important;
+    }
+a.nav-list-link {
+	font-size: 0.7rem !important;
+}
+}
+
+@media (min-width: 66.5rem) {
+    .side-bar {
+        width: calc((100% - 66.5rem) / 2 + 13rem) !important;
+        min-width: 13rem !important;
+    }
+    .side-bar + .main {
+	margin-left: max((100% - 66.5rem) / 2 + 13rem) !important;
+    }
+    .site-nav, .site-header, .site-footer {
+        width: 13rem !important;
+    }
+}
+
+
+
+
+
 
 

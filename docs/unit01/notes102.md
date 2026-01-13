@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "📓1.2: Control Structures" 
+title: "📓1.2: Data Collections" 
 parent: "1️⃣ Python Bootcamp"
 nav_order: 2
 ---
@@ -13,1637 +13,959 @@ nav_order: 2
 {:toc}
 
 ---
-## Boolean Logic
 
-### Truthiness
-Evaluating an expression to be `True` or `False` will help us control the flow of our program.
+## Data Collections
 
-
-| type                                        	| truthiness                                                                     	|   	|
-|---------------------------------------------	|--------------------------------------------------------------------------------	|---	|
-| `int`                                       	| `0` is `False`, all other numbers are `True` (including negative)              	|   	|
-| containers - `list`, `tuple`, `set`, `dict` 	| empty container evaluates to `False`, container with items evaluates to `True`) 	|   	|
-| `None`                                      	| `False`                                                                        	|   	|
-
-We talked about `boolean` types, `True` and `False` earlier. `True` and `False` are keywords in Python, so make sure you don't name your variables the same thing.
-
-```python
->>> True
-True
->>> False
-False
-```
-
-Sometimes the truth is obvious. For example `3 < 5` is always `True`. Other times, in Python, the truth value might surprise you. Let's review. First, let's start with an expression we know is always `True`.
-
-```python
->>> 3 < 5
-True
-```
-
-{:.highlight}
-**Tip:** If you want to test your assumptions about an expression that returns `True` or `False`, you can pass it into the constructor for `bool`eans: `bool(expression)`.
-
-### Numbers
-{:.no_toc}
-
-In Python, the integer `0` is always `False`, while every other number, *including negative numbers*, are `True`. In fact, under the hood, `bool`eans inherit from `int`egers.
-
-```python
->>> bool(0)
-False
->>> bool(1)
-True
->>> bool(-1)
-True
-```
-
-### Sequences
-{:.no_toc}
-
-Empty sequences in Python always evaluate to `False`, **including empty `str`ings.**
-
-```python
->>> bool("")    # String
-False
->>> bool([])    # Empty List
-False
->>> bool(set()) # Empty Set
-False
->>> bool({})    # Empty Dictionary
-False
->>> bool(())    # Empty Tuple
-False
-```
-
-Sequences with at least one value will evaluate to `True`.
-
-```python
->>> bool("Hello")   # String
-True
->>> bool([1])       # List
-True
->>> bool({1})       # Set
-True
->>> bool({1: 1})    # Dictionary
-True
->>> bool((1,))      # Tuple
-True
-```
-
-### `None`
-{:.no_toc}
-
-The `None` type in Python represents nothing. No returned value. It shouldn't come as a surprise that the truthiness of `None` is `False`.
-
-```python
->>> bool(None)
-False
-```
-
-`None` is commonly used as a placeholder to mean *"I haven't set this value yet."* Since empty `str`ings and sequence evaluate to `False`, we need to be very careful when we're checking if a sequence has been *declared* or not, or if it's *empty*.   We'll review this concept again when talking about `if` statements later in the day.
-
-```python
->>> my_name = None
->>> bool(my_name)
-False
->>> my_name = ""
->>> bool(my_name)
-False
-
->>> my_list = None
->>> bool(my_list)
-False
->>> my_list = []
->>> bool(my_list)
-False
-```
-
-### Comparison Operators
-
-|Operator|Means|
-|---|---|
-|`<`|less-than|
-|`<=`|less-than-or-equal-to|
-|`>`|greater-than|
-|`>=`|greater-than-or-equal-to|
-
-In Python, comparing numbers is pretty straight forward.
-
-```python
->>> 1 < 10  # 1 is less than 10? True
-True
->>> 20 <= 20  # 20 is less than or equal to 20? True
-True
->>> 10 > 1  # 10 is greater than 1? True
-True
->>> -1 > 1  # -1 is greater than 1? False
-False
->>> 30 >= 30  # 30 is greater than or equal to 30? True
-True
-```
-
-Things get interesting when you try to compare strings. Strings are compared lexicographically. That means by the ASCII value of the character. You don't need to know much about ASCII, besides that capital letters come before lower case ones.
-
-Each character in the two strings is checked one by one, until a character is found that is of a different value. That determines the order. Under the hood, this allows Python to sort strings by comparing them to each other.
-
-```python
->>> "T" < "t"  # Upper case letters are "lower" valued.
-True
->>> "a" < "b"
-True
->>> "bat" < "cat"
-True
-```
-
-### Checking Equality
-
-|Operator|Means|
-|---|---|
-|`==`|equals|
-|`!=`|not-equals|
-
-The equality operators `val1 == val2` *(`val1` equals `val2`)* and `val1 != val2` *(`val1` doesn't equal `val2`)* compare the contents of two different values and return a `bool`ean.
-
-Equality works like you'd expect it to for simple data types.
-
-```python
->>> a = 1
->>> b = 1
->>> a == b
-True
->>> a != b
-False
-
->>> a = "Nina"
->>> b = "Nina"
->>> a == b
-True
->>> a != b
-False
-```
-
-Equality for container types is interesting. Even though `a` and `b` are two different `list`s, their contents are still the same. So compared two lists containing the same values with `==` will return `True`.
-
-```python
->>> a = [1, 2, 3]
->>> b = [1, 2, 3]
->>> a == b
-True
->>> a != b
-False
-```
-
-### Checking Identity
-
-|Operator|Means|
-|---|---|
-|`is`| *is* the same object in memory? (not equality!)|
-|`is not`| *is not* the same object in memory? (not equality!)|
-
-{:.highlight}
-This is something that trips up Python beginners, so make sure you remember that *equality* (`==`, `!=`) **is not** the same as *identity* (`is`, `not is`).
-
-The `is` keywords tests if the two compared objects are stored in the same memory location. I won't go into too much detail into why, but remember **not** to use `is` when what you actually want to check for is equality.
-
-```python
->>> a = [1, 2, 3]
->>> b = [1, 2, 3]
-
->>> a == b  # Testing for equality. a and b contain the same values
-True
->>> a is b  # Testing for identity. a and b are NOT the same object.
-False
-```
-
-{:.highlight}
-When you're first starting out, the only place you'll want to use the `is` keyword is to explicitly compare a value to the built-in types of `None`, `True`, or `False`.
-
-```python
->>> a = True
->>> a is True
-True
-
->>> b = False
->>> b is False
-True
->>> b is not True   # Opposite of is b True. aka is b False?
-True
-
->>> c = None
->>> c is None
-True
->>> c is not None
-False
-```
-
-### Compound Operators: `and`, `or`, `not`
-`and`, `or`, and `not` are the three basic types of boolean operators that are present in math, programming, and database logic.
-
-In other programming languages, you might have seen the concept of `and` represented with `&&`, `or`, represented with `||`, and `not` represented by `!`. The Python language is instead focused on readability. So we'll use the english `and` instead of trying to remember fancy symbols. Python still uses the `&`, `|` and `!` expressions, but they're used for bitwise operations.
-
-You can use them to compare one (or more expressions) and determine if they evaluate to `True` or `False`.
-
-Thankfully, you don't have to be a computer scientist to understand them if you use this handy table.
-
-|Operation|Result|
-|---|---|
-|`a or b`|if a is False, then b, else a|
-|`a and b`|if a is False, then a, else b|
-|`not a`|if a is false, then `True`, else `False`|
-
-
-#### `and` table
-{:.no_toc}
-
-<!--
-| a       	| b       	| a `and` b  	|
-|---------	|---------	|------------	|
-| `True`  	| `True`  	| **`True`** 	|
-| `True`  	| False 	| False    	|
-| False 	| `True`  	| False    	|
-| False 	| False 	| False    	|
--->
-
-{:.highlight}
-For `a and b`, if a is false, a is returned. Otherwise b is returned.
-*If `a and b` are both `bool`ean values, the expression evaluates to`True` if both a and b are `True`.*
-
-```python
->>> a = True    # a is True
->>> b = True
->>> a and b     # True is returned. (value of b)
-True
-
->>> a = False   # a is False
->>> b = True
->>> a and b     # False is returned. (value of a)
-False
-
->>> a = False   # a is False
->>> b = False
->>> a and b     # False is returned. (value of a)
-False
-```
-
-Notice what happens when do the same thing to values that have a "truthiness" to them.
-
-```python
->>> bool(0) # Verify that zero is "falsey"
-False
->>> bool(1) # Verify that one is "truthy"
-True
->>> 0 and 1 # 0 is False. 0 is returned.
-0
-```
-
-#### `or` table
-{:.no_toc}
-
-<!--
-| a       	| b       	| a `or` b   	|
-|---------	|---------	|------------	|
-| `True`  	| `True`  	| **`True`** 	|
-| `True`  	| False 	| **`True`** 	|
-| False 	| `True`  	| **`True`** 	|
-| False 	| False 	| False    	|
--->
-
-{:.highlight}
-For `a or b`, if a is false, b is returned. If a is true, a is returned.
-*`a or b` evaluates to `True` if either (or both) of the expressions are true.*
-
-```python
->>> a = True    # a is true
->>> b = True
->>> a or b      # True is returned (value of a)
-True
-
->>> a = False   # a is false
->>> b = True
->>> a or b      # True is returned (value of b)
-True
-
->>> 0 or 1      # 0 is false. Return 1.
-1
-```
-
-#### `not` table
-{:.no_toc}
-
-| a       	| `not` a    	|
-|---------	|------------	|
-| true  	| False    	|
-| false 	| **`True`** 	|
-
-
-{:.highlight}
-`not a` reverses the `bool`ean value of `a`. If it *was* true, it will return `False`. If it was false, it will return `True`.
-
-```python
->>> a = True
->>> not a  # not returns the opposite. True -> False
-False
-
->>> a = False
->>> not a  # not returns the opposite. False -> True
-True
-```
-
-And again, with numbers. Remember, zero is considered `False`, any other number is considered `True`.
-
-```python
->>> bool(1)
-True
->>> not 1
-False
->>> bool(0)
-False
->>> not 0
-True
-```
-
-#### In Combination
-{:.no_toc}
-
-When combining multiple boolean operators, you can add optional parenthesis for readability.
-
-```python
->>> a = True
->>> b = True
->>> c = False
-
->>> a and (b or c)
-True
-```
-
-You can combine multiple operators to test complex assumptions. For example, to return `True` only if *both* values are `False`, we can use the `not` negation operation on the result of an `or`.
-
-```python
->>> a = False
->>> b = False
-
->>> a or b  # False because both are False.
-False
-
->>> not (a or b)  # True - checking if both are False.
-True
-```
-
-#### With "truthiness"
-{:.no_toc}
-
-Remember, we learned that some values in Python are *falsey* like the number zero, and some are *truthy* like any number *expect* for zero.
-
-It's a little counter intuitive, but when we compare values other than `bool`eans, our code behaves a little differently.
-
-|Operation|Result|
-|---|---|
-|`x or y`|if x is false, then y, else x|
-|`x and y`|if x is false, then x, else y|
-
-Let's see it in action. First, lets test our assumptions again.
-
-```python
->>> bool(0)     # Truthiness of 0 is False
-False
-
->>> bool(1)     # Truthiness of 1 is True
-True
-
->>> bool(None)  # Truthiness of None type is False
-False
-
->>> 1 or 0      # Returns 1, the True value
-1
-
->>> 1 and 0     # Returns 0, the False value
-0
-
->>> 0 or None   # Neither are True. Returns nothing (None)
-```
-
-### ⭐️ Practice
-
-#### Comparison Operators
-{:.no_toc}
-
-|Operator|Means|
-|---|---|
-|`<`|less-than|
-|`<=`|less-than-or-equal-to|
-|`>`|greater-than|
-|`>=`|greater-than-or-equal-to|
-|`==`|equals|
-|`!=`|not-equals|
-
-Remember, the first six operators test the object's *value*. `is` and `is not` test whether two objects are the same thing. This is useful for singletons, such as `None` or `False`. We won't be using them much in this intro course, but feel free to play with them.
-
-```python
->>> 10 > 5
->>> 5 > 10
->>> 10 > 10
->>> 10 >= 10
->>> 5 < 10
->>> 5 < 5
->>> 5 <= 5
->>> 5 == 5
->>> 5 != 10
-```
+Python provides 4 **built-in data structures** that allow you to store _collections of data_ in a _single named variable_:
 
 <html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-  
+<dl>
+  <dt>Lists</dt>
+  <dd>Ordered, mutable sequences, declared with square brackets <code>[ ]</code>. Suitable for storing collections of items that can be changed.</dd>
+  <dt>Tuples</dt>
+  <dd>Ordered, immutable sequences, declared with parentheses <code>( )</code>. Useful for storing fixed collections of items that should not be modified.</dd>
+  <dt>Sets</dt>
+  <dd>Unordered collections of unique, immutable elements, declared with curly braces <code>{ }</code>. Ideal for storing distinct items and performing set operations.</dd>
+  <dt>Dictionaries</dt>
+  <dd>Unordered collections of key-value pairs, declared with curly braces <code>{ }</code>. Excellent for storing data with associated labels for quick retrieval.</dd>
+</dl>
+</html>
+
+### Lists
+Lists are one of the most powerful data types in Python. Generally, they're container objects used to **store related items together**.
+
+#### `list` cheat sheet
+{: .no_toc }
+
+| type             	| `list`                                                                                	|
+|------------------	|---------------------------------------------------------------------------------------	|
+| use              	| Used for storing similar items, and in cases where items need to be added or removed. 	|
+| creation         	| `[]` or `list()` for empty list, or `[1, 2, 3]` for a list with items.                            	|
+| search methods   	| `my_list.index(item)` or `item in my_list`                                                                           	|
+| search speed     	| Searching in an item in a large list is slow. Each item must be checked.                               	|
+| common methods   	| `len(my_list)`, `append(item)` to add, `insert(index, item)` to insert in the middle, `pop()` to remove.         	|
+| order preserved? 	| Yes. Items can be accessed by index.                                                  	|
+| mutable?         	| Yes                                                                                   	|
+| in-place sortable?        	| Yes. `my_list.sort()` will sort the list in-place. `my_list.sort(reverse=True)` will sort the list in-place in *descending* order. `my_list.reverse()` will *reverse the items* in `my_list` in-place.           	|
+
+
+An _empty list_ can be created in two ways. The first, by calling the `list()` method. More commonly, it's created with two empty brackets `[]`. 
+
 ```python
->>> 10 > 5
-True
->>> 5 > 10
-False
->>> 10 > 10
-False
->>> 10 >= 10
-True
->>> 5 < 10
-True
->>> 5 < 5
-False
->>> 5 <= 5
-True
->>> 5 == 5
-True
->>> 5 != 10
-True
+empty_list = list()
+another_empty_list = []
+```
+> Confirm the data type of the list with the `type()` built-in function
+
+Let's create a list with a few items in it. Let's say we want to keep track of a list of names. We add items to our list as strings, and separate them with commas `,`:
+
+```python
+names = ["Nina", "Max", "Jane"]
+```
+
+We can check its **length** with the built-in `len()` method, like so:
+
+```python
+print(len(names))
+```
+> Returns `3`
+
+#### Indexes/Indices
+
+**Lists retain the order** of the items in them. In the next section, you'll learn about some data structures that don't.
+
+In order to *access* items in a list, we'll need to use an *index*. (Multiple indexes are sometimes also called indices). The index for the item you want to access is *an integer* put in *square brackets* after the list.
+
+{:.highlight}
+**Indexes start at** `0` in Python and most other programming languages.
+
+<div class="task" markdown="block">
+
+Try accessing the individual items in our list: 
+
+```python
+print(names[0])
+print(names[1])
+print(names[2])
 ```
 
 </div>
-</details>
-</html>
 
-#### Truthiness
-{:.no_toc}
+##### Updating an item in a list
+{: .no_toc }
 
-Different languages have different ideas of what is "truthy" and "falsy." In Python, all objects can be tested for truth, and an object is considered True unless except under certain circumstances that we talked about earlier in the chapter. Remember that checking if an object is "equal" to another object doesn't necessarily mean the same thing. An object is considered "truthy" if it satisfies the check performed by `if` or `while` statements.
+To update a particular item in a `list` use square-bracket notion and assign a new value. `my_list[pos] = new_value`
 
-Let's try a few of these out:
+<div class="task" markdown="block">
 
 ```python
->>> 5 == True
->>> # The number 5 does not equal True, but...
->>> if 5:
-...     print("The number 5 is truthy!")
-...
->>> # The number 5 is truthy for an if test!
-```
-
-True and False can also be represented by 1 and 0
-```python
->>> 1 == True
->>> 0 == False
-```
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-  
-```python
->>> 5 == True
-False
->>> # The number 5 does not equal True, but...
->>> if 5:
-...     print("The number 5 is truthy!")
-...
-The number 5 is truthy!
->>> # The number 5 is truthy for an if test!
-```
-
-```python
->>> 1 == True
-True
->>> 0 == False
-True
+names[2] = "Floyd"
+print(names)
 ```
 </div>
-</details>
-</html>
 
-#### Boolean Operators
-{:.no_toc}
-
-Python also supports boolean operators, although they're a little different than the comparison operators. Remember that `or` and `and` return one of their operands, rather than `True` or `False`.
-
-|Operation|Result|
-|---|---|
-|`x or y`|if x is false, then y, else x|
-|`x and y`|if x is false, then x, else y|
-|`not x`|if x is false, then `True`, else `False`|
+{:.warning}
+If you try to access an index that is greater than or equal to (>=) the **length** of the list, you'll get an `IndexError`.
 
 ```python
->>> True or False
->>> [] or [1, 2, 3]
->>> "Hello" or None
-```
-
-```python
->>> True and False
->>> 5 and 0
->>> [1] and [1, 2, 3]
->>> "Hello" and None
-```
-
-```python
-# Of course, you can use `and` and `or` aren't limited to two operands
->>> a = False
->>> b = False
->>> c = False
->>> a or b or c
->>> b = True
->>> a or b or c
-
->>> a and b and c
->>> a = True
->>> c = True
->>> a and b and c
-```
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-
-```python
->>> True or False
-True
->>> [] or [1, 2, 3]
-[1, 2, 3]
->>> "Hello" or None
-'Hello'
-```
-
-```python
->>> True and False
-False
->>> 5 and 0
-0
->>> [1] and [1, 2, 3]
-[1, 2, 3]
->>> "Hello" and None
->>> # No output, since the result was None
-```
-
-```python
->>> a = False
->>> b = False
->>> c = False
->>> a or b or c
-False
->>> b = True
->>> a or b or c
-True
-
->>> a and b and c
-False
->>> a = True
->>> c = True
->>> a and b and c
-True
-```
-
-</div>
-</details>
-</html>
-
----
-
-## Control Structures: Conditionals & Loops
-
-### The `if` Statement and Conditionals
-
-`if` in Python means: **only run the rest of this code once, *if* the condition evaluates to `True`.** Don't run the rest of the code at all if it's not.
-
-Anatomy of an `if` statement: Start with the `if` keyword, followed by a boolean value, an expression that evaluates to `True`, or a value with "Truthiness". Add a colon `:`, a new line, and write the code that will run if the statement is `True` under a level of indentation.
-
-{:.highlight}
-Remember, just like with functions, we know that code is associated with an `if` statement *by it's level of indentation*. All the lines indented under the `if` statement will run if it evaluates to `True`.
-
-```python
->>> if 3 < 5:
-...     print("Hello, World!")
-...
-Hello, World!
-```
-
-{:.highlight}
-Remember, your `if` statements only run if the expression in them evaluates to `True` and just like with functions, you'll need to enter an extra space in the REPL to run it.
-
-#### Using `not` With `if` Statements
-
-If you only want your code to run if the expression is `False`, use the `not` keyword.
-
-```python
->>> b = False
->>> if not b:
-...     print("Negation in action!")
-...
-Negation in action!
-```
-
-### `if` Statements and Truthiness
-
-`if` statements also work with items that have a "truthiness" to them.
-
-For example:
-
- * The number 0 is False-y, any other number (including negatives) is Truth-y
- * An empty `list`, `set`, `tuple` or `dict` is False-y
- * Any of those structures with items in it is Truth-y
-
-```python
->>> message = "Hi there."
-
->>> a = 0
->>> if a:   # 0 is False-y
-...     print(message)
-...
-
->>> b = -1
->>> if b:  # -1 is Truth-y
-...     print(message)
-...
-Hi there.
-
->>> c = []
->>> if c:  # Empty list is False-y
-...     print(message)
-...
-
->>> d = [1, 2, 3]
->>> if d:  # List with items is Truth-y
-...     print(message)
-...
-Hi there.
-```
-
-### `if` Statements and Functions
-
-You can easily declare `if` statements in your functions, you just need to mindful of the level of indentation. Notice how the code belonging to the `if` statement is indented at *two levels*.
-
-```python
->>> def modify_name(name):
-...    if len(name) < 5:
-...         return name.upper()
-...    else:
-...         return name.lower()
-...
->>> name = "Nina"
->>> modify_name(name)
-'NINA'
-```
-
-#### Nested `if` Statements
-
-Using the same technique, you can also *nest* your `if` statements.
-
-```python
->>> def num_info(num):
-...    if num > 0:
-...        print("Greater than zero")
-...        if num > 10:
-...            print("Also greater than 10.")
-...
->>> num_info(1)
-Greater than zero
->>> num_info(15)
-Greater than zero
-Also greater than 10.
+>>> names = ["Nina", "Max", "Jane"]
+>>> len(names)
+3
+>>> names[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
 ```
 
 
-#### How *Not* To Use `if` Statements
+#### Common Mistakes
+{: .no_toc }
 
-Remember, comparisons in Python evaluate to `True` or `False`. With conditional statements, we check for that value *implicitly*. In Python, we **do not** want to compare to `True` or `False` with `==`.
-
-{{% notice warning %}}
-Warning - pay attention, because the code below shows what you **shouldn't** do.
-{{% /notice %}}
+If you forget to include commas between your items, you'll get a `SyntaxError`:
 
 ```python
-# Warning: Don't do this!
->>> if (3 < 5) == True: # Warning: Don't do this!
-...     print("Hello")
-...
-Hello
-
-# Warning: Don't do this!
->>> if (3 < 5) is True: # Warning: Don't do this!
-...     print("Hello")
-...
-Hello
-```
-
-{{% notice tip %}}
-Do this instead:
-{{% /notice %}}
-
-```python
->>> if 3 < 5:
-...     print("Hello")
-...
-Hello
-```
-
-If we want to explicitly check if the value is explicitly set to `True` or `False`, we can use the `is` keyword.
-
-```python
->>> a = True        # a is set to True
->>> b = [1, 2, 3]   # b is a list with items, is "truthy"
->>>
->>> if a and b:     # this is True, a is True, b is "truthy"
-...     print("Hello")
-...
-Hello
->>> if a is True:   # we can explicitly check if a is True
-...     print("Hello")
-...
-Hello
->>> if b is True:   # b does not contain the actual value of True.
-...     print("Hello")
-...
->>>
-```
-
-### `else`
-
-The `else` statement is what you want to run **if and only if** your `if` statement wasn't triggered.
-
-An `else` statement is part of an `if` statement. If your `if` statement ran, your `else` statement will never run.
-
-
-```python
->>> a = True
->>> if a:
-...     print("Hello")
-... else:
-...     print("Goodbye")
-...
-Hello
-```
-
-And vice-versa.
-
-```python
->>> a = False
->>> if a:
-...     print("Hello")
-... else:
-...     print("Goodbye")
-...
-Goodbye
-```
-
-In the REPL it must be written on the line after your last line of indented code. In Python code in a file, there can't be any other code between the `if` and the `else`.
-
-{{% notice info %}}
-You'll see `SyntaxError: invalid syntax` if you try to write an `else` statement on its own, or put extra code between the `if` and the `else` in a Python file.
-{{% /notice %}}
-
-```python
->>> if a:
-...     print("Hello")
-...
-Hello
->>> else:
+>>> numbers = [1, 2 3]
   File "<stdin>", line 1
-    else:
-       ^
+    numbers = [1, 2 3]
+                    ^
 SyntaxError: invalid syntax
 ```
 
-### `elif` Means Else, If.
+If you forget the closing bracket, you'll see a `SyntaxError` with a different name. It'll say: `SyntaxError: unexpected EOF while parsing` or `SyntaxError: invalid syntax`. In these cases, you also need to check the line of code **before** the line with the `SyntaxError`. 
 
-`elif` means *else if*. It means, **if** this `if` statement isn't considered `True`, try this **instead.**
+#### Sorting Lists
 
-You can have as many `elif` statements in your code as you want. They get evaluated in the order that they're declared **until** Python finds one that's `True`. That runs the code defined in that `elif`, and skips the rest.
+Sorting sounds complicated, but in practice, it's just one method call away!
 
-```python
->>> a = 5
->>> if a > 10:
-...     print("Greater than 10")
-... elif a < 10:
-...     print("Less than 10")
-... elif a < 20:
-...     print("Less than 20")
-... else:
-...     print("Dunno")
-...
-Less than 10
-```
+##### Sorting a copy of your list
+{: .no_toc }
 
-### While Loops
-`while` loops are a special type of loop in Python. Instead of running just once when a condition is met, like an `if` statement, they run **forever** until a condition is *no longer* met.
-
-`while` loops usually need to be accompanied by an always changing sentinel value.
+If you'd like sort to return a brand new copy of your list, instead of modifying your original copy, you can use the built-in `sorted(my_list)` function on your list to return a *new* `list`, sorted in increasing (ascending) order. Or use `sorted(my_list, reverse=True)` to create a new `list` sorted backwards, in decreasing (or descending) order. This operation will **not modify** the underlying list.
 
 ```python
->>> counter = 0
->>> max = 4
->>>
->>> while counter < max:
-...     print(f"The count is: {counter}")
-...     counter = counter + 1
-...
-The count is: 0
-The count is: 1
-The count is: 2
-The count is: 3
+>>> lottery_numbers = [1, 4, 32423, 2, 45, 11]
+>>> sorted(lottery_numbers)
+[1, 2, 4, 11, 45, 32423]
+>>> lottery_numbers
+[1, 4, 32423, 2, 45, 11]
+>>> sorted(lottery_numbers, reverse=True)
+[32423, 45, 11, 4, 2, 1]
+>>> lottery_numbers
+[1, 4, 32423, 2, 45, 11]
 ```
 
-{{% notice warning %}}
-Our loop will run forever if we forget to *update* the sentinel value. **Press Ctrl-C to exit the infinite loop.**
-{{% /notice %}}
+##### Sorting in-place
+{: .no_toc }
 
+You can call `my_list.sort()` on your list to sort it in increasing (ascending) order, or `my_list.sort(reverse=True)` on the list to sort it backwards, in decreasing (or descending) order. This operation will modify the underlying list, and *doesn't return a value*.
 
 ```python
-# Warning: don't copy and paste this example.
+>>> lottery_numbers = [1, 4, 32423, 2, 45, 11]
+>>> lottery_numbers.sort()
+>>> lottery_numbers
+[1, 2, 4, 11, 45, 32423]
 
->>> counter = 0
->>> max = 4
+>>> lottery_numbers.sort(reverse=True)
+>>> lottery_numbers
+[32423, 45, 11, 4, 2, 1]
 
->>> while counter < max:
-...     print(f"The count is: {counter}")
-...
-# What happens if we don't update counter?
-The count is: 0
-The count is: 0
-The count is: 0
-The count is: 0
-# An infinite loop repeated until we hit Ctrl-C
-The count ^CTraceback (most recent call last):
-  File "<stdin>", line 2, in <module>
-KeyboardInterrupt
+>>> words = ["Umbrella", "Fox", "Apple"]
+>>> words.sort()
+>>> words
+['Apple', 'Fox', 'Umbrella']
 ```
 
-### For Loops
-Looping in Python doesn't look like looping in other languages.
+##### Reverse a list in-place
+{: .no_toc }
 
-If you write JavaScript, Java, or other languages, you might have seen code that looks something like this code, that keeps track of 3 things: the starting index, the condition the loop will run until, and which action to take (in this case, incrementing the variable `i` by 1) until the condition is met.
-
-```javascript
-for (i = 0; i < 5; i++) {
-  text += "The number is " + i + "<br>";
-}
-```
-
-In fact, before these languages introduced something called a `for each` loop, that was also the clunky way you'd loop through items in a sequence.
-
-### Looping in Python
-
-Looping in Python is a simpler, cleaner process because the Python language prides itself on readability.
-
-Remember you used the `in` keyword to test if an item was in a sequence? When combined with the `for` keyword, `in` can be used to indicate looping over each item in the sequence. The syntax is: `for single_item in items`, followed by a colon `:`, followed by a new line, a level of indentation, and the code you'd like to consider as the *body* of the loop. That is, the code that'll run multiple times, until there are no more items in the collection.
-
-Let's see it in action.
+To reverse the items of a list in-place, call `my_list.reverse()` on it.
 
 ```python
->>> colors = ["Red", "Green", "Blue", "Orange"]
->>> for color in colors:
-...     print(f"The color is: {color}")
-The color is: Red
-The color is: Green
-The color is: Blue
-The color is: Orange
+>>> lottery_numbers = [1, 4, 32423, 2, 45, 11]
+>>> lottery_numbers.reverse()
+>>> lottery_numbers
+[11, 45, 2, 32423, 4, 1]
 ```
 
-#### Looping over a range of numbers
+#### `list` Operations
 
-Let's say we wanted to duplicate the code in the example JavaScript above, that prints out the numbers from 0 to 4.
+| action                                           	| method                                	| returns           	| possible errors                            	|
+|--------------------------------------------------	|---------------------------------------	|-------------------	|--------------------------------------------	|
+| check length                                     	| `len(my_list)`                        	| `int`             	|                                            	|
+| **add:** to the end                              	| `my_list.append(item)`                	| -                 	|                                            	|
+| **insert:** at position                          	| `my_list.insert(pos, item)`           	| -                 	|                                            	|
+| **update:** at position                          	| `my_list[pos] = item`          	| -        -         	| `IndexError` if `pos` is >= `len(my_list)`                                          	|
+| **extend:** add items from another list          	| `my_list.extend(other_list)`          	| -                 	|                                            	|
+| is item in list?                                 	| `item in my_list`                     	| `True` or `False` 	|                                            	|
+| **index** of item                                	| `my_list.index(item)`                 	| `int`             	| `ValueError` if `item` is not in `my_list` 	|
+| **count** of item                                	| `my_list.count(item)`                 	| `int`             	|                                            	|
+| **remove** an item                               	| `my_list.remove(item)`                	| -                 	| `ValueError` if `item` not in `my_list`    	|
+| **remove** the last item, or an item at an index 	| `my_list.pop()` or `my_list.pop(pos)` 	| `item`            	| `IndexError` if `pos` >= `len(my_list)`    	|
 
-In order to do this, we'll need to use a built-in function called `range()`. The range function in python produces a sequence of integers from an optional and inclusive start, to a defined and exclusive finish.
 
+##### Checking Length
+{: .no_toc }
 
-In Python2, this function created a list of each number in that sequence. As you can imagine, it was horribly inefficient for large ranges. In Python3, the `range()` function returns a new optimized data type. It's great for optimization, but it's harder for debugging.
+Before we add or remove items, it's usually a good idea to check a list's length. We do that with the `len` built in function. We can even use the `len` built in function to check the lengths of other types, like strings.
 
-{{% notice note %}}
-If you want to explicitly see what a call to `range()` produces for debugging purposes, you can pass the result into the `list()` method to see all the values at once. For example: `list(range(5))`. Remember that this is inefficient, so use it for testing, not in production code.
-{{% /notice %}}
-
-If we wanted to loop over all the values from 0 to 4, we'd use the range function like this:
-
-```python
->>> for num in range(5):
-...     print(f"The number is: {num}")
-...
-The number is: 0
-The number is: 1
-The number is: 2
-The number is: 3
-The number is: 4
-```
-
-You'll notice that this call didn't *include* the number 5.
-
-What if we wanted the range from 1 to 4, instead of 0 to 4? `range()` can be called with `start` and `stop` parameters, and the range will *start* from `start`.
+Let's see it in action on a names `list` with two items, and a name `str`ing with four characters.
 
 ```python
->>> for num in range(1, 5):
-...     print(f"The number is: {num}")
-...
-The number is: 1
-The number is: 2
-The number is: 3
-The number is: 4
-```
-
-You can also pass an a third optional `step` parameter in. Let's say I quickly wanted to print out all the even numbers from 2 to 10. I would call `range(2, 11, 2)`. Remember, 2 is where we're starting, 11 is one higher than where we're ending (10), and 2 is the step, or the amount to jump between numbers.
-
-```python
->>> for num in range(2, 11, 2):
-...     print(f"The number is: {num}")
-...
-The number is: 2
-The number is: 4
-The number is: 6
-The number is: 8
-The number is: 10
-```
-
-What do inclusive and exclusive mean in this context? *Exclusive* means that the end result *will not* include that number. If you'd like the numbers from 0 to 4, you would call `range(5)`. Consider 5 to the *stopping point*. *Inclusive* means the range will include the number. The `start` parameter is inclusive, meaning if you'd like the range of numbers from 1 to 4, you'd call `range(1, 5)`.
-
-{{% notice tip %}}
-If you can't remember how to use range, don't forget to call `help(range)` from the command line.
-{{% /notice %}}
-
-#### Looping over items with the index using `enumerate`.
-
-In Python, we avoid writing code like the JavaScript `for` loop at the top, but sometimes it's unavoidable, and we need a way to access the index of the items we're looping through. To do that we use a special function called `enumerate()`. The function takes a sequence, like a `list`, and it *returns* a `list` of tuples, containing the index of the item in the sequence, and the sequence itself.
-
-Don't worry about the list of tuples for now, but remember our tuple unpacking from earlier?
-
-```python
->>> point = (2, 5, 11)
->>> x, y, z = point
->>> x
+>>> len(names)
 2
->>> y
-5
->>> z
-11
+>>> name = "Nina"
+>>> len(name)
+4
 ```
 
-Because `enumerate()` returns a structure that looks like a list of `tuple`s under the hood, we can take advantage of tuple unpacking in the `for` loop.
+#### Adding Items
+{: .no_toc }
+
+Let's start with a list of two names.
 
 ```python
->>> for index, item in enumerate(colors):
-...     print(f"Item: {item} is at index: {index}.")
-...
-Item: Red is at index: 0.
-Item: Green is at index: 1.
-Item: Blue is at index: 2.
-Item: Orange is at index: 3.
+>>> names = ["Nina", "Max"]
 ```
 
-{{% notice tip %}}
-Remember, indicies in Python start at zero.
-{{% /notice %}}
+##### `my_list.append(item)` adds to the end of `my_list`
+{: .no_toc }
 
-#### Looping over a dictionary
-
-Now that we know we can use tuple unpacking in a for loop, let's go over how to loop over a dictionary.
-
-Let's say we have a dictionary of colors to their hex color code used for HTML in websites.
+We can use `my_list.append(item)` to add an additional item to the end of the list.
 
 ```python
->>> hex_colors = {
-...     "Red": "#FF",
-...     "Green": "#008",
-...     "Blue": "#0000FF",
-... }
+>>> names.append("John")
+>>> names
+['Nina', 'Max', 'John']
 ```
 
-{{% notice warning %}}
-Remember, a dictionary is composed of key, value pairs. When we loop over a dictionary with the `for item in my_dict` syntax, we'll end up looping over **just** the keys.
-{{% /notice %}}
+##### `my_list.insert(pos, item)` inserts an item into `my_list` at the given position
+{: .no_toc }
 
-In this example, notice how we're looping over the wrong thing:
+Use `my_list.insert(pos, item)` to insert items in an arbitrary position in the list. If the position is 0, we'll insert at the beginning of the list.
 
 ```python
->>> for color in hex_colors:
-...     print(f"The value of color is actually: {color}")
-...
-The value of color is actually: Red
-The value of color is actually: Green
-The value of color is actually: Blue
+>>> names.insert(0, "Rose")
+>>> names
+['Rose', 'Nina', 'Max', 'John']
 ```
 
-{{% notice tip %}}
-If we want to loop over the key, value pairs in a dictionary, we'll want to call `my_dict.items()`.
-{{% /notice %}}
-
-We can use tuple unpacking along with the `my_dict.items()` list to loop over both the keys and the values at the same time.
+##### `my_list.extend(other_list)` adds all the contents of `other_list` to `my_list`
+{: .no_toc }
 
 ```python
->>> for color, hex_value in hex_colors.items():
-...     print(f"For color {color}, the hex value is: {hex_value}")
-...
-For color Red, the hex value is: #FF0000
-For color Green, the hex value is: #008000
-For color Blue, the hex value is: #0000FF
+>>> names = ["Nina", "Max"]
+>>> colors = ["Red", "Blue"]
+>>> names
+['Nina', 'Max']
+>>> names.extend(colors)
+>>> names
+['Nina', 'Max', 'Red', 'Blue']
 ```
 
-##### Common Errors
+#### Searching for Items
 
-What if you try to loop over key, value pairs, and forget to use `my_dict.items()`?
+Looking for items in a list is *slow*. Each item needs to be checked in order to find a match.
+
+This doesn't matter much when you're just getting started, unless your data set is large, or if you're building high-performance systems. If you want to quickly search for an item, you'll need to use a `set` or a `dict`ionary instead.
+
+There are a few ways to determine if an item is in the list, and at which position. Let's try this on our list of names.
 
 ```python
->>> for color, hex_value in hex_colors:
-...     print(f"For color {color}, the hex value is: {hex_value}")
-...
+names = ["Nina", "Max", "Phillip", "Nina"]
+```
+
+##### Use the `in` keyword to determine if an item is present or not.
+{: .no_toc }
+
+```python
+>>> "Nina" in names
+True
+>>> "Rose" in names
+False
+```
+
+##### Use the `my_list.index(item)` method to find the **first** index of a potential match.
+{: .no_toc }
+
+Notice that only the *first* index of the string `"Nina"` is returned. We'll learn more about what an index is in the next chapter.
+
+{:.warning}
+If the item we're looking for *is not* in the list, Python will throw a `ValueError`.
+
+You'll learn how to deal with exceptions later. For now, you can use the `in` operator to check if an item is present in the list before finding its index.
+
+```python
+>>> names.index("Nina")
+0
+>>> names.index("Rose")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: too many values to unpack (expected 2)
+ValueError: 'Rose' is not in list
 ```
 
-{{% notice info %}}
-You'll see `ValueError: too many values to unpack (expected 2)` if you *forget* to call `my_dict.items()`, and try to loop over what you'd expect to be key, value pairs.
-{{% /notice %}}
-
-#### Additional Resources
-
-If you really want to be a pro at looping in a Pythonic way, I recommend watching Raymond Hettinger's talk - [Transforming Code into Beautiful, Idiomatic Python](https://www.youtube.com/watch?time_continue=1855&v=OSGv2VnC0go) after the course.
-
-`break` and `continue` allow you to control the flow of your loops. They're a concept that beginners to Python tend to misunderstand, so pay careful attention.
-
-### Using `break`
-
-The `break` statement will completely break out of the *current loop*, meaning it won't run any more of the statements contained inside of it.
-
+##### Use the `my_list.count(item)` method to find out how many times an item appears in a list.
+{: .no_toc }
 
 ```python
->>> names = ["Rose", "Max", "Nina", "Phillip"]
->>> for name in names:
-...     print(f"Hello, {name}")
-...     if name == "Nina":
-...         break
-...
-Hello, Rose
-Hello, Max
-Hello, Nina
+>>> names.count("Nina")
+2
+>>> names.count("Rose")
+0
 ```
 
-{{% notice tip %}}
-`break` completely **breaks out** of the loop.
-{{% /notice %}}
+#### Updating Items
 
-### Using `continue`
+To update items in a list, use the *position* of the item you'd like to change using square bracket `[]` syntax. Like: `my_list[pos] = new_item`
 
-`continue` works a little differently. Instead, it goes back to the start of the loop, skipping over any other statements contained within the loop.
+For example:
 
 ```python
->>> for name in names:
-...     if name != "Nina":
-...         continue
-...     print(f"Hello, {name}")
-...
-Hello, Nina
+>>> names = ["Nina", "Max"]
+>>> names[0] = "Rose"
+>>> names
+['Rose', 'Max']
 ```
 
-{{% notice tip %}}
-`continue` continues to the **start of the loop**
-
-{{% /notice %}}
-
-
-### `break` and `continue` visualized
-
-What happens when we run the code from this Python file?
+Or, when used with `my_list.index(item)`:
 
 ```python
-# Python file names.py
-names = ["Jimmy", "Rose", "Max", "Nina", "Phillip"]
-
-for name in names:
-    if len(name) != 4:
-        continue
-
-    print(f"Hello, {name}")
-
-    if name == "Nina":
-        break
-
-print("Done!")
+>>> names = ["Nina", "Max"]
+>>> pos = names.index("Max")
+>>> names[pos] = "Rose"
+>>> names
+['Nina', 'Rose']
 ```
 
-![break and continue visualized](/02-introduction-to-python/110-control-statements-looping/images/break-continue.png?classes=shadow,border)
-
-#### Results
-
-{{%expand "See if you can guess the results before expanding this section." %}}
-```bash
-(env) $ python names.py
-
-Hello, Rose
-Hello, Nina
-Done!
-```
-{{% /expand%}}
-
-### Using `break` and `continue` in nested loops.
-
-Remember, `break` and `continue` only work for the **current loop**. *Even though I've been programming Python for years, this is something that still trips me up!*
+{:.warning}
+You'll see a `IndexError: list assignment index out of range` if you try to update an item in a position that doesn't exist, that is *if the position is greater than or equal to `>=` the length of the list*.
 
 ```python
->>> names = ["Rose", "Max", "Nina"]
->>> target_letter = 'x'
->>> for name in names:
-...     print(f"{name} in outer loop")
-...     for char in name:
-...             if char == target_letter:
-...                 print(f"Found {name} with letter: {target_letter}")
-...                 print("breaking out of inner loop")
-...                 break
-...
-Rose in outer loop
-Max in outer loop
-Found Max with letter: x
-breaking out of inner loop
-Nina in outer loop
+>>> names = ["Nina", "Max"]
+>>> len(names)
+2
+>>> names[2] = "Rose"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list assignment index out of range
+```
+
+#### Removing Items
+
+There are a few ways to remove items from a list.
+
+##### Use `my_list.remove(item)` to remove the *first* instance of the item
+{: .no_toc }
+
+Be careful. `remove()` only removes the first instance of the item from the list, which isn't always what we want to do.
+
+```python
+>>> names = ["Nina", "Max", "Rose"]
+>>> names.remove("Nina")
+>>> names
+['Max', 'Rose']
 >>>
+>>>
+>>> names = ["Nina", "Max", "Nina"]
+>>> names.remove("Nina")
+>>> names
+['Max', 'Nina']
 ```
 
-{{% notice tip %}}
-`break` in the inner loop only breaks out of the inner loop! The outer loop continues to run.
-{{% /notice %}}
-
-
-### Loop Control in `while` loops
-
-You can also use `break` and `continue` in `while` loops. One common scenario is running a loop forever, until a certain condition is met.
+{:.warning}
+If we try to remove an item that's not in the list, we'll get a `ValueError: list.remove(x): x not in list`.
 
 ```python
->>> count = 0 
->>> while True:
-...     count += 1
-...     if count == 5:
-...             print("Count reached")
-...             break
-...
-Count reached
+>>> names = ["Nina"]
+>>> names.remove("Max")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
 ```
 
-{{% notice note %}}
-Be careful that your condition will eventually be met, or else your program will get stuck in an infinite loop. For production use, it's better to use asynchronous programming.
-{{% /notice %}}
+##### Use `my_list.pop()` to remove the last item, or `my_list.pop(index)` to remove the item at that index
+{: .no_toc }
 
-### Loops and the `return` statement
-
-Just like in functions, consider the `return` statement the hard kill-switch of the loop.
+Using `pop()` will also **return** the item that was in that position. That's useful if we want to save the item.
 
 ```python
->>> def name_length(names):
-...     for name in names:
-...             print(name)
-...             if name == "Nina":
-...                     return "Found the special name"
-...
->>> names = ["Max", "Nina", "Rose"]
->>> name_length(names)
-Max
-Nina
-'Found the special name'
+>>> names = ["Nina", "Max", "Rose"]
+>>> names.pop()
+'Rose'
+>>> names
+['Nina', 'Max']
+>>> names.pop(1)
+'Max'
+>>> names
+['Nina']
 ```
 
-### ⭐️ Practice
-### `if`, `else`, and `elif`
-
-Let's practice our branching statements. Remember that `elif` (short for `else if`) is an optional branch that will let you add another `if` test, and `else` is an optional branch that will catch anything not previously caught by `if` or `elif`.
+{:.warning}
+If we try to pop an item from an index that is longer than or equal to the length of the list, we'll get an `IndexError: pop index out of range`.
 
 ```python
->>> def test_number(number):
-...     if number < 100:
-...         print("This is a pretty small number")
-...     elif number == 100:
-...         print("This number is alright")
-...     else:
-...         print("This number is huge!")
-...
->>> test_number(5)
->>> test_number(99)
->>> test_number(100)
->>> test_number(8675309)
-```
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-```python
->>> def test_number(number):
-...     if number < 100:
-...         print("This is a pretty small number")
-...     elif number == 100:
-...         print("This number is alright")
-...     else:
-...         print("This number is huge!")
-...
->>> test_number(5)
-This is a pretty small number
->>> test_number(99)
-This is a pretty small number
->>> test_number(100)
-This number is alright
->>> test_number(8675309)
-This number is huge!
-```
-{{%/expand%}}
-
-You can also have multiple conditions in an if statement. This function prints "Fizzbuzz!" if the number is divisible by both 3 and 5 (the `%` or modulo operator returns the remainder from the division of two numbers):
-
-```python
->>> def fizzbuzz(number):
-...     if number % 3 == 0 and number % 5 == 0:
-...         print("Fizzbuzz!")
-...
->>> fizzbuzz(3)
->>> fizzbuzz(5)
->>> fizzbuzz(15)
-```
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-```python
->>> def fizzbuzz(number):
-...     if number % 3 == 0 and number % 5 == 0:
-...         print("Fizzbuzz!")
-...
->>> fizzbuzz(3)
->>> fizzbuzz(5)
->>> fizzbuzz(15)
-Fizzbuzz!
-```
-{{%/expand%}}
-
-Let's also practice using `if` to test for an empty list. Remember that an empty list is "Falsey", or resolves to `False`. Write a function to print a list of elements, or an error message if the list is empty. Print a special message if a list item is `None`:
-
-```python
->>> def my_func(my_list):
-...     if my_list:
-...         for item in my_list:
-...             if item is None:
-...                 print("Got None!")
-...             else:
-...                 print(item)
-...     else:
-...         print("Got an empty list!")
-...
->>> my_func([1, 2, 3])
+>>> names = ["Nina"]
+>>> len(names)
 1
-2
-3
->>> my_func([2, None, "hello", 42])
-2
-Got None!
-hello
-42
->>> my_func([])
-Got an empty list!
+>>> names.pop(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: pop index out of range
 ```
 
+### Tuples
+Tuples are light-weight collections used to keep track of related, but different items. Tuples are **immutable**, meaning that once a tuple has been created, the items in it can't change.
 
-## The `for` loop, `range()` and `enumerate()`
+You might ask, why tuples when Python already has lists? Tuples are different in a few ways. While lists are generally used to store collections of similar items together, tuples, by contrast, can be used to contain a snapshot of data. They can't be continually changed, added or removed from like you could with a list.
 
-Let's try making a list and looping over it:
+#### `tuple` cheat sheet
+{: .no_toc }
 
+| type               	| `tuple`                                                                                                 	|
+|--------------------	|---------------------------------------------------------------------------------------------------------	|
+| use                	| Used for storing a snapshot of related items when we don't plan on modifying, adding, or removing data. 	|
+| creation           	| `()` or `tuple()` for empty tuple. `(1, )` for one item, or `(1, 2, 3)` for a tuple with items.         	|
+| search methods     	| `my_tuple.index(item)` or `item in my_tuple`                                                            	|
+| search speed       	| Searching for an item in a large tuple is slow. Each item must be checked.                              	|
+| common methods     	| Can't add or remove from tuples.                                                                        	|
+| order preserved?   	| Yes. Items can be accessed by index.                                                                    	|
+| mutable?           	| **No**                                                                                                  	|
+| in-place sortable? 	| **No**                                                                                                  	|
+
+
+A good use of a `tuple` might be for storing the information for a *row* in a spreadsheet. That data is information only. We don't necessarily care about updating or manipulating that data. We just want a _read-only_ snapshot.
+> Tuples are an interesting and powerful datatype, and one of the more unique aspects of Python. Most other programming languages have ways of representing lists and dictionaries, but only a small subset contain tuples. Use them to your advantage.
+
+<!--
+
+#### Empty and one-item `tuple`s
+{: .no_toc }
+
+One important thing to note about tuples, is there's a quirk to their creation. Let's check the type of an empty `tuple` created with `()`.
 ```python
->>> my_list = [0, 1, 2]
->>> for num in my_list:
-...     print(f"Next value: {num}")
-...
+>>> a = ()
+>>> type(a)
+<class 'tuple'>
 ```
 
-
-If we're just interested in looping over a list of numbers, we can use the `range()` function instead. Remember that the first argument is inclusive and the second is exclusive:
+That looks like we'd expect it to. What about if we *tried* to create a one-item `tuple` using the same syntax?
 
 ```python
->>> for num in range(0, 3):
-...     print(f"Next value: {num}")
-...
+>>> b = (1)
+>>> type(b)
+<class 'int'>
 ```
 
-Another useful function is `enumerate()`, which iterates over an iterable (like a list) and also gives you an automatic counter. `enumerate()` returns a tuple in the form of (`counter`, `item`).
+It didn't work! `type((1))` is an `int`eger. In order to create a one-item tuple, you'll need to include a trailing comma.
 
 ```python
->>> my_list = ["foo", "bar", "baz"]
->>> for index, item in enumerate(my_list):
-...     print(f"Item {index}: {item}")
-...
+>>> c = (1, )
+>>> type(c)
+<class 'tuple'>
 ```
 
-We can also loop over a dictionary's keys and/or values. If you try to iterate over the dictionary object itself, what do you get?
+{:.highlight}
+If you're creating a one-item tuple, you **must** include a trailing comma, like this: `(1, )`
+
+-->
+
+#### Tuple Creation
+{: .no_toc }
+
+Let's say we have a spreadsheet of students, and we'd like to represent each row as a tuple.
 
 ```python
->>> my_dict = {"foo": "bar", "hello": "world"}
->>> for key in my_dict:
-...     print(f"Key: {key}")
-...
-# This is equivalent to...
->>> for key in my_dict.keys():
-...     print(f"Key: {key}")
-...
+student = ("Marcy", 8, "History", 3.5)
 ```
 
-The `keys()` method returns the dictionary's keys as a list, which you can then iterate over as you would any other list. This also works for `values()`
+#### Tuple Access by index
+{: .no_toc }
+
+We can access items in the `tuple` by index, but we **can't change them**.
 
 ```python
->>> for value in my_dict.values():
-...     print(f"Value: {value}")
-...
+>>> student = ("Marcy", 8, "History", 3.5)
+>>> student[0]
+'Marcy'
+>>> student[0] = "Bob"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
 ```
 
-The most useful function, however, is `items()`, which returns the dictionary's items as tuples in the form of (key, value):
+{:.warning}
+We'll see `TypeError: 'tuple' object does not support item assignment` if we try to change the items in a tuple.
+
+`tuple`s also don't have an `append` or `extend` method available on them like lists do, because they can't be changed.
+
+#### Tuple unpacking
+{: .no_toc }
+
+Sounds like a lot of work for not a lot of benefit, right? Not so. `tuple`s are great when you depend on your data staying unchanged. Because of this guarantee, we can use `tuples` in other types of containers like `set`s and `dict`ionaries.
+> It's also a great way to quickly consolidate information.
+
+You can also use `tuples` for something called **unpacking**. Let's see it in action:
 
 ```python
->>> for key, value in my_dict.items():
-...     print(f"Item {key} = {value}")
-...
-```
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-```python
->>> my_list = [1, 2, 3]
->>> for num in my_list:
-...     print(f"Next value: {num}")
-...
-Next value: 0
-Next value: 1
-Next value: 2
-```
-
-```python
->>> for num in range(0, 3):
-...     print(f"Next value: {num}")
-...
-Next value: 0
-Next value: 1
-Next value: 2
-```
-
-```python
->>> my_list = ["foo", "bar", "baz"]
->>> for index, item in enumerate(my_list):
-...     print(f"Item {index}: {item}")
-...
-Item 0: foo
-Item 1: bar
-Item 2: baz
-```
-
-```python
->>> my_dict = {"foo": "bar", "hello": "world"}
->>> for key in my_dict:
-...     print(f"Key: {key}")
-...
-Key: foo
-Key: hello
-
->>> for key in my_dict.keys():
-...     print(f"Key: {key}")
-...
-Key: foo
-Key: hello
-
->>> for value in my_dict.values():
-...     print(f"Value: {value}")
-...
-Value: bar
-Value: world
-
->>> for key, value in my_dict.items():
-...     print(f"Item {key} = {value}")
-...
-Item foo = bar
-Item hello = world
-```
-
-{{%/expand%}}
-
-## `break`, `continue`, and `return`
-
-`break` and `continue` are important functions for controlling the program flow inside loops. `break` ends the loop immediately and continues executing from outside the loop's scope, and `continue` skips the remainder of the loop and continues executing from the next round of the loop. Let's practice:
-
-```python
->>> for num in range(0, 100):
-...     print(f"Testing number {num}")
-...     if num == 3:
-...         print("Found number 3!")
-...         break
-...     print("Not yet...")
-...
-```
-
-Notice that "Not yet..." doesn't get printed for number 3, because we `break` out of the loop first. Let's try a `continue`:
-
-```python
->>> for num in range(0, 100):
-...     print(f"Testing number {num}")
-...     if num < 3:
-...         continue
-...     elif num == 5:
-...         print("Found number 5!")
-...         break
-...     print("Not yet...")
-...
-```
-
-Notice that "Not yet..." doesn't get printed at all until the number is 3, because the `continue` short-circuits the loop back to the beginning. Then we `break` when we hit 5.
-
-You can also use the `return` keyword to break out of a loop within a function, while optionally returning a value.
-
-```python
->>> def is_number_in_list(number_to_check, list_to_search):
-...     for num in list_to_search:
-...         print(f"Checking {num}...")
-...         if num == number_to_check:
-...             return True
-...     return False
->>> my_list = [1, 2, 3, 4, 5]
->>> is_number_in_list(27, my_list)
->>> is_number_in_list(2, my_list)
-```
-
-Notice that our function `is_number_in_list` checks all the numbers in `my_list` on the first run, but on the next run, stops immediately when it hits 3 and returns `True`.
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
-```python
->>> for num in range(0, 100):
-...     print(f"Testing number {num}")
-...     if num == 3:
-...         print("Found number 3!")
-...         break
-...     print("Not yet...")
-...
-Testing number 0
-Not yet...
-Testing number 1
-Not yet...
-Testing number 2
-Not yet...
-Testing number 3
-Found number 3!
+>>> student = ("Marcy", 8, "History", 3.5)
 >>>
+>>> name, age, subject, grade = student
+>>> name
+'Marcy'
+>>> age
+8
+>>> subject
+'History'
+>>> grade
+3.5
 ```
 
-```python
->>> for num in range(0, 100):
-...     print(f"Testing number {num}")
-...     if num < 3:
-...         continue
-...     elif num == 5:
-...         print("Found number 5!")
-...         break
-...     print("Not yet...")
-...
-Testing number 0
-Testing number 1
-Testing number 2
-Testing number 3
-Not yet...
-Testing number 4
-Not yet...
-Testing number 5
-Found number 5!
-```
+### Sets
+Sets are a datatype that allows you to store other **immutable** types in an unsorted way. An item can only be contained in a set once. There are no duplicates allowed. The benefits of a set are: very fast membership testing along with being able to use powerful set operations, like `union`, `difference`, and `intersection`.
+
+#### `set` cheat sheet
+{: .no_toc }
+
+| type               	| `set`                                                                                                                         	|
+|--------------------	|-------------------------------------------------------------------------------------------------------------------------------	|
+| use                	| Used for storing immutable data types uniquely. Easy to compare the items in `set`s.                                          	|
+| creation           	| `set()` for an empty set (`{}` makes an empty `dict`) and `{1, 2, 3}` for a set with items in it                              	|
+| search methods     	| `item in my_set`                                                                                                              	|
+| search speed       	| Searching for an item in a large set is very fast.                                                                            	|
+| common methods     	| `my_set.add(item)`, `my_set.discard(item)` to remove the item if it's present, `my_set.update(other_set)` 	|
+| order preserved?   	| **No**. Items *can't* be accessed by index.                                                                                   	|
+| mutable?           	| **Yes**. Can add to or remove from `set`s.                                                                                    	|
+| in-place sortable? 	| **No**, because items aren't ordered.                                                                                                                        	|
+
+<!--
+
+#### Empty `set`s
+{: .no_toc }
+
+Let's create our first few sets.
+
+The first thing we might try to do is create an empty set with `{}`, but we'll come across a hurdle.
 
 ```python
->>> def is_number_in_list(number_to_check, list_to_search):
-...     for num in list_to_search:
-...         print(f"Checking {num}...")
-...         if num == number_to_check:
-...             return True
-...     return False
-...
->>> is_number_in_list(27, my_list)
-Checking 1...
-Checking 2...
-Checking 3...
-Checking 4...
-Checking 5...
-False
->>> is_number_in_list(2, my_list)
-Checking 1...
-Checking 2...
+>>> my_new_set = {}
+>>> type(my_new_set)
+<class 'dict'>
+>>> my_set = set()
+>>> type(my_set)
+<class 'set'>
+```
+
+{:.highlight}
+You can't create an empty `set` with `{}`. That creates a `dict`. Create an empty set with `set()` instead.
+
+{:.highlight}
+While you're learning Python, it's useful to use `type()`, `dir()` and `help()` as often as possible.
+
+-->
+
+#### Creating sets with items
+{: .no_toc }
+
+Let's make a new set with some items in it, and test out important set concepts.
+
+##### `set`s can't contain duplicate values
+{: .no_toc }
+
+```python
+>>> names = {"Nina", "Max", "Nina"}
+>>> names
+{'Max', 'Nina'}
+>>> len(names)
+2
+```
+
+##### `set`s can't contain mutable types
+{: .no_toc }
+
+The way that `set`s allow you to quickly check if an item is contained in them or not is with an algorithm called a hash. I won't cover the details, but an algorithm is a way of representing an immutable data type with a unique numerical representation. In Python, there's a built-in `hash()` function.
+
+The `hash()` function only works on immutable data types. That means, data types where the contents can't be changed after creation.
+
+```python
+>>> hash("Nina")
+3509074130763756174
+>>> hash([])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+```
+
+{:.warning}
+You'll see a `TypeError: unhashable type: 'list'` if you try to add a mutable data type (like a `list`) to a set.
+
+If you try to add a mutable data type (like a `list`) to a set, you'll see the same `TypeError`, complaining about an `unhashable type`.
+
+```python
+>>> {"Nina"}
+{'Nina'}
+>>> {[]}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+```
+
+##### `set`s can be used to de-duplicate the items in a list
+{: .no_toc }
+
+**Tip:** *If you don't care about order*, you can quickly de-duplicate the items in a `list` by passing the `list` into the `set` constructor.
+
+```python
+>>> colors = ["Red", "Yellow", "Red", "Green", "Green", "Green"]
+>>> set(colors)
+{'Red', 'Green', 'Yellow'}
+```
+
+##### `set`s don't have an order
+{: .no_toc }
+
+Sets don't have an order. That means that when you print them, the items won't be displayed in the order they were entered in the list.
+
+```python
+>>> my_set = {1, "a", 2, "b", "cat"}
+>>> my_set
+{1, 2, 'cat', 'a', 'b'}
+```
+
+It also means that you *can't* access items in the `set` by position in subscript `[]` notation.
+
+```python
+>>> my_set = {"Red", "Green", "Blue"}
+>>> my_set[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object does not support indexing
+```
+
+{:.warning}
+You'll see `TypeError: 'set' object does not support indexing` if you try to access the items in a `set` by index with `my_set[pos]`
+
+**Tip:** If your set contains items of the same type, and you want to sort the items, you'll need to convert the `set` to a `list` first. Or, you can use the built-in `sorted(sequence)` method, which will do the conversion for you.
+
+```python
+>>> my_set = {"a", "b", "cat", "dog", "red"}
+>>> my_set
+{'b', 'red', 'a', 'cat', 'dog'}
+>>> sorted(my_set)
+['a', 'b', 'cat', 'dog', 'red']
+```
+
+#### Adding to and removing from `set`s
+{: .no_toc }
+
+Since a set has no order, we can't add or remove items to it by index. We need to call the operations with the item itself.
+
+##### Add items to a set with `my_set.add(item)`.
+{: .no_toc }
+
+```python
+>>> colors = {"Red", "Green", "Blue"}
+>>> colors.add("Orange")
+>>> colors
+{'Orange', 'Green', 'Blue', 'Red'}
+```
+
+##### Remove items with `my_set.discard(item)`
+{: .no_toc }
+
+You can remove an item from a `set` if it's present with `my_set.discard(item)`. If the set doesn't contain the item, no error occurs.
+
+```python
+>>> colors = {"Red", "Green", "Blue"}
+>>> colors.discard("Green")
+>>> colors
+{'Blue', 'Red'}
+>>> colors.discard("Green")
+>>> colors
+{'Blue', 'Red'}
+```
+
+You can also remove items from a `set` with `my_set.remove(item)`, which will raise a `KeyError` if the item doesn't exist.
+
+
+##### Update a set with another sequence using `my_set.update(sequence)`
+{: .no_toc }
+
+You can update a `set` by passing in another **sequence**, meaning another `set`, `list`, or `tuple`.
+
+```python
+>>> colors = {"Red", "Green"}
+>>> numbers = {1, 3, 5}
+>>> colors.update(numbers)
+>>> colors
+{1, 3, 'Red', 5, 'Green'}
+```
+
+{:.highlight}
+Be careful passing in a `str`ing to `my_set.update(sequence)`. That's because a `str`ing is *also* a sequence. It's a sequence of characters.
+
+```python
+>>> numbers = {1, 3, 5}
+>>> numbers.update("hello")
+>>> numbers
+{1, 3, 'h', 5, 'o', 'e', 'l'}
+```
+> Your set will update with each character of the `str`ing, which was probably not your intended result.
+
+#### `set` operations
+{: .no_toc }
+
+`sets` allow quick and easy operations to _compare items_ between two sets:
+
+
+| Method Operation    	| Symbol Operation 	| Result    |
+| ---------------------	| ------------------	| ---------------------------	|
+| `s.union(t)`        	| <code>s &#124; t</code> | creates a new set with all the items **from both `s` and `t`**             |
+| `s.intersection(t)` 	| `s & t`          	| creates a new set containing *only* items that are **both in `s` and in `t`** 	|
+| `s.difference(t)`    	| `s ^ t`          	| creates a new set containing items that are **not in both `s` and in `t`**                        	|
+
+We have two sets, `rainbow_colors`, which contain the colors of the rainbow, and `favorite_colors`, which contain my favorite colors.
+
+```python
+>>> rainbow_colors = {"Red", "Orange", "Yellow", "Green", "Blue", "Violet"}
+>>> favorite_colors = {"Blue", "Pink", "Black"}
+```
+
+First, let's combine the sets and create a new `set` that contains all of the items from `rainbow_colors` and `favorite_colors` using the union operation. You can use the `my_set.union(other_set)` method, or you can just use the symbol for union `|=` from the table above.
+
+```python
+>>> rainbow_colors | favorite_colors
+{'Orange', 'Red', 'Yellow', 'Green', 'Violet', 'Blue', 'Black', 'Pink'}
+```
+
+Next, let's find the intersection. We'll create a new `set` with *only* the items in both `set`s.
+
+```python
+>>> rainbow_colors & favorite_colors
+{'Blue'}
+```
+
+Lastly, We can also find the difference. Create a new set with the items that are in in one, but not the other. We'll see that `"Blue"` is missing from the list.
+
+```python
+>>> rainbow_colors ^ favorite_colors
+{'Orange', 'Red', 'Yellow', 'Green', 'Violet', 'Black', 'Pink'}
+```
+
+There are other useful operations available on `set`s, such as checking if one set is a subset, a superset, and more, but I don't have time to cover them all. Python also has a `frozenset` type, if you need the functionality of a `set` in an immutable package (meaning that the contents can't be changed after creation).
+
+Find out more by reading the [documentation](https://docs.python.org/3/library/stdtypes.html#set), or calling `help()` on `set`.
+
+### Dictionaries
+Dictionaries are a useful type that allow us to store our data in key, value pairs. Dictionaries themselves are **mutable**, *but*, dictionary keys can only be **immutable** types.
+
+We use dictionaries when we want to be able to quickly access additional data associated with a particular **key**. 
+> Looking for a key in a large dictionary is extremely fast. Unlike lists, we don't have to check every item for a match.
+
+#### Dictionary cheat sheet
+{: .no_toc }
+
+| type               	| `dict`                                                                                                                                             	|
+|--------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------	|
+| use                	| Use for storing data in key, value pairs. Keys used must be **immutable** data types.                                                              	|
+| creation           	| `{}` or `dict()` for an empty `dict`. `{1: "one", 2: "two"}` for a `dict` with items.                                                              	|
+| search methods     	| `key in my_dict`                                                                                                                                   	|
+| search speed       	| Searching for a key in a large dictionary is fast.                                                                                                 	|
+| common methods     	| `my_dict[key]` to get the value by `key`, and throw a `KeyError` if `key` is not in the dictionary. Use `my_dict.get(key)` to fail silently if `key` is not in `my_dict`. `my_dict.items()` for all key, value pairs, `my_dict.keys()` for all keys, and `my_dict.values()` for all values. 	|
+| order preserved?   	| **Sort of**. As of Python 3.6 a `dict` is sorted by insertion order. Items *can't* be accessed by index, only by key.                              	|
+| mutable?           	| **Yes**. Can add or remove keys from `dict`s.                                                                                                      	|
+| in-place sortable? 	| **No**. `dict`s don't have an index, only keys.                                                                                                    	|
+
+#### Creating `dict`s with items
+{: .no_toc }
+
+If we want to create `dict`s with items in them, we need to pass in key, value pairs. A `dict` is declared with curly braces `{}`, followed by a key and a value, separated with a colon `:`. Multiple key and value pairs are separated with commas `,`.
+
+We can call familiar methods on our dictionary, like finding out how many key / value pairs it contains with the built-in `len(my_dict)` method.
+
+```python
+>>> nums = {1: "one", 2: "two", 3: "three"}
+
+>>> len(nums)
+3
+```
+
+##### Side note: What can be used as keys?
+{: .no_toc }
+
+Any type of object, mutable or immutable, can be used as a value but just like `set`s, `dict`ionaries can only use immutable types as keys. That means you can use `int`, `str`, or even `tuple` as a key, but *not* a `set`, `list`, or other `dict`ionary.
+
+The follow is OK:
+
+```python
+>>> my_dict = {1: 1}
+>>> my_dict = {1: []}
+```
+
+{:.warning}
+You'll see a `TypeError: unhashable type: 'list'` if you try to use a mutable type, like a `list` as a `dict`ionary key.
+
+```python
+>>> my_dict = {[]: 1}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+```
+
+#### Accessing Dictionary Items
+
+Our `dict` contains `key`, `value` pairs. Because a `dict`ionary isn't ordered, we *can't access the items in it by position*. Instead, to access the items in it, we use square-bracket `my_dict[key]` notation, similar to how we access items in a list with square bracket notation containing the position.
+
+```python
+>>> nums = {1: "one", 2: "two", 3: "three"}
+>>> nums[1]
+'one'
+>>> nums[2]
+'two'
+```
+
+{:.warning}
+We'll get a `KeyError: key` if we try to access `my_dict[key]` with square bracket notation, but `key` isn't in the dictionary.
+
+```python
+>>> nums = {1: "one", 2: "two", 3: "three"}
+>>> nums[4]
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 4
+```
+
+One way to get around this is to use the `my_dict.get(key)` method. Using this method, if the key isn't present, no error is thrown, and no value (aka the `None` type) is returned.
+
+```python
+>>> nums = {1: "one", 2: "two", 3: "three"}
+>>> nums.get(4)
+
+>>> result = nums.get(4)
+>>> type(result)
+<class 'NoneType'>
+```
+
+If we want to provide a *default value* if the key is missing, we also pass an *optional* argument to the `my_dict.get(key)` method like so: `my_dict.get(key, default_val)`
+
+```python
+>>> nums = {1: "one", 2: "two", 3: "three"}
+>>> nums.get(4, "default")
+'default'
+```
+
+#### Adding & Removing Items
+{: .no_toc }
+
+To add a new key value pair to the dictionary, you'll use square-bracket notation.
+
+If you try to put a key into a dictionary that's already there, you'll just end up replacing it. To avoid subtle bugs, you can check if a particular key is in a dictionary with the `in` keyword. We'll cover that technique in the Control Statements and Looping topic.
+
+```python
+>>> nums = {1: "one", 2: "two", 3: "three"}
+>>> nums[8] = "eight"
+
+>>> nums
+{1: 'one', 2: 'two', 3: 'three', 8: 'eight'}
+
+>>> nums[8] = "oops, overwritten"
+>>> nums
+{1: 'one', 2: 'two', 3: 'three', 8: 'oops, overwritten'}
+>>> 8 in nums
 True
 ```
-{{%/expand%}}
 
-## `while` loop
+#### Updating Items
+{: .no_toc }
 
-Instead of looping over a sequence, `while` loops continue looping while a certain condition is met (or not met). The condition is checked at the beginning every iteration.
-
-```python
->>> counter = 0
->>> while counter < 3:
-...     print(f"Counter = {counter}")
-...     counter += 1
-```
-
-Notice that the loop ends once `counter` 3, and the remainder of the loop is bypassed. You can also loop forever by using `while True` or `while False`, but you should make sure you have solid `break` conditions, or your program will just loop forever (unless that's what you want).
+Just like with `list`s an `set`s, you can update the items in a dictionary with the items from another dictionary.
 
 ```python
->>> counter = 0
->>> while True:
-...     print(f"Counter = {counter}")
-...     if counter == 3:
-...         break
-...     counter += 1
+>>> colors = {"r": "Red", "g": "Green"}
+>>> numbers = {1: "one", 2: "two"}
+>>> colors.update(numbers)
+>>> colors
+{'r': 'Red', 'g': 'Green', 1: 'one', 2: 'two'}
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+#### Complex Dictionaries
+{: .no_toc }
+
+One incredibly useful scenario for dictionaries is storing the values in a `list` or other sequence. 
 
 ```python
->>> counter = 0
->>> while counter < 3:
-...     print(f"Counter = {counter}")
-...     counter += 1
-...
-Counter = 0
-Counter = 1
-Counter = 2
+>>> colors = {"Green": ["Spinach"]}
+>>> colors
+{'Green': ['Spinach']}
+>>> colors["Green"].append("Apples")
+>>> colors
+{'Green': ['Spinach', 'Apples']}
 ```
+
+#### Working with `items`, `keys`, & `values`
+
+There are three useful methods you need to remember about `dict`ionary access:
+
+1. `my_dict.keys()`
+2. `my_dict.values()`
+3. `my_dict.items()`
+
+##### 1. `my_dict.keys()` Getting all the keys in a dictionary
+{: .no_toc }
 
 ```python
->>> counter = 0
->>> while True:
-...     print(f"Counter = {counter}")
-...     if counter == 3:
-...         break
-...     counter += 1
-...
-Counter = 0
-Counter = 1
-Counter = 2
-Counter = 3
+>>> nums = {1: 'one', 2: 'two', 3: 'three', 8: 'eight'}
+>>> nums.keys()
+dict_keys([1, 2, 3, 8])
 ```
 
-{{%/expand%}}
-
-## Nested Loops
-
-Nesting loops is often necessary and sometimes tricky. The `break` keyword will only get you out of whichever loop you're `break`ing. The only way to exit all loops is with multiple `break` statements (at each level), or the `return` keyword (inside a function). For example:
+##### 2. `my_dict.values()` Getting all the values in a dictionary.
+{: .no_toc }
 
 ```python
-names = ["Rose", "Max", "Nina"]
-target_letter = 'x'
-found = False
-
-for name in names:
-    for char in name:
-            if char == target_letter:
-                    found = True
-                    break
-
-    if found:
-        print(f"Found {name} with letter: {target_letter}")
-        break
+>>> nums = {1: 'one', 2: 'two', 3: 'three', 8: 'eight'}
+>>> nums.values()
+dict_values(['one', 'two', 'three', 'eight'])
 ```
 
-Or:
+##### 3. `my_dict.items()` Getting all the items (key, value pairs) in a dictionary
+{: .no_toc }
+
+Notice that `my_dict.items()` returns a type that looks like a list. It contains two-item `tuple`s containing the key, value pairs.
 
 ```python
->>> for x in range(0, 5):
-...     for y in range(0, 5):
-...         print(f"x = {x}, y = {y}")
-...         if y == 2:
-...             break
-...
+>>> nums = {1: 'one', 2: 'two', 3: 'three', 8: 'eight'}
+>>> nums.items()
+dict_items([(1, 'one'), (2, 'two'), (3, 'three'), (8, 'eight')])
 ```
 
-Notice how the inner `y` loop never gets above 2, whereas the outer `x` loop continues until the end of its range.
+---
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-```python
->>> for x in range(0, 5):
-...     for y in range(0, 5):
-...         print(f"x = {x}, y = {y}")
-...         if y == 2:
-...             break
-...
-x = 0, y = 0
-x = 0, y = 1
-x = 0, y = 2
-x = 1, y = 0
-x = 1, y = 1
-x = 1, y = 2
-x = 2, y = 0
-x = 2, y = 1
-x = 2, y = 2
-x = 3, y = 0
-x = 3, y = 1
-x = 3, y = 2
-x = 4, y = 0
-x = 4, y = 1
-x = 4, y = 2
-```
-{{%/expand%}}
+## Mutability
 
+Mutability, simply put: the contents of a **mutable** object can be _changed_, while the contents of an **immutable** object _cannot be changed_.
+
+### Simple Data Types
+{: .no_toc }
+
+All of the simple data types we covered first are **immutable**:
+
+| type                      	| use                     	| mutable? 	|
+|---------------------------	|-------------------------	|----------	|
+| `int`, `float`, `decimal` 	| store numbers           	| **no**   	|
+| `str`                     	| store strings           	| **no**   	|
+| `bool`                    	| store `True` or `False` 	| **no**   	|
+
+### Collection/Container Types
+{: .no_toc }
+
+For the mutability of the container types we covered in this chapter, check this helpful list:
+
+| container type 	| use                                                                                                     	| mutable? 	|
+|----------------	|---------------------------------------------------------------------------------------------------------	|----------	|
+| `list`         	| ordered group of items, accessible by position                                                          	| **yes**  	|
+| `set`          	| mutable unordered group consisting only of immutable items. useful for set operations (membership, intersection, difference, etc) 	| **yes**  	|
+| `tuple`        	| contain ordered groups of items in an **immutable** collection                                          	| **no**   	|
+| `dict`         	| contains key value pairs                                                                                	| **yes**  	|
 
 ---
 

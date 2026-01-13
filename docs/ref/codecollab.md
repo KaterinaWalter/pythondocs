@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "💬 CodeCollab HW" 
-parent: References
+parent: "📖 References"
 nav_order: 0
 ---
 
@@ -18,10 +18,10 @@ UPDATE TO REFLECT CHANGE FROM REPLIT TO GITHUB!!!
   > Your **forked copy** of the program will be saved in the `MY REPLS` section of Replit. You can always access my **original copy** at the provided link and fork a new copy if you need to start over.
 -->
 
-### Discussion Requirements
-
 {: .important }
 You must contribute at least **two (2) valid comments** in the Blackbaud discussion before `Friday @ 11:59PM` to earn full credit. See below for more detailed guidelines for what qualifies as an acceptable comment.
+
+### Discussion Requirements
 
 #### Checklist:
 - [ ] At least one (1) of your comments must be a **paragraph-long post** where you analyze/attempt to explain a section of code. This is considered your "individual contribution" and it's the most important part of the assignment.

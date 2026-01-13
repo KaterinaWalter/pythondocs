@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "🐍 Python Cheatsheet" 
-parent: References
+parent: "📖 References"
 nav_order: 3
 ---
 

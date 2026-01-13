@@ -2,7 +2,7 @@ title: Python Docs
 description: Course materials for Post-AP Computer Science
 theme: just-the-docs
 
-url: https://katerinanavab.github.io/pythondocs
+url: https://KaterinaWalter.github.io/pythondocs
 
 logo: "assets/logo-pythondocs.png"
 favicon_ico: "favicon.ico"
@@ -12,12 +12,12 @@ aux_links:
   "Blackbaud":
     - "https://bwl.myschoolapp.com/app#login"
   "GitHub":
-    - "https://classroom.github.com/classrooms/180414627-bwl-cs3-python"    
+    - "https://github.com/BWL-CS"    
   "DevDocs":
     - "https://devdocs.io/"
 
 back_to_top: true
-back_to_top_text: "⬆️ BACK TO TOP"
+back_to_top_text: "⬆️ TO TOP"
 
 kramdown:
   parse_block_html: true
