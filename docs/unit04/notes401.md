@@ -16,11 +16,11 @@ The final part of this course is dedicated to pursuing an open-ended **passion p
 
 #### Python Programming
 * Build a **Python web-app** that implements the `Flask` techniques we learned in [Unit 3](https://coderina.dev/pythondocs/unit03)
-  > _The possibilities are endless here!_ You could make something fun and interactive for your friends to use, or a useful app for tracking/organizing certain information in your daily life, or a page that showcases your interests and hobbies, etc.
+  > _The possibilities are endless here!_ You could make something fun and interactive for your friends to use, or a useful app for tracking/organizing certain information in your daily life, or a page that showcases your interests and hobbies, etc. I would expect this app to be **more complex** than any of the projects created in the last unit.  
 * Combine your skills: create a `Flask` application that incorporates **data visualization** (`pandas`, `matplotlib`, `seaborn`) from [Unit 2]()
   > _Example:_ This [Timestamp Analyzer for Google Docs](https://coderina.pythonanywhere.com/) is a Python web-app I made that processes text data and generates a bar chart. 
-* Explore the world of **machine learning & artificial intelligence** by following tutorials like [Kaggle - Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) or [Kaggle - Intro to Game AI and Reinforcement Learning](https://www.kaggle.com/learn/intro-to-game-ai-and-reinforcement-learning).
-  > _NOTE:_ If you choose to pursue a project that requires spending time on tutorial, that will be factored into the expectations for your project. You wouldn't be required submit a project of the same level of complexity as I would expect for a Python web-app, but make sure to produce some sort of **working program** that demonstrates creative effort (_not just screenshots that you completed a course_). 
+* Explore the world of **machine learning & artificial intelligence** by following self-guided online tutorials. I recommend Kaggle's courses in [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) and [Intro to Game AI and Reinforcement Learning](https://www.kaggle.com/learn/intro-to-game-ai-and-reinforcement-learning).
+  > _NOTE:_ If you choose to pursue a project that requires spending time on tutorials, that will be factored into the expectations for your project. You wouldn't be required submit a project of the same level of complexity as I would expect for a Python web-app, but make sure to produce some sort of **working program** that demonstrates creative effort (_not just screenshots that you completed a course_). 
 
 #### Other Languages & Software
 * Want to learn how to **develop games**? 
