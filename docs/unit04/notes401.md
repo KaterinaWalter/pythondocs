@@ -15,16 +15,20 @@ The final part of this course is dedicated to pursuing an open-ended **passion p
 ### 📚 Ideas & Resources
 
 #### Python Programming
-* Build a **Python web-app** that implements the `Flask` techniques we learned in [Unit 3](https://coderina.dev/pythondocs/unit03)
+* Build a creative `Python` **web-app** that implements the `Flask` techniques we learned in [Unit 3](https://coderina.dev/pythondocs/unit03)
   > _The possibilities are endless here!_ You could make something fun and interactive for your friends to use, or a useful app for tracking/organizing certain information in your daily life, or a page that showcases your interests and hobbies, etc. I would expect this app to be **more complex** than any of the projects created in the last unit.  
-* Combine your skills: create a `Flask` application that incorporates **data visualization** (`pandas`, `matplotlib`, `seaborn`) from [Unit 2]()
-  > _Example:_ This [Timestamp Analyzer for Google Docs](https://coderina.pythonanywhere.com/) is a Python web-app I made that processes text data and generates a bar chart. 
-* Explore the world of **machine learning & artificial intelligence** by following self-guided online tutorials. I recommend Kaggle's courses in [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) and [Intro to Game AI and Reinforcement Learning](https://www.kaggle.com/learn/intro-to-game-ai-and-reinforcement-learning).
-  > _NOTE:_ If you choose to pursue a project that requires spending time on tutorials, that will be factored into the expectations for your project. You wouldn't be required submit a project of the same level of complexity as I would expect for a Python web-app, but make sure to produce some sort of **working program** that demonstrates creative effort (_not just screenshots that you completed a course_). 
+* Combine skills: create a `Flask` application that incorporates **data visualization** (`pandas`, `matplotlib`, `seaborn`) from [Unit 2]()
+  > _Example:_ This [Timestamp Analyzer for Google Docs](https://coderina.pythonanywhere.com/) is a web-app I made that processes text data and generates a bar chart. 
+* Explore the world of **machine learning & artificial intelligence** by following self-guided online tutorials. I recommend **Kaggle**'s `Python` courses in [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) and [Intro to Game AI and Reinforcement Learning](https://www.kaggle.com/learn/intro-to-game-ai-and-reinforcement-learning).
+  > _NOTE:_ If you choose to pursue a project that requires spending time on tutorials like this, that will be factored into the expectations for your project. You wouldn't be required submit a project of the same level of complexity as I would expect for a Python web-app, but make sure to produce some sort of **working program** that demonstrates creative effort. 
 
 #### Other Languages & Software
-* Want to learn how to **develop games**? 
-* Missing **Java**? Didn't think so... but if you do, let me know and I can show you some advanced projects that students have made.
+* Want to learn how to **develop games**? _Here are my recommended paths:_
+  * [Unity Game Engine]() that uses the `C#` programming language, which is similar to `Java`. 
+* Interested in **cybersecurity**? _Here are some ideas:_
+  * ADD
+* Want to make this a **group project**? Propose an idea of what you'd like to create as a team, and an explanation of how you plan to allocate the work between you all.
+* Missing `Java`? Didn't think so... but if you do, let me know and I can show you some advanced projects that students have made.
 
 {:.highlight} 
 💡 Let me know if you'd like a custom-made **lesson**, **cheatsheet**, or **code demo**! I am happy to write new pages and add them to this unit, by request. 
